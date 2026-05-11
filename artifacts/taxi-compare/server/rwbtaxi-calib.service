@@ -1,0 +1,23 @@
+[Unit]
+Description=RWB Taxi calibration receiver (приём замеров с фронта)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /opt/rwbtaxi-calib/calib-receiver.mjs
+EnvironmentFile=-/etc/rwbtaxi-calib.env
+Restart=on-failure
+RestartSec=3
+User=www-data
+Group=www-data
+StandardOutput=journal
+StandardError=journal
+# Песочница
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/rwbtaxi/data/calib
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

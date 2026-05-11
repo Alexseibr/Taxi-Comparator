@@ -1,0 +1,20 @@
+{
+  "name": "@workspace/scripts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "hello": "tsx ./src/hello.ts",
+    "tariff-analysis": "node ./src/tariff-analysis.mjs",
+    "forecast-bot": "node ./src/tariff-bot.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "tsx": "catalog:"
+  },
+  "dependencies": {
+    "@types/node-telegram-bot-api": "^0.64.14",
+    "node-telegram-bot-api": "^0.67.0"
+  }
+}

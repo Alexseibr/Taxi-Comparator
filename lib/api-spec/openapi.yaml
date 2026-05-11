@@ -1,0 +1,574 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: Taxi price comparison API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: taxi
+    description: Taxi price comparison
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /taxi/providers:
+    get:
+      operationId: listProviders
+      tags: [taxi]
+      summary: List taxi providers
+      description: Returns the list of supported taxi providers with their branding and tariff classes.
+      responses:
+        "200":
+          description: Provider list
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [providers]
+                properties:
+                  providers:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Provider"
+  /taxi/estimate:
+    post:
+      operationId: estimateTrip
+      tags: [taxi]
+      summary: Estimate trip price across providers
+      description: |
+        Returns price, ETA and tariff-class estimates from every supported taxi
+        provider for a given trip. Results are sorted from cheapest to most
+        expensive across the cheapest tariff class of each provider.
+
+        The `passengers` field filters out tariff classes whose capacity is less
+        than the requested party size — for example, asking for 5 passengers
+        will only return Minivan-capable classes/providers.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EstimateRequest"
+      responses:
+        "200":
+          description: Estimates from each provider
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EstimateResponse"
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+  /taxi/popular-routes:
+    get:
+      operationId: listPopularRoutes
+      tags: [taxi]
+      summary: Popular sample routes
+      description: Returns a small curated set of popular routes users can compare with one click.
+      responses:
+        "200":
+          description: Popular routes
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [routes]
+                properties:
+                  routes:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/PopularRoute"
+  /tariff-grid/routes:
+    get:
+      operationId: listTariffGridRoutes
+      tags: [taxi]
+      summary: Tariff grid for 20 Minsk routes
+      description: |
+        Returns the 20 monitored Minsk routes plus, for each route, the latest
+        per-class price snapshot captured by the background scheduler (which
+        runs once every 150 minutes against taxi.yandex.ru). Each cell carries
+        a `source` flag indicating whether the price came from a live fetch or
+        from the local fallback model. Cells are `null` when no snapshot has
+        been recorded yet for that route+class combination.
+      responses:
+        "200":
+          description: Tariff grid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TariffGridResponse"
+  /tariff-grid/route/{id}/history:
+    get:
+      operationId: getTariffRouteHistory
+      tags: [taxi]
+      summary: Historical & forecasted tariffs for a single route
+      description: |
+        Returns the captured price-history points for the last `hours` hours
+        (default 48, max 168), plus a 24-hour forecast computed from the
+        deterministic surge model. History points themselves may have been
+        captured live from Yandex Go or computed by the same fallback model;
+        each point carries its own `source` flag.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: hours
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 168
+            default: 48
+        - name: forecastHours
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 72
+            default: 24
+      responses:
+        "200":
+          description: Route history & forecast
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TariffRouteHistoryResponse"
+        "404":
+          description: Route not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+  /taxi/recent-comparisons:
+    get:
+      operationId: listRecentComparisons
+      tags: [taxi]
+      summary: Recent comparisons
+      description: Returns the most recent trip comparisons made by users (privacy-safe summaries).
+      responses:
+        "200":
+          description: Recent comparisons
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [comparisons]
+                properties:
+                  comparisons:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/RecentComparison"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+    Coordinate:
+      type: object
+      required: [lat, lng]
+      properties:
+        lat:
+          type: number
+        lng:
+          type: number
+    Place:
+      type: object
+      required: [label, coordinate]
+      properties:
+        label:
+          type: string
+          description: Human-readable address or place name
+        coordinate:
+          $ref: "#/components/schemas/Coordinate"
+    TariffClass:
+      type: object
+      required: [id, name, description, multiplier, capacity]
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+          description: Tariff class display name (e.g. Economy, Comfort, Business)
+        description:
+          type: string
+        multiplier:
+          type: number
+          description: Multiplier applied on top of the provider base price
+        capacity:
+          type: integer
+          description: Maximum passenger capacity for this class
+    Provider:
+      type: object
+      required:
+        - id
+        - name
+        - color
+        - currency
+        - baseFare
+        - perKm
+        - perMinute
+        - minimumFare
+        - serviceFee
+        - bookingEtaMin
+        - bookingEtaMax
+        - classes
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        color:
+          type: string
+          description: Brand hex color, e.g. "#000000"
+        currency:
+          type: string
+          description: ISO 4217 currency code
+        baseFare:
+          type: number
+        perKm:
+          type: number
+        perMinute:
+          type: number
+        minimumFare:
+          type: number
+        serviceFee:
+          type: number
+        bookingEtaMin:
+          type: integer
+          description: Minimum booking ETA in minutes
+        bookingEtaMax:
+          type: integer
+          description: Maximum booking ETA in minutes
+        classes:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffClass"
+    EstimateRequest:
+      type: object
+      required: [pickup, dropoff]
+      properties:
+        pickup:
+          $ref: "#/components/schemas/Place"
+        dropoff:
+          $ref: "#/components/schemas/Place"
+        passengers:
+          type: integer
+          minimum: 1
+          maximum: 6
+          default: 1
+        surgeHint:
+          type: number
+          description: Optional client-supplied surge multiplier (1.0 = no surge)
+          minimum: 1
+          maximum: 3
+    ClassEstimate:
+      type: object
+      required: [classId, className, classDescription, priceMin, priceMax, etaMin, currency]
+      properties:
+        classId:
+          type: string
+        className:
+          type: string
+        classDescription:
+          type: string
+        priceMin:
+          type: number
+        priceMax:
+          type: number
+        etaMin:
+          type: integer
+          description: Pickup ETA in minutes
+        currency:
+          type: string
+        live:
+          type: boolean
+          description: True when this price came from a live provider source rather than our estimate formula
+    ProviderEstimate:
+      type: object
+      required:
+        - providerId
+        - providerName
+        - providerColor
+        - currency
+        - cheapest
+        - classes
+        - surgeMultiplier
+      properties:
+        providerId:
+          type: string
+        providerName:
+          type: string
+        providerColor:
+          type: string
+        currency:
+          type: string
+        surgeMultiplier:
+          type: number
+        cheapest:
+          $ref: "#/components/schemas/ClassEstimate"
+        classes:
+          type: array
+          items:
+            $ref: "#/components/schemas/ClassEstimate"
+    EstimateResponse:
+      type: object
+      required:
+        - distanceKm
+        - durationMin
+        - currency
+        - results
+        - bestProviderId
+        - generatedAt
+      properties:
+        distanceKm:
+          type: number
+        durationMin:
+          type: number
+        currency:
+          type: string
+        bestProviderId:
+          type: string
+          description: ID of the cheapest provider across cheapest classes
+        savingsVsMostExpensive:
+          type: number
+          description: How much the best option saves vs the most expensive cheapest-class option
+        results:
+          type: array
+          items:
+            $ref: "#/components/schemas/ProviderEstimate"
+        generatedAt:
+          type: string
+          format: date-time
+    PopularRoute:
+      type: object
+      required: [id, label, pickup, dropoff, distanceKm]
+      properties:
+        id:
+          type: string
+        label:
+          type: string
+        pickup:
+          $ref: "#/components/schemas/Place"
+        dropoff:
+          $ref: "#/components/schemas/Place"
+        distanceKm:
+          type: number
+    RecentComparison:
+      type: object
+      required:
+        - id
+        - pickupLabel
+        - dropoffLabel
+        - distanceKm
+        - bestProviderName
+        - bestPrice
+        - currency
+        - createdAt
+      properties:
+        id:
+          type: string
+        pickupLabel:
+          type: string
+        dropoffLabel:
+          type: string
+        distanceKm:
+          type: number
+        bestProviderName:
+          type: string
+        bestPrice:
+          type: number
+        currency:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+    TariffGridCell:
+      type: object
+      required: [classId, className, capacity, priceMin, priceMax, surgeMultiplier, source]
+      properties:
+        classId:
+          type: string
+        className:
+          type: string
+        capacity:
+          type: integer
+        priceMin:
+          type: number
+          nullable: true
+        priceMax:
+          type: number
+          nullable: true
+        surgeMultiplier:
+          type: number
+          nullable: true
+        source:
+          type: string
+          enum: [live, model, none]
+          description: "Where the snapshot came from. `live`: real fetch from taxi.yandex.ru/3.0/routestats. `model`: local fallback formula (used when live fetch failed/throttled). `none`: no snapshot recorded yet."
+    TariffGridRouteRow:
+      type: object
+      required:
+        - routeId
+        - pickupLabel
+        - dropoffLabel
+        - pickup
+        - dropoff
+        - distanceKm
+        - durationMin
+        - volatility
+        - capturedAt
+        - surgeMultiplier
+        - surgeDriver
+        - cells
+      properties:
+        routeId:
+          type: string
+        pickupLabel:
+          type: string
+        dropoffLabel:
+          type: string
+        pickup:
+          $ref: "#/components/schemas/Coordinate"
+        dropoff:
+          $ref: "#/components/schemas/Coordinate"
+        distanceKm:
+          type: number
+        durationMin:
+          type: number
+        volatility:
+          type: number
+        capturedAt:
+          type: string
+          format: date-time
+          nullable: true
+        surgeMultiplier:
+          type: number
+          nullable: true
+        surgeDriver:
+          type: string
+          description: "Tag identifying which model component drives the current surge: morning_rush | evening_rush | nightlife | calm"
+        cells:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffGridCell"
+    TariffGridResponse:
+      type: object
+      required: [generatedAt, intervalMinutes, routes]
+      properties:
+        generatedAt:
+          type: string
+          format: date-time
+        intervalMinutes:
+          type: integer
+        routes:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffGridRouteRow"
+    TariffHistoryPoint:
+      type: object
+      required: [capturedAt, classId, className, priceMin, priceMax, surgeMultiplier, source]
+      properties:
+        capturedAt:
+          type: string
+          format: date-time
+        classId:
+          type: string
+        className:
+          type: string
+        priceMin:
+          type: number
+        priceMax:
+          type: number
+        surgeMultiplier:
+          type: number
+        source:
+          type: string
+          enum: [live, model]
+          description: "live = fetched from taxi.yandex.ru, model = local fallback formula"
+    TariffForecastPoint:
+      type: object
+      required: [capturedAt, classId, className, priceMin, priceMax, surgeMultiplier, surgeDriver]
+      properties:
+        capturedAt:
+          type: string
+          format: date-time
+        classId:
+          type: string
+        className:
+          type: string
+        priceMin:
+          type: number
+        priceMax:
+          type: number
+        surgeMultiplier:
+          type: number
+        surgeDriver:
+          type: string
+    TariffRouteHistoryResponse:
+      type: object
+      required: [routeId, pickupLabel, dropoffLabel, volatility, sinceHours, forecastHours, classes, history, forecast]
+      properties:
+        routeId:
+          type: string
+        pickupLabel:
+          type: string
+        dropoffLabel:
+          type: string
+        volatility:
+          type: number
+        sinceHours:
+          type: integer
+        forecastHours:
+          type: integer
+        classes:
+          type: array
+          description: Tariff classes available for this route, in display order.
+          items:
+            type: object
+            required: [classId, className]
+            properties:
+              classId:
+                type: string
+              className:
+                type: string
+        history:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffHistoryPoint"
+        forecast:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffForecastPoint"
+    ApiError:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+        details:
+          type: string

@@ -1,0 +1,91 @@
+{
+  "date": "2026-04-27",
+  "day": "monday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 22:00. Накоплено: 6 заказов.",
+  "coords": {
+    "Иерусалимская 4": [
+      53.8994219,
+      27.5380405
+    ],
+    "Харьковская 8": [
+      53.9037648,
+      27.5236308
+    ],
+    "деревня Ельница": [
+      53.81431569999999,
+      27.7216111
+    ],
+    "Павлины Медёлки": [
+      53.955756,
+      27.55461
+    ],
+    "Щомыслица": [
+      53.8230249,
+      27.4516214
+    ],
+    "Шаранговича 19": [
+      53.8833188,
+      27.45308
+    ],
+    "Зыбицкая 6": [
+      53.9062778,
+      27.5570208
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-27-h22-0ea99a",
+      "from": "Иерусалимская 4",
+      "to": "Харьковская 8",
+      "hour": 22,
+      "factE": 11.3,
+      "factC": 13.4,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0314.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=22:16."
+    },
+    {
+      "id": "calib-2026-04-27-h22-1286e4",
+      "from": "Иерусалимская 4",
+      "to": "деревня Ельница",
+      "hour": 22,
+      "factE": 31.6,
+      "factC": 38.2,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0318.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=22:15."
+    },
+    {
+      "id": "calib-2026-04-27-h22-42f2cd",
+      "from": "Иерусалимская 4",
+      "to": "Павлины Медёлки",
+      "hour": 22,
+      "factE": 22.1,
+      "factC": 27,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0331.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=22:11."
+    },
+    {
+      "id": "calib-2026-04-27-h22-655818",
+      "from": "Иерусалимская 4",
+      "to": "Щомыслица",
+      "hour": 22,
+      "factE": 25.4,
+      "factC": 31,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0316.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=22:15."
+    },
+    {
+      "id": "calib-2026-04-27-h22-717ec9",
+      "from": "Иерусалимская 4",
+      "to": "Шаранговича 19",
+      "hour": 22,
+      "factE": 18,
+      "factC": 21.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0317.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=22:15."
+    },
+    {
+      "id": "calib-2026-04-27-h22-cd45f9",
+      "from": "Иерусалимская 4",
+      "to": "Зыбицкая 6",
+      "hour": 22,
+      "factE": 12.9,
+      "factC": 15.2,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0315.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=22:16."
+    }
+  ]
+}

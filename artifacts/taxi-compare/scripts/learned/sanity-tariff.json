@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-05-10T07:59:18.996Z",
+  "basedOn": 233,
+  "hypothesis": "v3: baza_Y = const (= minimum_C). Регрессия perKm/perMin должна сходиться к 0.",
+  "current": {
+    "econom": {
+      "pickup": 0,
+      "perKm": 0,
+      "perMin": 0,
+      "minimum": 9.39
+    },
+    "comfort": {
+      "pickup": 0,
+      "perKm": 0,
+      "perMin": 0,
+      "minimum": 9.86
+    }
+  },
+  "evidence": {
+    "bazaStats": {
+      "n": 233,
+      "mean": 9.78,
+      "median": 9.8,
+      "std": 0.73,
+      "min": 8.57,
+      "max": 20
+    },
+    "regression": {
+      "pickup": 9.594,
+      "perKm": -0.0189,
+      "perMin": 0.0268,
+      "mae": 0.234,
+      "rmse": 0.718
+    }
+  },
+  "verdict": "✅ v3 подтверждена: |perKm|=0.0189 < 0.05, |perMin|=0.0268 < 0.05. Baza Yandex плоская.",
+  "warnings": []
+}

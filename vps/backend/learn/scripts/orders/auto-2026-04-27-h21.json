@@ -1,0 +1,108 @@
+{
+  "date": "2026-04-27",
+  "day": "monday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 21:00. Накоплено: 7 заказов.",
+  "coords": {
+    "Сухая 25": [
+      53.9024197,
+      27.5373228
+    ],
+    "Кирилла Туровского 4": [
+      53.9315942,
+      27.6533432
+    ],
+    "пр. Независимости 22": [
+      53.90086770000001,
+      27.5603839
+    ],
+    "Красноармейская 5": [
+      53.9011314,
+      27.5656994
+    ],
+    "Немига 3": [
+      53.9041614,
+      27.5526828
+    ],
+    "пр. Независимости 32": [
+      53.904093,
+      27.5678966
+    ],
+    "Сальники": [
+      53.9006011,
+      27.558972
+    ],
+    "Партизанский пр. 8": [
+      53.8814426,
+      27.5965406
+    ],
+    "Карла Маркса 42": [
+      53.9022788,
+      27.5673486
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-27-h21-17f896",
+      "from": "Сухая 25",
+      "to": "Кирилла Туровского 4",
+      "hour": 21,
+      "factE": 24,
+      "factC": 29,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0275.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=07:35."
+    },
+    {
+      "id": "calib-2026-04-27-h21-3a473f",
+      "from": "пр. Независимости 22",
+      "to": "Красноармейская 5",
+      "hour": 21,
+      "factE": 4.1,
+      "factC": 4.9,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0276.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=15:02."
+    },
+    {
+      "id": "calib-2026-04-27-h21-4128b6",
+      "from": "Сухая 25",
+      "to": "Немига 3",
+      "hour": 21,
+      "factE": 12.5,
+      "factC": 14.5,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0273.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=07:35."
+    },
+    {
+      "id": "calib-2026-04-27-h21-524901",
+      "from": "пр. Независимости 22",
+      "to": "пр. Независимости 32",
+      "hour": 21,
+      "factE": 3.4,
+      "factC": 4.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0291.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=15:03."
+    },
+    {
+      "id": "calib-2026-04-27-h21-872796",
+      "from": "Сухая 25",
+      "to": "Сальники",
+      "hour": 21,
+      "factE": 23.6,
+      "factC": 28,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0274.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=07:36."
+    },
+    {
+      "id": "calib-2026-04-27-h21-965338",
+      "from": "Сухая 25",
+      "to": "Партизанский пр. 8",
+      "hour": 21,
+      "factE": 17.1,
+      "factC": 19.9,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0272.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=07:35."
+    },
+    {
+      "id": "calib-2026-04-27-h21-bc6b89",
+      "from": "пр. Независимости 22",
+      "to": "Карла Маркса 42",
+      "hour": 21,
+      "factE": 3.6,
+      "factC": 4.4,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0292.jpeg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=15:02."
+    }
+  ]
+}

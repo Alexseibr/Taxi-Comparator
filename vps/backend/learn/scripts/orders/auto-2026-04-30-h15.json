@@ -1,0 +1,627 @@
+{
+  "date": "2026-04-30",
+  "day": "thursday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 15:00. Накоплено: 45 заказов.",
+  "coords": {
+    "Аладовых 13": [
+      53.921905,
+      27.4558475
+    ],
+    "Выход на ул. Нарочанская": [
+      53.9338358,
+      27.4820932
+    ],
+    "Ложинская 18": [
+      53.9505182,
+      27.6808694
+    ],
+    "Руссиянова 51": [
+      53.93236810000001,
+      27.6944676
+    ],
+    "Чернышевского 14": [
+      53.9288238,
+      27.5984529
+    ],
+    "Волгоградская 23": [
+      53.93415779999999,
+      27.6193747
+    ],
+    "Бобруйская 4В": [
+      53.8911083,
+      27.5481936
+    ],
+    "Привокзальная пл. 5": [
+      53.8908168,
+      27.5512335
+    ],
+    "Киселёва 2А": [
+      53.90951380000001,
+      27.5744023
+    ],
+    "Коммунистическая 2": [
+      53.9083263,
+      27.5717086
+    ],
+    "Новодворский сельсовет, 126": [
+      53.9006011,
+      27.558972
+    ],
+    "Ангарская 38": [
+      53.87308179999999,
+      27.6853273
+    ],
+    "Нестерова 58": [
+      53.8839091,
+      27.6849112
+    ],
+    "Карвата 75": [
+      53.9084195,
+      27.6850506
+    ],
+    "Первомайская 24к1": [
+      53.9016914,
+      27.577232
+    ],
+    "Немига 14": [
+      53.9024592,
+      27.5480175
+    ],
+    "Линейная 1": [
+      53.94814419999999,
+      27.4166695
+    ],
+    "Парковая 2": [
+      53.914455,
+      27.5319456
+    ],
+    "Бехтерева 7к1": [
+      53.87609399999999,
+      27.644554
+    ],
+    "пр. Рокоссовского 2": [
+      53.8751501,
+      27.5951367
+    ],
+    "пр. Рокоссовского 76": [
+      53.863877,
+      27.6017922
+    ],
+    "Долгобродская 29к72": [
+      53.8905113,
+      27.6180912
+    ],
+    "Бабушкина 4А": [
+      53.8211492,
+      27.5769662
+    ],
+    "Сеницкий сельсовет, 16": [
+      53.8734191,
+      27.5500013
+    ],
+    "Ваупшасова 4к52": [
+      53.888592,
+      27.6364547
+    ],
+    "Линейная 7Б": [
+      53.9461557,
+      27.4257669
+    ],
+    "Тимирязева 129к2": [
+      53.94037369999999,
+      27.4403473
+    ],
+    "Минская 67В": [
+      53.9498775,
+      27.761898
+    ],
+    "Тюленина 26": [
+      53.9533869,
+      27.7826988
+    ],
+    "Парковая 8": [
+      53.9503344,
+      27.4299508
+    ],
+    "Горный пер. 1А": [
+      53.94211079999999,
+      27.4282629
+    ],
+    "пр. Независимости 85Е": [
+      53.9233068,
+      27.6027093
+    ],
+    "Программистов 9": [
+      53.92623469999999,
+      27.6950788
+    ],
+    "б-р Мулявина 9": [
+      53.914082,
+      27.5870991
+    ],
+    "Ратомская 12А": [
+      53.9429283,
+      27.4528526
+    ],
+    "Широкая 72": [
+      53.9492032,
+      27.591469
+    ],
+    "Привокзальная пл. 7": [
+      53.8912907,
+      27.551069
+    ],
+    "пр. Независимости 58к22": [
+      53.9174202,
+      27.5899894
+    ],
+    "Чкалова 2": [
+      53.8817982,
+      27.535553
+    ],
+    "Алеся Гаруна 28": [
+      53.92476199999999,
+      27.445664
+    ],
+    "Матусевича 42к2": [
+      53.91658529999999,
+      27.4675932
+    ],
+    "Чкалова 17": [
+      53.8763174,
+      27.535227
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-30-h15-01fb10",
+      "from": "Аладовых 13",
+      "to": "Выход на ул. Нарочанская",
+      "hour": 15,
+      "factE": 13.9,
+      "factC": 15.5,
+      "yaMin": 14,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000089395.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:12)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-033e77",
+      "from": "Ложинская 18",
+      "to": "Руссиянова 51",
+      "hour": 15,
+      "factE": 11.9,
+      "factC": 13.9,
+      "yaMin": 10,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9329.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:08)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-08bf49",
+      "from": "Чернышевского 14",
+      "to": "Волгоградская 23",
+      "hour": 15,
+      "factE": 9.6,
+      "factC": 10.7,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2215.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:49)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-0c054b",
+      "from": "Бобруйская 4В",
+      "to": "Привокзальная пл. 5",
+      "hour": 15,
+      "factE": 3.3,
+      "factC": 4.9,
+      "yaMin": 2,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478817.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:55)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-0c48b5",
+      "from": "Киселёва 2А",
+      "to": "Коммунистическая 2",
+      "hour": 15,
+      "factE": 9.9,
+      "factC": 10.7,
+      "yaMin": 4,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9330.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:08)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-0cba24",
+      "from": "Новодворский сельсовет, 126",
+      "to": "Ангарская 38",
+      "hour": 15,
+      "factE": 8.2,
+      "factC": 11.5,
+      "yaMin": 3,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478809.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:54)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-0d2da9",
+      "from": "Нестерова 58",
+      "to": "Карвата 75",
+      "hour": 15,
+      "factE": 12.6,
+      "factC": 13.9,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478793.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:51)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-10e429",
+      "from": "Первомайская 24к1",
+      "to": "Немига 14",
+      "hour": 15,
+      "factE": 17.2,
+      "factC": 18.8,
+      "yaMin": 15,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478795.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:52)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-13a2f2",
+      "from": "Линейная 1",
+      "to": "Парковая 2",
+      "hour": 15,
+      "factE": 11.8,
+      "factC": 13.2,
+      "yaMin": 11,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478797.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:52)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-1472ef",
+      "from": "Руссиянова 51",
+      "to": "Ложинская 18",
+      "hour": 15,
+      "factE": 15.6,
+      "factC": 17.1,
+      "yaMin": 12,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478819.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:55)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-227b16",
+      "from": "Бобруйская 4В",
+      "to": "Киселёва 2А",
+      "hour": 15,
+      "factE": 7.3,
+      "factC": 8.4,
+      "yaMin": 13,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2212.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:49)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-228978",
+      "from": "Бехтерева 7к1",
+      "to": "пр. Рокоссовского 2",
+      "hour": 15,
+      "factE": 16.3,
+      "factC": 18,
+      "yaMin": 15,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478789.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:51)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-22f25b",
+      "from": "Бобруйская 4В",
+      "to": "Первомайская 24к1",
+      "hour": 15,
+      "factE": 5.8,
+      "factC": 6.9,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478811.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:54)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-260c1f",
+      "from": "Руссиянова 51",
+      "to": "Бехтерева 7к1",
+      "hour": 15,
+      "factE": 27.4,
+      "factC": 30.7,
+      "yaMin": 30,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478803.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:53)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-2e9b46",
+      "from": "пр. Рокоссовского 76",
+      "to": "Долгобродская 29к72",
+      "hour": 15,
+      "factE": 13.8,
+      "factC": 15.3,
+      "yaMin": 15,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478791.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:51)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-30746d",
+      "from": "Бабушкина 4А",
+      "to": "Сеницкий сельсовет, 16",
+      "hour": 15,
+      "factE": 14,
+      "factC": 17.1,
+      "yaMin": 5,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478805.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:53)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-3dc333",
+      "from": "Ваупшасова 4к52",
+      "to": "Долгобродская 29к72",
+      "hour": 15,
+      "factE": 14.1,
+      "factC": 15.8,
+      "yaMin": 8,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478813.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:54)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-3fb824",
+      "from": "Линейная 7Б",
+      "to": "Тимирязева 129к2",
+      "hour": 15,
+      "factE": 9.7,
+      "factC": 10.8,
+      "yaMin": 5,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000089401.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:13)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-415369",
+      "from": "пр. Рокоссовского 2",
+      "to": "Ваупшасова 4к52",
+      "hour": 15,
+      "factE": 11.8,
+      "factC": 13.3,
+      "yaMin": 9,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2216.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:49)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-440f4d",
+      "from": "Минская 67В",
+      "to": "Тюленина 26",
+      "hour": 15,
+      "factE": 16.2,
+      "factC": 13.8,
+      "yaMin": 5,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2211.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:49)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-49cf6c",
+      "from": "Парковая 8",
+      "to": "Горный пер. 1А",
+      "hour": 15,
+      "factE": 7.3,
+      "factC": 8.3,
+      "yaMin": 5,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478821.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:55)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-5163f0",
+      "from": "пр. Независимости 85Е",
+      "to": "Чернышевского 14",
+      "hour": 15,
+      "factE": 8.8,
+      "factC": 9.8,
+      "yaMin": 6,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478799.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:53)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-5250e6",
+      "from": "Парковая 8",
+      "to": "Тимирязева 129к2",
+      "hour": 15,
+      "factE": 10.3,
+      "factC": 11.5,
+      "yaMin": 6,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000089403.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:13)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-5f6c4a",
+      "from": "Программистов 9",
+      "to": "Карвата 75",
+      "hour": 15,
+      "factE": 13,
+      "factC": 14.6,
+      "yaMin": 13,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000089399.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:13)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-60c7ea",
+      "from": "Коммунистическая 2",
+      "to": "б-р Мулявина 9",
+      "hour": 15,
+      "factE": 15.7,
+      "factC": 16.7,
+      "yaMin": 6,
+      "notes": "[auto] red screenshot-auto Распознано из IMG_2213.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:49)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-66bb30",
+      "from": "Ратомская 12А",
+      "to": "Парковая 8",
+      "hour": 15,
+      "factE": 13.7,
+      "factC": 15,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478801.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:53)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-6ec24d",
+      "from": "б-р Мулявина 9",
+      "to": "Киселёва 2А",
+      "hour": 15,
+      "factE": 13.7,
+      "factC": 14.8,
+      "yaMin": 9,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2210.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:48)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-77fa2c",
+      "from": "Тимирязева 129к2",
+      "to": "Выход на ул. Нарочанская",
+      "hour": 15,
+      "factE": 11.1,
+      "factC": 12.4,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000089389.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:12)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-8a414a",
+      "from": "Тимирязева 129к2",
+      "to": "Линейная 1",
+      "hour": 15,
+      "factE": 13.3,
+      "factC": 14.7,
+      "yaMin": 9,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478825.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:56)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-8a99db",
+      "from": "пр. Независимости 85Е",
+      "to": "Волгоградская 23",
+      "hour": 15,
+      "factE": 10.3,
+      "factC": 11.5,
+      "yaMin": 8,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000089397.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:12)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-928d3b",
+      "from": "Горный пер. 1А",
+      "to": "Ратомская 12А",
+      "hour": 15,
+      "factE": 15.8,
+      "factC": 17.2,
+      "yaMin": 9,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2217.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:49)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-a2a96f",
+      "from": "Широкая 72",
+      "to": "пр. Независимости 85Е",
+      "hour": 15,
+      "factE": 14.7,
+      "factC": 16.4,
+      "yaMin": 14,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478783.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:50)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-a37f50",
+      "from": "Привокзальная пл. 7",
+      "to": "Привокзальная пл. 5",
+      "hour": 15,
+      "factE": 4.2,
+      "factC": 5.3,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9336.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:14)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-aa7bdf",
+      "from": "пр. Рокоссовского 76",
+      "to": "Бехтерева 7к1",
+      "hour": 15,
+      "factE": 14.9,
+      "factC": 16.6,
+      "yaMin": 13,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000089383.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:11)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-b6b43b",
+      "from": "пр. Независимости 58к22",
+      "to": "Чернышевского 14",
+      "hour": 15,
+      "factE": 12,
+      "factC": 13.5,
+      "yaMin": 13,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000089387.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:12)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-c48361",
+      "from": "Бабушкина 4А",
+      "to": "Сеницкий сельсовет, 16",
+      "hour": 15,
+      "factE": 15.8,
+      "factC": 21.4,
+      "yaMin": 5,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9331.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:08)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-c8e3c2",
+      "from": "Первомайская 24к1",
+      "to": "б-р Мулявина 9",
+      "hour": 15,
+      "factE": 9.1,
+      "factC": 10.3,
+      "yaMin": 8,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478815.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:55)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-cb71c1",
+      "from": "Бобруйская 4В",
+      "to": "Чкалова 2",
+      "hour": 15,
+      "factE": 6.8,
+      "factC": 8.2,
+      "yaMin": 11,
+      "notes": "[auto] green screenshot-auto Распознано из 1000478823.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:56)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-d47563",
+      "from": "Алеся Гаруна 28",
+      "to": "Матусевича 42к2",
+      "hour": 15,
+      "factE": 11.9,
+      "factC": 13.2,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000089391.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:12)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-eac9ea",
+      "from": "Чкалова 17",
+      "to": "Минская 67В",
+      "hour": 15,
+      "factE": 15.9,
+      "factC": 13.1,
+      "yaMin": 8,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9328.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:07)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-ecf409",
+      "from": "Тимирязева 129к2",
+      "to": "Тимирязева 129к2",
+      "hour": 15,
+      "factE": 14.7,
+      "factC": 16.4,
+      "yaMin": 8,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2214.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=upload."
+    },
+    {
+      "id": "calib-2026-04-30-h15-ef5caa",
+      "from": "Немига 14",
+      "to": "б-р Мулявина 9",
+      "hour": 15,
+      "factE": 15.6,
+      "factC": 17.2,
+      "yaMin": 19,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478785.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:50)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-f7e012",
+      "from": "пр. Независимости 58к22",
+      "to": "Первомайская 24к1",
+      "hour": 15,
+      "factE": 14.3,
+      "factC": 15.7,
+      "yaMin": 11,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478787.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:50)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-f94c68",
+      "from": "пр. Независимости 58к22",
+      "to": "Волгоградская 23",
+      "hour": 15,
+      "factE": 13.4,
+      "factC": 15.1,
+      "yaMin": 14,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9335.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:14)."
+    },
+    {
+      "id": "calib-2026-04-30-h15-ffd949",
+      "from": "Линейная 1",
+      "to": "Парковая 8",
+      "hour": 15,
+      "factE": 9.9,
+      "factC": 11.4,
+      "yaMin": 11,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000478807.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 15:54)."
+    }
+  ]
+}

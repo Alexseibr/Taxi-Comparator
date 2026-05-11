@@ -1,0 +1,23 @@
+[Unit]
+Description=RWB Taxi screen receiver (приём скринов Yandex Go и распознавание через Gemini Vision)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /opt/rwbtaxi-screens/screen-receiver.mjs
+EnvironmentFile=-/etc/rwbtaxi-calib.env
+Restart=on-failure
+RestartSec=3
+User=www-data
+Group=www-data
+StandardOutput=journal
+StandardError=journal
+# Песочница: пишем только в директорию скринов и WB
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/rwbtaxi/data/screens /var/www/rwbtaxi/data/wb /var/www/rwbtaxi/data/recommendations /var/www/rwbtaxi/data/calib
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

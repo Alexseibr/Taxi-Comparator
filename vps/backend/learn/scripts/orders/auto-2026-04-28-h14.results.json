@@ -1,0 +1,70 @@
+{
+  "date": "2026-04-28",
+  "day": "tuesday",
+  "calibrationVersion": 3,
+  "results": [
+    {
+      "id": "calib-2026-04-28-h14-3a14b5",
+      "from": "Платонова 20Бк1",
+      "to": "пр. Независимости 88",
+      "hour": 14,
+      "factE": 9.1,
+      "factC": 10.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000088870.jpg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=14:41.",
+      "fromPt": [
+        53.9102533,
+        27.5956951
+      ],
+      "toPt": [
+        53.9250672,
+        27.6227293
+      ],
+      "km": 3.4098,
+      "freeMin": 6.025,
+      "ttMult": 1.032258064516129,
+      "ttN": 6,
+      "ttTotal": 6,
+      "ttRatios": [
+        1,
+        1,
+        0.81,
+        1,
+        1,
+        1
+      ],
+      "ttMeanRatio": 0.96875,
+      "min": 6.219354838709678,
+      "minSource": "tomtom",
+      "rC": 10,
+      "rE": 9,
+      "sC": 1.01,
+      "sE": 1.011111111111111,
+      "hb": 1.001100110011001,
+      "spdOSRM": 33.95651452282158,
+      "spdTT": 32.8953734439834,
+      "spdYa": null,
+      "dSpdPct": null,
+      "spdG": 19.829032258064515,
+      "dSpdGPct": null,
+      "yaSurgeC": null,
+      "bazaYC": null,
+      "bazaRatio": null,
+      "googleKm": 4.098,
+      "googleFreeMin": 11.15,
+      "googleTrafficMin": 12.4,
+      "gMult": 1.1121076233183858,
+      "weather": {
+        "condition": "Cloudy",
+        "conditionType": "CLOUDY",
+        "tempC": 6.7,
+        "precipMmH": 0.01,
+        "precipProb": 20,
+        "precipType": "RAIN",
+        "windKmh": 19,
+        "visibilityKm": 16,
+        "cloudPct": 94,
+        "isDay": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "date": "2026-04-28",
+  "day": "tuesday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 11:00. Накоплено: 10 заказов.",
+  "coords": {
+    "Лебяжий": [
+      53.9386331,
+      27.466989
+    ],
+    "Рынок Ждановичи": [
+      53.9484929,
+      27.4284167
+    ],
+    "Выход на пр-т Победителей": [
+      53.9323594,
+      27.5069765
+    ],
+    "Каменная Горка": [
+      53.91656159999999,
+      27.4274313
+    ],
+    "Кунцевшина": [
+      53.9118376,
+      27.4509606
+    ],
+    "Дрозды клуб": [
+      53.9549123,
+      27.4472087
+    ],
+    "пр. Независимости 16": [
+      53.8982809,
+      27.5550007
+    ],
+    "Площадь Якуба Коласа": [
+      53.9145879,
+      27.5804725
+    ],
+    "Чюрлёниса 24": [
+      53.8548008,
+      27.4847876
+    ],
+    "агрогородок Сеница": [
+      53.8245054,
+      27.5187439
+    ],
+    "Аэродромная 109": [
+      53.8724247,
+      27.5551396
+    ],
+    "Иркутская 37": [
+      53.8719976,
+      27.6796746
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-28-h11-01e906",
+      "from": "Лебяжий",
+      "to": "Рынок Ждановичи",
+      "hour": 11,
+      "factE": 8.2,
+      "factC": 9.3,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_1865.png моделью gemini-2.5-flash-lite. App=Yandex Go. Time=11:53."
+    },
+    {
+      "id": "calib-2026-04-28-h11-0b7e17",
+      "from": "Выход на пр-т Победителей",
+      "to": "Рынок Ждановичи",
+      "hour": 11,
+      "factE": 8.2,
+      "factC": 9.3,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_1866.png моделью gemini-2.5-flash. App=Yandex Go. Time=11:53."
+    },
+    {
+      "id": "calib-2026-04-28-h11-0c951d",
+      "from": "Каменная Горка",
+      "to": "Кунцевшина",
+      "hour": 11,
+      "factE": 7.5,
+      "factC": 7.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_1869.png моделью gemini-2.5-flash-lite. App=Yandex Go. Time=11:58."
+    },
+    {
+      "id": "calib-2026-04-28-h11-518afb",
+      "from": "Каменная Горка",
+      "to": "Кунцевшина",
+      "hour": 11,
+      "factE": 7.5,
+      "factC": 7.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_1870.png моделью gemini-2.5-flash-lite. App=Yandex Go. Time=11:58."
+    },
+    {
+      "id": "calib-2026-04-28-h11-616bcb",
+      "from": "Дрозды клуб",
+      "to": "Рынок Ждановичи",
+      "hour": 11,
+      "factE": 10.4,
+      "factC": 10.2,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2016.png моделью gemini-2.5-flash-lite. App=Yandex Go. Time=11:00. | Маршрут развёрнут вручную (OCR перепутал направление)."
+    },
+    {
+      "id": "calib-2026-04-28-h11-6bb7fa",
+      "from": "пр. Независимости 16",
+      "to": "Площадь Якуба Коласа",
+      "hour": 11,
+      "factE": 6.2,
+      "factC": 6.9,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4835.png моделью gemini-2.5-flash-lite. App=Yandex Go. Time=11:37."
+    },
+    {
+      "id": "calib-2026-04-28-h11-7e1b40",
+      "from": "пр. Независимости 16",
+      "to": "Чюрлёниса 24",
+      "hour": 11,
+      "factE": 11.1,
+      "factC": 12.6,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4836.png моделью gemini-2.5-flash. App=Yandex Go. Time=11:37."
+    },
+    {
+      "id": "calib-2026-04-28-h11-b8709d",
+      "from": "пр. Независимости 16",
+      "to": "агрогородок Сеница",
+      "hour": 11,
+      "factE": 13.1,
+      "factC": 15,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4838.png моделью gemini-2.5-flash-lite. App=Yandex Go. Time=11:38."
+    },
+    {
+      "id": "calib-2026-04-28-h11-c7bd0d",
+      "from": "пр. Независимости 16",
+      "to": "Аэродромная 109",
+      "hour": 11,
+      "factE": 7.4,
+      "factC": 8.4,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4834.png моделью gemini-2.5-flash. App=Yandex Go. Time=11:37."
+    },
+    {
+      "id": "calib-2026-04-28-h11-cdb66d",
+      "from": "пр. Независимости 16",
+      "to": "Иркутская 37",
+      "hour": 11,
+      "factE": 12.1,
+      "factC": 13.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4837.png моделью gemini-2.5-flash-lite. App=Yandex Go. Time=11:37."
+    }
+  ]
+}

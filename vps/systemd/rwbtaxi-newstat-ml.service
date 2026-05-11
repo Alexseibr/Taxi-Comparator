@@ -1,0 +1,22 @@
+[Unit]
+Description=rwbtaxi newstat ML service (CatBoost FastAPI)
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=rwbtaxi-newstat
+Group=rwbtaxi-newstat
+WorkingDirectory=/opt/rwbtaxi-newstat-ml
+EnvironmentFile=/etc/rwbtaxi-newstat-ml.env
+ExecStart=/opt/rwbtaxi-newstat-ml/venv/bin/uvicorn app:app --host 127.0.0.1 --port 3013 --workers 1
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/var/log/rwbtaxi-newstat-ml.log
+StandardError=append:/var/log/rwbtaxi-newstat-ml.log
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

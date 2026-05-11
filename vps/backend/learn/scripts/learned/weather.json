@@ -1,0 +1,1127 @@
+{
+  "generatedAt": "2026-04-26T14:58:28.158Z",
+  "source": "Open-Meteo (forecast/archive)",
+  "n": 112,
+  "byOrderId": {
+    "9843": {
+      "precipMm": 0.2,
+      "rainMm": 0.1,
+      "snowCm": 0.07,
+      "tempC": 2.3,
+      "windKmh": 23,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9844": {
+      "precipMm": 0.4,
+      "rainMm": 0.3,
+      "snowCm": 0.07,
+      "tempC": 2.1,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9845": {
+      "precipMm": 0.4,
+      "rainMm": 0.3,
+      "snowCm": 0.07,
+      "tempC": 2.1,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9846": {
+      "precipMm": 0.4,
+      "rainMm": 0.3,
+      "snowCm": 0.07,
+      "tempC": 2.1,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9847": {
+      "precipMm": 0.2,
+      "rainMm": 0.1,
+      "snowCm": 0.07,
+      "tempC": 2.6,
+      "windKmh": 24.1,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9848": {
+      "precipMm": 0.2,
+      "rainMm": 0.1,
+      "snowCm": 0.07,
+      "tempC": 2.6,
+      "windKmh": 24.1,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9849": {
+      "precipMm": 0.2,
+      "rainMm": 0.1,
+      "snowCm": 0.07,
+      "tempC": 2.6,
+      "windKmh": 24.1,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9850": {
+      "precipMm": 0.3,
+      "rainMm": 0.1,
+      "snowCm": 0.14,
+      "tempC": 1.8,
+      "windKmh": 21.6,
+      "isWet": false,
+      "isSnow": true,
+      "isCold": false
+    },
+    "9851": {
+      "precipMm": 0.3,
+      "rainMm": 0.1,
+      "snowCm": 0.14,
+      "tempC": 1.8,
+      "windKmh": 21.6,
+      "isWet": false,
+      "isSnow": true,
+      "isCold": false
+    },
+    "9852": {
+      "precipMm": 0.4,
+      "rainMm": 0.2,
+      "snowCm": 0.14,
+      "tempC": 0.7,
+      "windKmh": 18.7,
+      "isWet": false,
+      "isSnow": true,
+      "isCold": false
+    },
+    "9853": {
+      "precipMm": 0.4,
+      "rainMm": 0.2,
+      "snowCm": 0.14,
+      "tempC": 0.7,
+      "windKmh": 18.7,
+      "isWet": false,
+      "isSnow": true,
+      "isCold": false
+    },
+    "9864": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.9,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9865": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.9,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9866": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.9,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9867": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.9,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9868": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.9,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9869": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.9,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9870": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.9,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9871": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.3,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9873": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 3.3,
+      "windKmh": 23,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9874": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 3.3,
+      "windKmh": 23,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9875": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 3.3,
+      "windKmh": 23,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9876": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 3.3,
+      "windKmh": 23,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9877": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 3.3,
+      "windKmh": 23,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9878": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.4,
+      "windKmh": 24.5,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9879": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.6,
+      "windKmh": 28.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9880": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 2.6,
+      "windKmh": 28.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9882": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 3.7,
+      "windKmh": 27.7,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9883": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 3,
+      "windKmh": 20.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9884": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.7,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9885": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.7,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9886": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.7,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9887": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.7,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9888": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.7,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9889": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.7,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9890": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.7,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9893": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.3,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9894": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.3,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9895": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.3,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9896": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.3,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9897": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.3,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9898": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.3,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9899": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.3,
+      "windKmh": 25.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9900": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 26.3,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9901": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 26.3,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9902": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 26.3,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9903": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 26.3,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9904": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 26.3,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9905": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 26.3,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9906": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 26.3,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9907": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27.7,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9908": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.6,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9909": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5,
+      "windKmh": 30.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9910": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5,
+      "windKmh": 30.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9912": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9913": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9914": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9915": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9916": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9917": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9918": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9919": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9920": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 3,
+      "windKmh": 20.9,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9922": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.8,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9923": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.8,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9924": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.8,
+      "windKmh": 23.4,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9947": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.6,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9948": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.6,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9967": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9968": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9971": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9972": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9973": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9974": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9975": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9976": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.1,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9977": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.1,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9978": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.1,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9979": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.1,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9980": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 4.7,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9982": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9983": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9984": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9985": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9986": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9987": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9988": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9989": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9990": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9991": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9992": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9993": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9994": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9995": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9996": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9997": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9998": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "9999": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.7,
+      "windKmh": 25.2,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0001": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0002": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0003": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0004": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0005": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0006": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0007": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0008": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0009": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0010": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0011": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0012": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0013": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.4,
+      "windKmh": 27,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    },
+    "0014": {
+      "precipMm": 0,
+      "rainMm": 0,
+      "snowCm": 0,
+      "tempC": 5.2,
+      "windKmh": 24.8,
+      "isWet": false,
+      "isSnow": false,
+      "isCold": false
+    }
+  }
+}

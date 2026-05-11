@@ -1,0 +1,69 @@
+{
+  "date": "2026-04-28",
+  "day": "tuesday",
+  "calibrationVersion": 3,
+  "results": [
+    {
+      "id": "calib-2026-04-28-h19-94ecae",
+      "from": "Томский пер. 20",
+      "to": "Купаловская",
+      "hour": 19,
+      "factE": 13,
+      "factC": 14.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000088880.jpg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=19:44.",
+      "fromPt": [
+        53.8706062,
+        27.6804054
+      ],
+      "toPt": [
+        53.9137871,
+        27.7481653
+      ],
+      "km": 8.6285,
+      "freeMin": 11.74,
+      "ttMult": 1,
+      "ttN": 5,
+      "ttTotal": 6,
+      "ttRatios": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ttMeanRatio": 1,
+      "min": 11.74,
+      "minSource": "tomtom",
+      "rC": 10,
+      "rE": 9,
+      "sC": 1.47,
+      "sE": 1.4444444444444444,
+      "hb": 0.982615268329554,
+      "spdOSRM": 44.09795570698467,
+      "spdTT": 44.09795570698467,
+      "spdYa": null,
+      "dSpdPct": null,
+      "spdG": 44.8261515601783,
+      "dSpdGPct": null,
+      "yaSurgeC": null,
+      "bazaYC": null,
+      "bazaRatio": null,
+      "googleKm": 8.38,
+      "googleFreeMin": 11.333333333333334,
+      "googleTrafficMin": 11.216666666666667,
+      "gMult": 0.9897058823529412,
+      "weather": {
+        "condition": "Mostly sunny",
+        "conditionType": "MOSTLY_CLEAR",
+        "tempC": 4.9,
+        "precipMmH": 0.04,
+        "precipProb": 0,
+        "precipType": "RAIN",
+        "windKmh": 13,
+        "visibilityKm": 16,
+        "cloudPct": 21,
+        "isDay": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "date": "2026-05-02",
+  "day": "saturday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 07:00. Накоплено: 5 заказов.",
+  "coords": {
+    "Коммунистическая 2": [
+      53.9083263,
+      27.5717086
+    ],
+    "Немига 14": [
+      53.9024592,
+      27.5480175
+    ],
+    "Новодворский сельсовет, 126": [
+      53.9006011,
+      27.558972
+    ],
+    "Ангарская 38": [
+      53.87308179999999,
+      27.6853273
+    ],
+    "Аладовых 13": [
+      53.921905,
+      27.4558475
+    ],
+    "Линейная 27": [
+      53.94276310000001,
+      27.4331424
+    ],
+    "Ратомская 12А": [
+      53.9429283,
+      27.4528526
+    ],
+    "Линейная 1": [
+      53.94814419999999,
+      27.4166695
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-05-02-h07-2c4412",
+      "from": "Коммунистическая 2",
+      "to": "Немига 14",
+      "hour": 7,
+      "factE": 5,
+      "factC": 6.2,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2681.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 07:59). Оператор: Вова."
+    },
+    {
+      "id": "calib-2026-05-02-h07-d4b93c",
+      "from": "Новодворский сельсовет, 126",
+      "to": "Ангарская 38",
+      "hour": 7,
+      "factE": 5.6,
+      "factC": 6.4,
+      "yaMin": 3,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2682.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 07:59). Оператор: Вова."
+    },
+    {
+      "id": "calib-2026-05-02-h07-d5afe4",
+      "from": "Аладовых 13",
+      "to": "Линейная 27",
+      "hour": 7,
+      "factE": 12,
+      "factC": 14.4,
+      "yaMin": 9,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2680.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 07:59). Оператор: Вова."
+    },
+    {
+      "id": "calib-2026-05-02-h07-e644b1",
+      "from": "Ратомская 12А",
+      "to": "Аладовых 13",
+      "hour": 7,
+      "factE": 13.5,
+      "factC": 15.2,
+      "yaMin": 14,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2683.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 07:59). Оператор: Вова."
+    },
+    {
+      "id": "calib-2026-05-02-h07-f8fdcd",
+      "from": "Линейная 1",
+      "to": "Ратомская 12А",
+      "hour": 7,
+      "factE": 8.8,
+      "factC": 9.8,
+      "yaMin": 8,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_2684.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 07:59). Оператор: Вова."
+    }
+  ]
+}

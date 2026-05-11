@@ -1,0 +1,70 @@
+{
+  "date": "2026-04-28",
+  "day": "tuesday",
+  "calibrationVersion": 3,
+  "results": [
+    {
+      "id": "calib-2026-04-28-h16-3f2c0e",
+      "from": "Фабрициуса 30",
+      "to": "Фаниполь",
+      "hour": 16,
+      "factE": 40.8,
+      "factC": 46,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4857.png моделью gemini-2.5-flash-lite. App=Yandex Go. Time=16:09.",
+      "fromPt": [
+        53.8860144,
+        27.5343358
+      ],
+      "toPt": [
+        53.745104,
+        27.333827
+      ],
+      "km": 23.264200000000002,
+      "freeMin": 23.334999999999997,
+      "ttMult": 1.0344827586206897,
+      "ttN": 6,
+      "ttTotal": 6,
+      "ttRatios": [
+        0.8,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ttMeanRatio": 0.9666666666666667,
+      "min": 24.139655172413793,
+      "minSource": "tomtom",
+      "rC": 10,
+      "rE": 9,
+      "sC": 4.6,
+      "sE": 4.533333333333333,
+      "hb": 0.9855072463768116,
+      "spdOSRM": 59.81795586029571,
+      "spdTT": 57.824023998285845,
+      "spdYa": null,
+      "dSpdPct": null,
+      "spdG": 50.9594306049822,
+      "dSpdGPct": null,
+      "yaSurgeC": null,
+      "bazaYC": null,
+      "bazaRatio": null,
+      "googleKm": 23.866,
+      "googleFreeMin": 28.516666666666666,
+      "googleTrafficMin": 28.1,
+      "gMult": 0.9853886616014027,
+      "weather": {
+        "condition": "Mostly cloudy",
+        "conditionType": "MOSTLY_CLOUDY",
+        "tempC": 6.7,
+        "precipMmH": 0.08,
+        "precipProb": 20,
+        "precipType": "RAIN",
+        "windKmh": 19,
+        "visibilityKm": 16,
+        "cloudPct": 71,
+        "isDay": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "sourceFile": "2026-04-26-1422.json",
+  "backfilledAt": "2026-04-27T10:28:13.305Z",
+  "date": "2026-04-26",
+  "day": "sunday",
+  "fileMinute": 22,
+  "successCount": 2,
+  "totalCount": 2,
+  "results": [
+    {
+      "id": "9947",
+      "from": "Кирова 23",
+      "to": "Дружная 26",
+      "hour": 14,
+      "day": "sunday",
+      "departureTime": "2026-05-03T11:22:00.000Z",
+      "yaMin": 42,
+      "yaSurgeC": null,
+      "factC": 43.6,
+      "factE": 35,
+      "googleKm": 25.225,
+      "googleFreeMin": 31.22,
+      "googleTrafficMin": 30.53,
+      "gMult": 0.978
+    },
+    {
+      "id": "9948",
+      "from": "Кирова 23",
+      "to": "Кульман 9",
+      "hour": 14,
+      "day": "sunday",
+      "departureTime": "2026-05-03T11:22:00.000Z",
+      "yaMin": 12,
+      "yaSurgeC": null,
+      "factC": 8,
+      "factE": 6.5,
+      "googleKm": 6.74,
+      "googleFreeMin": 13.78,
+      "googleTrafficMin": 13,
+      "gMult": 0.943
+    }
+  ]
+}

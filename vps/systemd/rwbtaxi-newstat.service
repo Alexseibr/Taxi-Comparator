@@ -1,0 +1,24 @@
+[Unit]
+Description=RWB Taxi - Newstat (fraud finance) service
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=rwbtaxi-newstat
+Group=rwbtaxi-newstat
+EnvironmentFile=/etc/rwbtaxi-newstat.env
+WorkingDirectory=/opt/rwbtaxi-newstat
+ExecStart=/usr/bin/node server.mjs
+Restart=on-failure
+RestartSec=3
+StandardOutput=append:/var/log/rwbtaxi-newstat.log
+StandardError=append:/var/log/rwbtaxi-newstat.log
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/log
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,169 @@
+{
+  "generatedAt": "2026-04-27T17:05:10.059Z",
+  "datasetSize": 412,
+  "withYaSurge": 233,
+  "bySlot": {
+    "sunday-h10": {
+      "n": 8,
+      "meanSurge": 0.447,
+      "std": 0.202
+    },
+    "sunday-h11": {
+      "n": 8,
+      "meanSurge": 0.731,
+      "std": 0.375
+    },
+    "sunday-h12": {
+      "n": 10,
+      "meanSurge": 1.859,
+      "std": 0.66
+    },
+    "sunday-h13": {
+      "n": 27,
+      "meanSurge": 2.321,
+      "std": 1.618
+    },
+    "sunday-h14": {
+      "n": 2,
+      "meanSurge": 2.58,
+      "std": 2.517
+    },
+    "sunday-h15": {
+      "n": 44,
+      "meanSurge": 3.009,
+      "std": 5.343
+    },
+    "sunday-h17": {
+      "n": 17,
+      "meanSurge": 2.074,
+      "std": 0.589
+    },
+    "sunday-h19": {
+      "n": 11,
+      "meanSurge": 1.661,
+      "std": 0.49
+    },
+    "sunday-h20": {
+      "n": 29,
+      "meanSurge": 3.254,
+      "std": 3.25
+    },
+    "sunday-h22": {
+      "n": 24,
+      "meanSurge": 2.396,
+      "std": 0.966
+    },
+    "sunday-h9": {
+      "n": 10,
+      "meanSurge": 0.71,
+      "std": 0.438
+    },
+    "weekday-h7": {
+      "n": 60,
+      "meanSurge": 2.873,
+      "std": 2.426
+    },
+    "weekday-h8": {
+      "n": 17,
+      "meanSurge": 2.245,
+      "std": 0.423
+    },
+    "weekday-h9": {
+      "n": 16,
+      "meanSurge": 0.968,
+      "std": 0.318
+    },
+    "weekday-h10": {
+      "n": 30,
+      "meanSurge": 1.18,
+      "std": 0.324
+    },
+    "weekday-h11": {
+      "n": 11,
+      "meanSurge": 0.996,
+      "std": 0.22
+    },
+    "weekday-h13": {
+      "n": 10,
+      "meanSurge": 1.655,
+      "std": 0.563
+    },
+    "weekday-h15": {
+      "n": 68,
+      "meanSurge": 0.558,
+      "std": 0.107
+    },
+    "weekday-h19": {
+      "n": 7,
+      "meanSurge": 1.809,
+      "std": 0.499
+    },
+    "weekday-h20": {
+      "n": 1,
+      "meanSurge": 1.54,
+      "std": 0
+    }
+  },
+  "bySlotOpen": {
+    "sunday-h10": {
+      "n": 8,
+      "meanSurge": 0.962,
+      "std": 0.498
+    },
+    "sunday-h11": {
+      "n": 8,
+      "meanSurge": 3.462,
+      "std": 2.006
+    },
+    "sunday-h15": {
+      "n": 44,
+      "meanSurge": 3.032,
+      "std": 5.34
+    },
+    "sunday-h17": {
+      "n": 13,
+      "meanSurge": 2,
+      "std": 0.512
+    },
+    "sunday-h19": {
+      "n": 11,
+      "meanSurge": 1.7,
+      "std": 0.502
+    },
+    "sunday-h22": {
+      "n": 24,
+      "meanSurge": 2.45,
+      "std": 0.958
+    },
+    "weekday-h7": {
+      "n": 41,
+      "meanSurge": 2.783,
+      "std": 0.792
+    },
+    "weekday-h8": {
+      "n": 17,
+      "meanSurge": 2.276,
+      "std": 0.428
+    },
+    "weekday-h9": {
+      "n": 16,
+      "meanSurge": 1,
+      "std": 0.314
+    },
+    "weekday-h10": {
+      "n": 30,
+      "meanSurge": 1.233,
+      "std": 0.327
+    },
+    "weekday-h11": {
+      "n": 11,
+      "meanSurge": 1.055,
+      "std": 0.216
+    },
+    "weekday-h13": {
+      "n": 10,
+      "meanSurge": 1.71,
+      "std": 0.567
+    }
+  }
+}

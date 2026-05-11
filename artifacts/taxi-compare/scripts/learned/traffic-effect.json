@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-05-10T07:59:19.014Z",
+  "n": 350,
+  "ttMean": 1.064,
+  "ttRange": [
+    1,
+    1.5
+  ],
+  "correlation": 0.03,
+  "note": "ttMean=1.06, корреляция surge↔traffic = 0.03."
+}

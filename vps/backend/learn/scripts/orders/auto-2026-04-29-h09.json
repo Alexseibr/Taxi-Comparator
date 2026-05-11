@@ -1,0 +1,724 @@
+{
+  "date": "2026-04-29",
+  "day": "wednesday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 09:00. Накоплено: 56 заказов.",
+  "coords": {
+    "Курганная 18": [
+      53.8532056,
+      27.461594
+    ],
+    "пр. Независимости 88": [
+      53.9250672,
+      27.6227293
+    ],
+    "1-й Енисейский пер. 18": [
+      53.8710345,
+      27.6765953
+    ],
+    "проспект Независимости, 88": [
+      53.9250672,
+      27.6227293
+    ],
+    "Молодёжная 22": [
+      53.8582279,
+      27.6896837
+    ],
+    "Будславская 62": [
+      53.9603688,
+      27.5475109
+    ],
+    "пр. Независимости 3": [
+      53.8949211,
+      27.5457143
+    ],
+    "Комаровский рынок": [
+      53.9198199,
+      27.5775762
+    ],
+    "Бурдейного 45": [
+      53.90350910000001,
+      27.4425834
+    ],
+    "Томская 53": [
+      53.8740175,
+      27.6806579
+    ],
+    "Институт культуры": [
+      53.8851081,
+      27.5390849
+    ],
+    "Струговская 10": [
+      53.9362642,
+      27.4405343
+    ],
+    "д. Каменная Горка": [
+      53.932764,
+      27.412679
+    ],
+    "Корона": [
+      53.8717899,
+      27.5725203
+    ],
+    "Выход № 1 на ул. Орловскую": [
+      53.9312312,
+      27.5418352
+    ],
+    "Площадь Ленина": [
+      53.892894,
+      27.547886
+    ],
+    "Дворец спорта": [
+      53.91062849999999,
+      27.5495588
+    ],
+    "Площадь Победы": [
+      53.9085303,
+      27.5748428
+    ],
+    "Немига": [
+      53.9006323,
+      27.5470923
+    ],
+    "Galileo": [
+      53.890522,
+      27.5537548
+    ],
+    "Кунцевщина": [
+      53.9118376,
+      27.4509606
+    ],
+    "Первомайская": [
+      53.9014626,
+      27.5767709
+    ],
+    "Долгиновский тракт, 75": [
+      53.9438763,
+      27.5400571
+    ],
+    "Кирова 2": [
+      53.89163910000001,
+      27.5526047
+    ],
+    "Ржавецкая 35": [
+      53.9390826,
+      27.4582498
+    ],
+    "Притыцкого 28А": [
+      53.90994540000001,
+      27.4961338
+    ],
+    "Масюковщина 8Б": [
+      53.9350235,
+      27.4377864
+    ],
+    "Суражская 1А": [
+      53.8852607,
+      27.5391308
+    ],
+    "микрорайон Курасовщина": [
+      53.8442549,
+      27.5066892
+    ],
+    "Лошица": [
+      53.8394624,
+      27.5745104
+    ],
+    "Восточная 180": [
+      53.9508944,
+      27.6083613
+    ],
+    "Автовокзал Восточный": [
+      53.8773184,
+      27.5992545
+    ],
+    "Автозаводская": [
+      53.8753355,
+      27.6612646
+    ],
+    "Площадь Якуба Коласа": [
+      53.9145879,
+      27.5804725
+    ],
+    "ЦУМ": [
+      53.9163663,
+      27.5857691
+    ],
+    "Солнечный пер. 9": [
+      53.9552765,
+      27.511465
+    ],
+    "Нёманская 78": [
+      53.9252081,
+      27.4329257
+    ],
+    "Белградская 11": [
+      53.8638029,
+      27.5372374
+    ],
+    "пер. Ивана Науменко 6": [
+      53.9650425,
+      27.5325285
+    ],
+    "Ратомская 18": [
+      53.9413133,
+      27.4554725
+    ],
+    "улица Александра Воинова": [
+      53.965396,
+      27.55973
+    ],
+    "микрорайон Серебрянка": [
+      53.86268949999999,
+      27.6015979
+    ],
+    "Каменная Горка": [
+      53.91656159999999,
+      27.4274313
+    ],
+    "Новодворский сельсовет, 35": [
+      53.9006011,
+      27.558972
+    ],
+    "Минск-Пасс": [
+      53.8908324,
+      27.5507367
+    ],
+    "Сергея Есенина 38": [
+      53.8522489,
+      27.4497126
+    ],
+    "Нёманская 39": [
+      53.9139445,
+      27.4229221
+    ],
+    "Артёма 28": [
+      53.88448950000001,
+      27.6734299
+    ],
+    "Большевик": [
+      54.00490569999999,
+      27.5678526
+    ],
+    "Неждановой 36": [
+      53.9431769,
+      27.5778338
+    ],
+    "пр. Газеты Звязда 14к3": [
+      53.8675593,
+      27.4688702
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-29-h09-0e215a",
+      "from": "Курганная 18",
+      "to": "пр. Независимости 88",
+      "hour": 9,
+      "factC": 34.5,
+      "notes": "[auto] red screenshot-auto Распознано из screen-2026-04-29-h07-107e59.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:39."
+    },
+    {
+      "id": "calib-2026-04-29-h09-0eab6b",
+      "from": "1-й Енисейский пер. 18",
+      "to": "проспект Независимости, 88",
+      "hour": 9,
+      "factE": 22.7,
+      "factC": 26.1,
+      "yaMin": 25,
+      "notes": "[auto] red screenshot-auto Распознано из screen-2026-04-29-h07-8e6917.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:45."
+    },
+    {
+      "id": "calib-2026-04-29-h09-2d9399",
+      "from": "Молодёжная 22",
+      "to": "проспект Независимости, 88",
+      "hour": 9,
+      "factE": 39.2,
+      "factC": 43.2,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-2026-04-29-h07-86f304.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:43."
+    },
+    {
+      "id": "calib-2026-04-29-h09-4dd6aa",
+      "from": "Будславская 62",
+      "to": "проспект Независимости, 88",
+      "hour": 9,
+      "factE": 22.4,
+      "factC": 25,
+      "notes": "[auto] red screenshot-auto Распознано из screen-2026-04-29-h07-7ab485.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:47."
+    },
+    {
+      "id": "calib-2026-04-29-h09-8805a3",
+      "from": "пр. Независимости 3",
+      "to": "Комаровский рынок",
+      "hour": 9,
+      "factE": 11.9,
+      "factC": 13.5,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-2026-04-28-h22-f97f11.png моделью gemini-2.5-flash. App=Yandex Go. Time=22:05."
+    },
+    {
+      "id": "calib-2026-04-29-h09-903696",
+      "from": "Бурдейного 45",
+      "to": "пр. Независимости 88",
+      "hour": 9,
+      "factE": 34.3,
+      "factC": 37.8,
+      "notes": "[auto] red screenshot-auto Распознано из screen-2026-04-29-h07-464230.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:40."
+    },
+    {
+      "id": "calib-2026-04-29-h09-a3dd0d",
+      "from": "Томская 53",
+      "to": "проспект Независимости, 88",
+      "hour": 9,
+      "factE": 23.4,
+      "factC": 29,
+      "notes": "[auto] red screenshot-auto Распознано из screen-2026-04-29-h07-368509.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:43."
+    },
+    {
+      "id": "calib-2026-04-29-h09-c09b54",
+      "from": "пр. Независимости 3",
+      "to": "Институт культуры",
+      "hour": 9,
+      "factE": 9,
+      "factC": 10,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-2026-04-28-h22-dbb9de.png моделью gemini-2.5-flash. App=Yandex Go. Time=22:04."
+    },
+    {
+      "id": "calib-2026-04-29-h09-e245f3",
+      "from": "Струговская 10",
+      "to": "пр. Независимости 88",
+      "hour": 9,
+      "factE": 28.7,
+      "factC": 32,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-2026-04-29-h07-8d87bc.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:40."
+    },
+    {
+      "id": "calib-2026-04-29-h09-020e3f",
+      "from": "д. Каменная Горка",
+      "to": "Корона",
+      "hour": 9,
+      "factE": 10.2,
+      "factC": 11.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121042-009-0000-d2c3.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:10."
+    },
+    {
+      "id": "calib-2026-04-29-h09-065a96",
+      "from": "Выход № 1 на ул. Орловскую",
+      "to": "Площадь Ленина",
+      "hour": 9,
+      "factE": 8.7,
+      "factC": 9.6,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120600-505-0000-2cd7.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:05."
+    },
+    {
+      "id": "calib-2026-04-29-h09-08b82f",
+      "from": "Дворец спорта",
+      "to": "Площадь Победы",
+      "hour": 9,
+      "factE": 9,
+      "factC": 9.9,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121319-788-0000-7ebf.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:13."
+    },
+    {
+      "id": "calib-2026-04-29-h09-0b8a77",
+      "from": "Немига",
+      "to": "Площадь Ленина",
+      "hour": 9,
+      "factE": 5.8,
+      "factC": 7.2,
+      "yaMin": 9,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120951-727-0000-103f.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:09."
+    },
+    {
+      "id": "calib-2026-04-29-h09-115e1a",
+      "from": "Площадь Победы",
+      "to": "Площадь Ленина",
+      "hour": 9,
+      "factE": 5,
+      "factC": 6.3,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-115951-525-0000-8f3c.png моделью gemini-2.5-flash. App=Yandex Go. Time=11:59."
+    },
+    {
+      "id": "calib-2026-04-29-h09-11e9cc",
+      "from": "Площадь Ленина",
+      "to": "Дворец спорта",
+      "hour": 9,
+      "factE": 5.3,
+      "factC": 6.6,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120236-865-0000-837f.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:02."
+    },
+    {
+      "id": "calib-2026-04-29-h09-14f16c",
+      "from": "Galileo",
+      "to": "Дворец спорта",
+      "hour": 9,
+      "factE": 8.7,
+      "factC": 9.5,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120721-221-0000-8b26.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:07."
+    },
+    {
+      "id": "calib-2026-04-29-h09-1b9014",
+      "from": "Корона",
+      "to": "Кунцевщина",
+      "hour": 9,
+      "factE": 10.3,
+      "factC": 12.3,
+      "notes": "[auto] red screenshot-auto Распознано из screen-20260428-121505-103-0000-a59a.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:14."
+    },
+    {
+      "id": "calib-2026-04-29-h09-1be5ed",
+      "from": "Институт культуры",
+      "to": "Galileo",
+      "hour": 9,
+      "factE": 6.4,
+      "factC": 7.5,
+      "notes": "[auto] red screenshot-auto Распознано из screen-20260428-121240-440-0000-f6d2.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:12."
+    },
+    {
+      "id": "calib-2026-04-29-h09-1dcb04",
+      "from": "Немига",
+      "to": "Первомайская",
+      "hour": 9,
+      "factE": 6.7,
+      "factC": 8.4,
+      "yaMin": 11,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120916-167-0000-016c.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:09."
+    },
+    {
+      "id": "calib-2026-04-29-h09-2561fe",
+      "from": "Долгиновский тракт, 75",
+      "to": "Кирова 2",
+      "hour": 9,
+      "factE": 11.7,
+      "factC": 12.7,
+      "notes": "[auto] red screenshot-auto Распознано из screen-20260428-121105-727-0000-9b6d.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:07."
+    },
+    {
+      "id": "calib-2026-04-29-h09-3010f9",
+      "from": "Ржавецкая 35",
+      "to": "Притыцкого 28А",
+      "hour": 9,
+      "factE": 10.4,
+      "factC": 11.8,
+      "notes": "[auto] red screenshot-auto Распознано из screen-20260428-120336-058-0000-a86b.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:02."
+    },
+    {
+      "id": "calib-2026-04-29-h09-312719",
+      "from": "Институт культуры",
+      "to": "Galileo",
+      "hour": 9,
+      "factE": 6.4,
+      "factC": 7.5,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121240-621-0000-e842.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:12."
+    },
+    {
+      "id": "calib-2026-04-29-h09-332086",
+      "from": "Масюковщина 8Б",
+      "to": "Суражская 1А",
+      "hour": 9,
+      "factE": 13.5,
+      "factC": 15.6,
+      "notes": "[auto] red screenshot-auto Распознано из screen-20260428-121531-248-0000-bd9f.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:12."
+    },
+    {
+      "id": "calib-2026-04-29-h09-333335",
+      "from": "Немига",
+      "to": "Первомайская",
+      "hour": 9,
+      "factE": 6.7,
+      "factC": 8.4,
+      "notes": "[auto] red screenshot-auto Распознано из screen-20260428-120915-816-0000-1525.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:09."
+    },
+    {
+      "id": "calib-2026-04-29-h09-35eec6",
+      "from": "Первомайская",
+      "to": "Площадь Ленина",
+      "hour": 9,
+      "factE": 5.9,
+      "factC": 6.9,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120325-583-0000-2eaf.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:03."
+    },
+    {
+      "id": "calib-2026-04-29-h09-3753cf",
+      "from": "микрорайон Курасовщина",
+      "to": "Лошица",
+      "hour": 9,
+      "factE": 11.8,
+      "factC": 12.6,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120830-370-0000-5746.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:08."
+    },
+    {
+      "id": "calib-2026-04-29-h09-37e9e6",
+      "from": "Galileo",
+      "to": "Дворец спорта",
+      "hour": 9,
+      "factE": 8.7,
+      "factC": 9.5,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120720-796-0000-6286.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:07."
+    },
+    {
+      "id": "calib-2026-04-29-h09-380ac4",
+      "from": "Дворец спорта",
+      "to": "Площадь Победы",
+      "hour": 9,
+      "factE": 9,
+      "factC": 9.9,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121319-955-0000-911e.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:13."
+    },
+    {
+      "id": "calib-2026-04-29-h09-40e365",
+      "from": "Восточная 180",
+      "to": "проспект Независимости, 88",
+      "hour": 9,
+      "factE": 17.4,
+      "factC": 19.1,
+      "yaMin": 15,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-2026-04-29-h07-9c3067.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:48."
+    },
+    {
+      "id": "calib-2026-04-29-h09-4916bc",
+      "from": "Автовокзал Восточный",
+      "to": "Автозаводская",
+      "hour": 9,
+      "factE": 9.7,
+      "factC": 11,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120128-903-0000-055d.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:01."
+    },
+    {
+      "id": "calib-2026-04-29-h09-4c7968",
+      "from": "Корона",
+      "to": "Кунцевщина",
+      "hour": 9,
+      "factE": 10.3,
+      "factC": 12.3,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121505-719-0000-af18.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:14."
+    },
+    {
+      "id": "calib-2026-04-29-h09-4eb131",
+      "from": "Дворец спорта",
+      "to": "Первомайская",
+      "hour": 9,
+      "factE": 9.5,
+      "factC": 10.5,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121357-530-0000-b393.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:13."
+    },
+    {
+      "id": "calib-2026-04-29-h09-4f9c4a",
+      "from": "Площадь Якуба Коласа",
+      "to": "ЦУМ",
+      "hour": 9,
+      "factE": 5.8,
+      "factC": 6.8,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120434-836-0000-2f70.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:04."
+    },
+    {
+      "id": "calib-2026-04-29-h09-519645",
+      "from": "Солнечный пер. 9",
+      "to": "Кирова 2",
+      "hour": 9,
+      "factE": 15.4,
+      "factC": 14.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121105-283-0000-88e6.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:05."
+    },
+    {
+      "id": "calib-2026-04-29-h09-5e7ba3",
+      "from": "Нёманская 78",
+      "to": "Белградская 11",
+      "hour": 9,
+      "factE": 16.1,
+      "factC": 17.9,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121529-607-0000-9901.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:13."
+    },
+    {
+      "id": "calib-2026-04-29-h09-5e9093",
+      "from": "пер. Ивана Науменко 6",
+      "to": "Кирова 2",
+      "hour": 9,
+      "factE": 16.3,
+      "factC": 16.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121105-584-0000-d852.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:06."
+    },
+    {
+      "id": "calib-2026-04-29-h09-652849",
+      "from": "Немига",
+      "to": "Площадь Ленина",
+      "hour": 9,
+      "factE": 5.8,
+      "factC": 7.2,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120951-929-0000-c2ed.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:09."
+    },
+    {
+      "id": "calib-2026-04-29-h09-66ee12",
+      "from": "Ратомская 18",
+      "to": "пр. Независимости 88",
+      "hour": 9,
+      "factE": 23.6,
+      "factC": 29.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-2026-04-29-h07-9c17b2.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:40."
+    },
+    {
+      "id": "calib-2026-04-29-h09-6f4cef",
+      "from": "Первомайская",
+      "to": "Площадь Ленина",
+      "hour": 9,
+      "factE": 5.9,
+      "factC": 6.9,
+      "yaMin": 7,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120325-755-0000-c31f.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:03."
+    },
+    {
+      "id": "calib-2026-04-29-h09-7043a9",
+      "from": "улица Александра Воинова",
+      "to": "Кирова 2",
+      "hour": 9,
+      "factE": 22,
+      "factC": 22.8,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121105-630-0000-f4df.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:06."
+    },
+    {
+      "id": "calib-2026-04-29-h09-73be5d",
+      "from": "Автовокзал Восточный",
+      "to": "микрорайон Серебрянка",
+      "hour": 9,
+      "factE": 8.4,
+      "factC": 9.6,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120048-475-0000-d05c.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:00."
+    },
+    {
+      "id": "calib-2026-04-29-h09-765330",
+      "from": "Корона",
+      "to": "Каменная Горка",
+      "hour": 9,
+      "factE": 10.2,
+      "factC": 11.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121041-733-0000-3067.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:10."
+    },
+    {
+      "id": "calib-2026-04-29-h09-91480a",
+      "from": "Новодворский сельсовет, 35",
+      "to": "проспект Независимости, 88",
+      "hour": 9,
+      "factE": 36.3,
+      "factC": 41,
+      "notes": "[auto] red screenshot-auto Распознано из screen-2026-04-29-h07-a2be32.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:42."
+    },
+    {
+      "id": "calib-2026-04-29-h09-91a7c3",
+      "from": "Дворец спорта",
+      "to": "Минск-Пасс",
+      "hour": 9,
+      "factE": 8.1,
+      "factC": 9.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-122622-691-0000-943d.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:25."
+    },
+    {
+      "id": "calib-2026-04-29-h09-93ff32",
+      "from": "Сергея Есенина 38",
+      "to": "Белградская 11",
+      "hour": 9,
+      "factE": 13.4,
+      "factC": 15.2,
+      "notes": "[auto] red screenshot-auto Распознано из screen-20260428-121529-038-0000-e77a.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:14."
+    },
+    {
+      "id": "calib-2026-04-29-h09-a3ee34",
+      "from": "Нёманская 39",
+      "to": "Белградская 11",
+      "hour": 9,
+      "factE": 16.1,
+      "factC": 18.3,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121529-480-0000-5986.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:13."
+    },
+    {
+      "id": "calib-2026-04-29-h09-ae0d3f",
+      "from": "Автовокзал Восточный",
+      "to": "Автозаводская",
+      "hour": 9,
+      "factE": 9.7,
+      "factC": 11,
+      "notes": "[auto] red screenshot-auto Распознано из screen-20260428-120128-681-0000-5d52.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:01."
+    },
+    {
+      "id": "calib-2026-04-29-h09-b1d25a",
+      "from": "Площадь Победы",
+      "to": "Площадь Ленина",
+      "hour": 9,
+      "factE": 5,
+      "factC": 6.3,
+      "notes": "[auto] red screenshot-auto Распознано из screen-20260428-115951-360-0000-b1da.png моделью gemini-2.5-flash. App=Yandex Go. Time=11:59."
+    },
+    {
+      "id": "calib-2026-04-29-h09-bd7aca",
+      "from": "Артёма 28",
+      "to": "проспект Независимости, 88",
+      "hour": 9,
+      "factE": 23,
+      "factC": 27.5,
+      "notes": "[auto] red screenshot-auto Распознано из screen-2026-04-29-h07-e51a52.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:44."
+    },
+    {
+      "id": "calib-2026-04-29-h09-ce704f",
+      "from": "Большевик",
+      "to": "проспект Независимости, 88",
+      "hour": 9,
+      "factE": 19.8,
+      "factC": 22,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-2026-04-29-h07-d6ca1a.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=07:47."
+    },
+    {
+      "id": "calib-2026-04-29-h09-d822d6",
+      "from": "Неждановой 36",
+      "to": "Кирова 2",
+      "hour": 9,
+      "factE": 12.8,
+      "factC": 14.4,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121105-757-0000-35df.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:07."
+    },
+    {
+      "id": "calib-2026-04-29-h09-de4956",
+      "from": "Площадь Ленина",
+      "to": "Дворец спорта",
+      "hour": 9,
+      "factE": 5.3,
+      "factC": 6.6,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120236-620-0000-4472.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:02."
+    },
+    {
+      "id": "calib-2026-04-29-h09-df02aa",
+      "from": "Выход № 1 на ул. Орловскую",
+      "to": "Площадь Ленина",
+      "hour": 9,
+      "factE": 8.7,
+      "factC": 9.6,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120600-243-0000-b42f.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:05."
+    },
+    {
+      "id": "calib-2026-04-29-h09-e029e4",
+      "from": "пр. Газеты Звязда 14к3",
+      "to": "Белградская 11",
+      "hour": 9,
+      "factE": 11.6,
+      "factC": 12.8,
+      "yaMin": 15,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-121529-371-0000-f906.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=12:14."
+    },
+    {
+      "id": "calib-2026-04-29-h09-ea6f26",
+      "from": "Площадь Якуба Коласа",
+      "to": "ЦУМ",
+      "hour": 9,
+      "factE": 5.8,
+      "factC": 6.8,
+      "notes": "[auto] yellow screenshot-auto Распознано из screen-20260428-120434-633-0000-a10f.png моделью gemini-2.5-flash. App=Yandex Go. Time=12:04."
+    },
+    {
+      "id": "calib-2026-04-29-h09-eaf10f",
+      "from": "Первомайская",
+      "to": "Площадь Ленина",
+      "hour": 9,
+      "factE": 16.8,
+      "factC": 17.9,
+      "yaMin": 6,
+      "notes": "[auto] red screenshot-auto Распознано из screen-2026-04-29-h07-9f4773.png моделью gemini-2.5-flash. App=Yandex Go. Time=07:39."
+    }
+  ]
+}

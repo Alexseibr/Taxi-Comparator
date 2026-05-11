@@ -1,0 +1,78 @@
+{
+  "date": "2026-04-29",
+  "day": "wednesday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 13:00. Накоплено: 5 заказов.",
+  "coords": {
+    "Карла Маркса 42": [
+      53.9022788,
+      27.5673486
+    ],
+    "Центральный": [
+      53.91455209999999,
+      27.5393572
+    ],
+    "Сергея Есенина 76": [
+      53.8522489,
+      27.4497126
+    ],
+    "Комаровский рынок": [
+      53.9198199,
+      27.5775762
+    ],
+    "Немига": [
+      53.9006323,
+      27.5470923
+    ],
+    "Уборевича 176": [
+      53.835313,
+      27.6044584
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-29-h13-27df00",
+      "from": "Карла Маркса 42",
+      "to": "Центральный",
+      "hour": 13,
+      "factE": 5.7,
+      "factC": 9.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4893.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 13:12)."
+    },
+    {
+      "id": "calib-2026-04-29-h13-457fbc",
+      "from": "Карла Маркса 42",
+      "to": "Сергея Есенина 76",
+      "hour": 13,
+      "factE": 14.1,
+      "factC": 18.8,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4897.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 13:13)."
+    },
+    {
+      "id": "calib-2026-04-29-h13-5fe299",
+      "from": "Карла Маркса 42",
+      "to": "Комаровский рынок",
+      "hour": 13,
+      "factE": 5.1,
+      "factC": 7.8,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4895.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 13:13)."
+    },
+    {
+      "id": "calib-2026-04-29-h13-ce9c71",
+      "from": "Карла Маркса 42",
+      "to": "Немига",
+      "hour": 13,
+      "factE": 4.5,
+      "factC": 7.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4896.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 13:13)."
+    },
+    {
+      "id": "calib-2026-04-29-h13-e83167",
+      "from": "Карла Маркса 42",
+      "to": "Уборевича 176",
+      "hour": 13,
+      "factE": 11.7,
+      "factC": 17.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_4894.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 13:12)."
+    }
+  ]
+}

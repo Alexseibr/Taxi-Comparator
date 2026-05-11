@@ -1,0 +1,93 @@
+{
+  "date": "2026-04-29",
+  "day": "wednesday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 18:00. Накоплено: 6 заказов.",
+  "coords": {
+    "пр. Независимости 31А": [
+      53.90787419999999,
+      27.5716203
+    ],
+    "пр. Независимости 58": [
+      53.9174202,
+      27.5899894
+    ],
+    "Калиновского 32": [
+      53.9416068,
+      27.6407633
+    ],
+    "Сурганова 14А": [
+      53.9238964,
+      27.6009444
+    ],
+    "Киселёва 2": [
+      53.90951380000001,
+      27.5744023
+    ],
+    "Рокоссовского 2А": [
+      53.87546,
+      27.5952228
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-29-h18-0988c9",
+      "from": "пр. Независимости 31А",
+      "to": "пр. Независимости 58",
+      "hour": 18,
+      "factE": 4,
+      "factC": 4.9,
+      "yaMin": 5,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9308.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 18:46)."
+    },
+    {
+      "id": "calib-2026-04-29-h18-4b02bb",
+      "from": "пр. Независимости 31А",
+      "to": "Калиновского 32",
+      "hour": 18,
+      "factE": 9.2,
+      "factC": 11.5,
+      "yaMin": 18,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9309.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 18:48)."
+    },
+    {
+      "id": "calib-2026-04-29-h18-59fa40",
+      "from": "пр. Независимости 31А",
+      "to": "Сурганова 14А",
+      "hour": 18,
+      "factE": 4.7,
+      "factC": 8.3,
+      "yaMin": 10,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9307.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 18:32)."
+    },
+    {
+      "id": "calib-2026-04-29-h18-a21b4a",
+      "from": "пр. Независимости 31А",
+      "to": "Сурганова 14А",
+      "hour": 18,
+      "factE": 7.9,
+      "factC": 9.8,
+      "yaMin": 10,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9310.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 18:51)."
+    },
+    {
+      "id": "calib-2026-04-29-h18-a34dda",
+      "from": "Киселёва 2",
+      "to": "Сурганова 14А",
+      "hour": 18,
+      "factE": 7.7,
+      "factC": 9.1,
+      "yaMin": 10,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9306.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 18:25)."
+    },
+    {
+      "id": "calib-2026-04-29-h18-acd611",
+      "from": "пр. Независимости 31А",
+      "to": "Рокоссовского 2А",
+      "hour": 18,
+      "factE": 79.9,
+      "factC": 107.9,
+      "yaMin": 46,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_9311.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 18:55)."
+    }
+  ]
+}

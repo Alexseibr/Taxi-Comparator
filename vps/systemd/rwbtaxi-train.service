@@ -1,0 +1,11 @@
+[Unit]
+Description=Train Yandex Go tariff breakdown from calib screens
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/rwbtaxi-screens
+ExecStart=/usr/bin/node /opt/rwbtaxi-screens/build-tariff-breakdown.mjs
+StandardOutput=append:/var/log/rwbtaxi-train.log
+StandardError=append:/var/log/rwbtaxi-train.log
+Nice=10

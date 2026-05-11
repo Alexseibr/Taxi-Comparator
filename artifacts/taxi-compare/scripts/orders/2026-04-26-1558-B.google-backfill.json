@@ -1,0 +1,43 @@
+{
+  "sourceFile": "2026-04-26-1558-B.json",
+  "backfilledAt": "2026-04-27T10:28:14.100Z",
+  "date": "2026-04-26",
+  "day": "sunday",
+  "fileMinute": 58,
+  "successCount": 2,
+  "totalCount": 2,
+  "results": [
+    {
+      "id": "B-0016",
+      "from": "Немига 3",
+      "to": "Николая Дрозда 25А",
+      "hour": 15,
+      "day": "sunday",
+      "departureTime": "2026-05-03T12:58:00.000Z",
+      "yaMin": 9,
+      "yaSurgeC": 0.7,
+      "factC": 6.6,
+      "factE": 5.3,
+      "googleKm": 2.562,
+      "googleFreeMin": 8.13,
+      "googleTrafficMin": 6.85,
+      "gMult": 0.842
+    },
+    {
+      "id": "B-0017",
+      "from": "Лермонтова 45",
+      "to": "Николая Дрозда 25А",
+      "hour": 15,
+      "day": "sunday",
+      "departureTime": "2026-05-03T12:58:00.000Z",
+      "yaMin": 10,
+      "yaSurgeC": 1.2,
+      "factC": 11.4,
+      "factE": 10.3,
+      "googleKm": 3.824,
+      "googleFreeMin": 9.05,
+      "googleTrafficMin": 7.6,
+      "gMult": 0.84
+    }
+  ]
+}

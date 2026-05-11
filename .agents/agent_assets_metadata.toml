@@ -1,0 +1,235 @@
+uploads = []
+
+[[generated]]
+id = "l1FV0cCJX1rqWjjke8gsv"
+uri = "file://artifacts/taxi-compare/public/logo-source-a.png"
+type = "image"
+title = "wb taxi logo a"
+
+[[generated]]
+id = "iTTcih2pyi-NPhr_96O6s"
+uri = "file://artifacts/taxi-compare/public/logo-source-b.png"
+type = "image"
+title = "wb taxi logo b"
+
+[[generated]]
+id = "8A_25Q5NenPpO_0IdcjES"
+uri = "file://artifacts/taxi-compare/public/logo-source-c.png"
+type = "image"
+title = "wb taxi logo c"
+
+[[outputs]]
+id = "Tf54vkfm5pKJVgb9-6v3j"
+uri = "file://deploy/pzk.by/pzk-by.tar.gz"
+type = "unspecified"
+title = "Архив с маршрутизатором и поддержкой пробок"
+
+[[outputs]]
+id = "R8Siu9e_3gulpFsv8Vd61"
+uri = "file://deploy/pzk.by/DEPLOY.md"
+type = "text"
+title = "Обновлённая инструкция деплоя"
+
+[[outputs]]
+id = "V153quAP3VHAvmQbj4VRF"
+uri = "file://artifacts/taxi-compare/public/data/observations.json"
+type = "unspecified"
+title = "Шаблон observations.json (в архиве и на сервере будет /data/observations.json)"
+
+[[outputs]]
+id = "sSJMO6esSNSnZSGNJkdcC"
+uri = "file://artifacts/taxi-compare/public/data/README.md"
+type = "text"
+title = "Описание формата observations.json"
+
+[[outputs]]
+id = "DgrNarEYPoaKWcMKR9zs8"
+uri = "file://artifacts/taxi-compare/scripts/METHODOLOGY.md"
+type = "text"
+title = "Методология RWB Taxi v3"
+
+[[outputs]]
+id = "qhT6grS_C1rEzOkRscw7U"
+uri = "file://artifacts/taxi-compare/scripts/orders/CALIBRATION_PLAN.md"
+type = "text"
+title = "План калибровки — что осталось замерить"
+
+[[outputs]]
+id = "CosAyEaBK7r66KRaAqRKn"
+uri = "file://artifacts/taxi-compare/scripts/learned/changelog.md"
+type = "text"
+title = "Журнал обучения (append-only)"
+
+[[outputs]]
+id = "H8780rAfqVMs75NoGfFNL"
+uri = "file://artifacts/taxi-compare/exports/orders.xlsx"
+type = "table"
+title = "Заказы Я.Такси (255 шт., 25-27 апреля — сб/вс/пн)"
+
+[[outputs]]
+id = "8ZUn29RMoyqCmDEpZjRO3"
+uri = "file://artifacts/taxi-compare/exports/orders.csv"
+type = "table"
+title = "Заказы Я.Такси (CSV, 254 шт., 25-27 апреля)"
+
+[[outputs]]
+id = "olF2HuhvZXoI6o8GMM835"
+uri = "file://attached_assets/exports/rwbtaxi-trips.xlsx"
+type = "table"
+title = "Поездки rwbtaxi.by — Yandex + ВБ"
+
+[[outputs]]
+id = "31RMOI-gxF0SvTQfXs8Zr"
+uri = "file://exports/rwbtaxi-trips.xlsx"
+type = "table"
+title = "rwbtaxi-trips (Yandex + ВБ): км и время поездки заполнены"
+
+[[outputs]]
+id = "iFiAwPinhAV1ajOl84uZ8"
+uri = "file://attached_assets/incoming-snapshot/screen-2026-04-30-h01-155a1d.png"
+type = "image"
+title = "01:31 #1 (IMG_0436) → Чернышевского→Мулявина E11.3/C12.6"
+
+[[outputs]]
+id = "9vzXy46tt_gQiJhux0GTD"
+uri = "file://attached_assets/incoming-snapshot/screen-2026-04-30-h01-20a467.png"
+type = "image"
+title = "01:31 #2 (IMG_0435) → ушёл в очередь"
+
+[[outputs]]
+id = "vz5CkcIU4EuTJKrsbIuEj"
+uri = "file://attached_assets/incoming-snapshot/screen-2026-04-30-h01-2d52e6.png"
+type = "image"
+title = "01:31 #3 (IMG_0438) → Бобруйская→Заславская E12.0/C13.5 ⚠high"
+
+[[outputs]]
+id = "GJmQl9_5UvQfayXCP4Sa-"
+uri = "file://attached_assets/incoming-snapshot/screen-2026-04-30-h01-4f73ea.png"
+type = "image"
+title = "01:31 #4 (IMG_0439) → Первомайская→Независимости E10.3/C11.7 ⚠medium"
+
+[[outputs]]
+id = "y6yz2vonWRJcPApomxtnX"
+uri = "file://attached_assets/incoming-snapshot/screen-2026-04-30-h01-fbbb95.png"
+type = "image"
+title = "01:31 #5 (IMG_0437) → Семашко→Свислочская E22.4/C26.3 🔥×1.80"
+
+[[outputs]]
+id = "qsAmkLp5EXthpGJZHic3z"
+uri = "file://exports/rwbtaxi-utro-2026-04-30.pdf"
+type = "pdf"
+title = "RWB Taxi — утренняя аналитика 30 апреля 2026"
+
+[[outputs]]
+id = "tqu8vAT1EyZTYQ99YNRJI"
+uri = "file://exports/rwbtaxi-reestr-utro-2026-04-30.pdf"
+type = "pdf"
+title = "RWB Taxi — реестр заказов 30 апреля 2026 (утро)"
+
+[[outputs]]
+id = "y1MZuftnw-S2See2mDq7C"
+uri = "file://exports/rwbtaxi-tarify-i-syordzh-2026-04-30.pdf"
+type = "pdf"
+title = "RWB Taxi — структура тарифов Yandex Go и сёрдж-таймлайн (30 апр 2026 утро)"
+
+[[outputs]]
+id = "S5q2HSqyBZMMwYU4uh7M7"
+uri = "file://exports/rwbtaxi-skorost-deficit-2026-04-30.pdf"
+type = "pdf"
+title = "RWB Taxi — скорость как маркер дефицита машин (30 апр 2026 утро)"
+
+[[outputs]]
+id = "6OsqfNXSSYZih_sJS3OE_"
+uri = "file://exports/rwbtaxi-wb-platforma-i-antifrod-2026-04-30.pdf"
+type = "pdf"
+title = "RWB Taxi — Аналитика и антифрод парка"
+
+[[outputs]]
+id = "AVxYnIqfwpXbhpiW0GPp0"
+uri = "file://attached_assets/RWB-Taxi-ML-skoring.docx"
+type = "word_document"
+title = "RWB Taxi — Аналитика и антифрод парка"
+
+[[outputs]]
+id = "PecwUP6--c3CS077nN6zg"
+uri = "file://attached_assets/RWB-Taxi-Analytics-Antifraud.docx"
+type = "word_document"
+title = "RWB Taxi — Аналитика и антифрод парка"
+
+[[outputs]]
+id = "EC0zWvsO30tTECsIztcmP"
+uri = "file://attached_assets/RWB-Taxi-Yandex-Parser.docx"
+type = "word_document"
+title = "RWB Taxi — Сервис парсинга цен Yandex Go"
+
+[[outputs]]
+id = "n66jVBJLas9Q7JhnMvrL0"
+uri = "file://.local/docs/newstat-system-T012.docx"
+type = "word_document"
+title = "Newstat — техническая документация (T012)"
+
+[[outputs]]
+id = "2Ib4RJmkJl0SwmbjFvAEw"
+uri = "file://attached_assets/rwbtaxi-split-plan.md"
+type = "text"
+title = "rwbtaxi — план L1+L2 (обновлён, добавлен §7 про VPS bundle)"
+
+[[outputs]]
+id = "b_KvKKenJ4eXKHVSxh2BE"
+uri = "file://exports/rwbtaxi-transfer.tar.gz"
+type = "unspecified"
+title = "rwbtaxi — архив для переноса v2 (фронт + бэкенд, 2.1 МБ)"
+
+[[outputs]]
+id = "U3mqzxJKVEl1TtFXcnLN9"
+uri = "file://artifacts/taxi-compare/public/logo-source-a.png"
+type = "image"
+title = "Вариант A — такси над гекс-картой со щитом"
+
+[[outputs]]
+id = "ERxoyahKh36dVgB56VfQ2"
+uri = "file://artifacts/taxi-compare/public/logo-source-b.png"
+type = "image"
+title = "Вариант B — таксишная плашка как map-pin"
+
+[[outputs]]
+id = "BtU6rVnwQC68DB3Kw9rLU"
+uri = "file://artifacts/taxi-compare/public/logo-source-c.png"
+type = "image"
+title = "Вариант C — шахматка такси в map-pin с радар-кольцом"
+
+[[outputs]]
+id = "_emuIzoqJ7DYEMGUA-Hum"
+uri = "file://tariff-analysis.xlsx"
+type = "table"
+title = "Анализ тарифов Яндекс Go — Минск"
+
+[[outputs]]
+id = "RMc_1tT5yCC6Cf-A8QNbv"
+uri = "file://tariff-model-report.xlsx"
+type = "table"
+title = "Тарифная модель v4/v5 — Снапшотов: 7640, Живых: 233"
+
+[[outputs]]
+id = "R7sYClKflLMJdc2L5iC1o"
+uri = "file://yandex-go-full-report.xlsx"
+type = "table"
+title = "Яндекс Go — Полный анализ (8 листов)"
+
+[[outputs]]
+id = "2-iLUhEmLEtZtnESnz7RQ"
+uri = "file://tariff-reversal.xlsx"
+type = "table"
+title = "OLS-анализ формулы Yandex Go · 7640 снапшотов"
+
+[[outputs]]
+id = "4EAvk18yWh6K-CXBYv-IG"
+uri = "file://tariff-report.md"
+type = "text"
+title = "Анализ тарифов Yandex Go — 6562 замера"
+
+[[outputs]]
+id = "azeR75-tKpGT4UqwjDaWY"
+uri = "file://yandex-go-orders.csv"
+type = "table"
+title = "Yandex Go — 6600 заказов + погода + события"

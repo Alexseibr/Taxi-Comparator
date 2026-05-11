@@ -1,0 +1,153 @@
+{
+  "date": "2026-04-29",
+  "day": "wednesday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 19:00. Накоплено: 10 заказов.",
+  "coords": {
+    "пр. Любимова 40А": [
+      53.8627724,
+      27.4583988
+    ],
+    "Скрыганова 39к8": [
+      53.9129193,
+      27.517611
+    ],
+    "Игуменский тракт, 14А": [
+      53.8478506,
+      27.5670029
+    ],
+    "Янковского 5": [
+      53.8809593,
+      27.4411165
+    ],
+    "Масюковщина 41Б": [
+      53.93374859999999,
+      27.4446641
+    ],
+    "Крупской 8к1": [
+      53.85910939999999,
+      27.6268306
+    ],
+    "Партизанский пр. 117А": [
+      53.8682689,
+      27.6570825
+    ],
+    "Ириновская 19": [
+      53.9624653,
+      27.5337448
+    ],
+    "Шугаева 2": [
+      53.9429247,
+      27.6830645
+    ],
+    "Гагарина 27/2": [
+      53.9683431,
+      27.53425
+    ],
+    "Слободская 65": [
+      53.8543694,
+      27.4382663
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-29-h19-06bc6d",
+      "from": "пр. Любимова 40А",
+      "to": "Скрыганова 39к8",
+      "hour": 19,
+      "factE": 15,
+      "factC": 17.2,
+      "yaMin": 20,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0397.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:52)."
+    },
+    {
+      "id": "calib-2026-04-29-h19-4d4017",
+      "from": "Игуменский тракт, 14А",
+      "to": "Скрыганова 39к8",
+      "hour": 19,
+      "factE": 15.8,
+      "factC": 17.7,
+      "yaMin": 21,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0391.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:48)."
+    },
+    {
+      "id": "calib-2026-04-29-h19-5f500e",
+      "from": "Янковского 5",
+      "to": "Скрыганова 39к8",
+      "hour": 19,
+      "factE": 12,
+      "factC": 13.4,
+      "yaMin": 18,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0398.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:53)."
+    },
+    {
+      "id": "calib-2026-04-29-h19-806ef8",
+      "from": "Масюковщина 41Б",
+      "to": "Скрыганова 39к8",
+      "hour": 19,
+      "factE": 12.9,
+      "factC": 14.2,
+      "yaMin": 17,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0388.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:47)."
+    },
+    {
+      "id": "calib-2026-04-29-h19-8b473b",
+      "from": "Крупской 8к1",
+      "to": "Партизанский пр. 117А",
+      "hour": 19,
+      "factE": 4.2,
+      "factC": 9.5,
+      "yaMin": 8,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0401.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:54)."
+    },
+    {
+      "id": "calib-2026-04-29-h19-8b9ad5",
+      "from": "Ириновская 19",
+      "to": "Скрыганова 39к8",
+      "hour": 19,
+      "factE": 16.5,
+      "factC": 18.6,
+      "yaMin": 18,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0390.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:48)."
+    },
+    {
+      "id": "calib-2026-04-29-h19-9458bd",
+      "from": "Янковского 5",
+      "to": "Шугаева 2",
+      "hour": 19,
+      "factE": 25.7,
+      "factC": 31.8,
+      "yaMin": 26,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0399.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:53)."
+    },
+    {
+      "id": "calib-2026-04-29-h19-dfcc57",
+      "from": "Гагарина 27/2",
+      "to": "Скрыганова 39к8",
+      "hour": 19,
+      "factE": 17.1,
+      "factC": 18.8,
+      "yaMin": 18,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0392.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:48)."
+    },
+    {
+      "id": "calib-2026-04-29-h19-e121e5",
+      "from": "Крупской 8к1",
+      "to": "Шугаева 2",
+      "hour": 19,
+      "factE": 17.4,
+      "factC": 18.8,
+      "yaMin": 24,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0400.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:53)."
+    },
+    {
+      "id": "calib-2026-04-29-h19-ee1303",
+      "from": "Слободская 65",
+      "to": "Скрыганова 39к8",
+      "hour": 19,
+      "factE": 18.6,
+      "factC": 21.3,
+      "yaMin": 25,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0389.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 19:48)."
+    }
+  ]
+}

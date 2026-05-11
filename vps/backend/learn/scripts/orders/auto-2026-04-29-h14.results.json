@@ -1,0 +1,71 @@
+{
+  "date": "2026-04-29",
+  "day": "wednesday",
+  "calibrationVersion": 3,
+  "results": [
+    {
+      "id": "calib-2026-04-29-h14-d357b4",
+      "from": "Ленина 3",
+      "to": "Брилевская 4",
+      "hour": 14,
+      "factE": 9.9,
+      "factC": 11.8,
+      "yaMin": 10,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0371.jpeg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 14:22).",
+      "fromPt": [
+        53.90086830000001,
+        27.5580947
+      ],
+      "toPt": [
+        53.8783273,
+        27.5322874
+      ],
+      "km": 3.5613,
+      "freeMin": 6.168333333333334,
+      "ttMult": 1.3333333333333333,
+      "ttN": 6,
+      "ttTotal": 6,
+      "ttRatios": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "ttMeanRatio": 0.75,
+      "min": 8.224444444444444,
+      "minSource": "tomtom",
+      "rC": 10,
+      "rE": 9,
+      "sC": 1.1800000000000002,
+      "sE": 1.1,
+      "hb": 0.9322033898305084,
+      "spdOSRM": 34.64112402053499,
+      "spdTT": 25.980843015401245,
+      "spdYa": 21.3678,
+      "dSpdPct": -17.755555555555567,
+      "spdG": 23.956923076923076,
+      "dSpdGPct": -10.807410737220652,
+      "yaSurgeC": null,
+      "bazaYC": null,
+      "bazaRatio": null,
+      "googleKm": 3.893,
+      "googleFreeMin": 8.866666666666667,
+      "googleTrafficMin": 9.75,
+      "gMult": 1.099624060150376,
+      "weather": {
+        "condition": "Cloudy",
+        "conditionType": "CLOUDY",
+        "tempC": 6.4,
+        "precipMmH": 0,
+        "precipProb": 10,
+        "precipType": "RAIN",
+        "windKmh": 13,
+        "visibilityKm": 16,
+        "cloudPct": 99,
+        "isDay": true
+      }
+    }
+  ]
+}

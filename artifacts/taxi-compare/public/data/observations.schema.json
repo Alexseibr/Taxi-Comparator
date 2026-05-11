@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Observations file",
+  "description": "Дополнительные точечные замеры сёрджа (например, скриншоты Яндекс Go) и/или поездки. Эти данные подмешиваются к встроенным зонам и влияют на тепловую карту через IDW-интерполяцию.",
+  "type": "object",
+  "required": ["version", "items"],
+  "properties": {
+    "version": { "type": "integer", "minimum": 1, "description": "Версия схемы файла (растёт при изменении формата записей)." },
+    "calibrationVersion": { "type": "integer", "minimum": 1, "description": "Версия калибровки тарифа Yandex, под которую посчитаны surge-значения. v3 = плоская baza 10br." },
+    "updatedAt": { "type": "string", "description": "ISO-дата последнего обновления (для удобства)." },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "lat", "lng", "day", "slot", "date"],
+        "properties": {
+          "id": { "type": "string", "description": "Уникальный идентификатор замера." },
+          "lat": { "type": "number", "minimum": 53.7, "maximum": 54.1 },
+          "lng": { "type": "number", "minimum": 27.3, "maximum": 27.8 },
+          "day": { "type": "string", "enum": ["weekday", "saturday", "sunday"] },
+          "slot": { "type": "string", "enum": ["night", "morning", "midday", "evening", "late"] },
+          "comfortSurge": { "type": "number", "minimum": 0.3, "maximum": 10, "description": "v3: полный множитель цены Comfort к 10br (= ⚡N в иконке Yandex). Может быть 0.3..6.0+." },
+          "economSurge": { "type": "number", "minimum": 0.3, "maximum": 10, "description": "v3: полный множитель цены Эконом к 9br." },
+          "hiddenEconomSurge": { "type": "number", "minimum": 0.3, "maximum": 10, "description": "Скрытый множитель Эконом (если посчитан из цены)." },
+          "calibrationVersion": { "type": "integer", "minimum": 1, "description": "Версия калибровки, под которую посчитан surge данной записи." },
+          "date": { "type": "string", "description": "Дата наблюдения, YYYY-MM-DD." },
+          "source": { "type": "string", "description": "Откуда взято: yandex-screenshot, rwb-trip, manual, ..." },
+          "notes": { "type": "string" },
+          "address": { "type": "string", "description": "Опциональный человекочитаемый адрес." },
+          "weight": { "type": "number", "minimum": 0, "maximum": 1, "description": "Опциональный вес для IDW (0..1, default 1.0). Используется для слабых точек с менее надёжными данными — они влияют на интерполяцию пропорционально weight." }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "generatedAt": "2026-04-27T10:36:16.715Z",
+  "v7_baseline": {
+    "source": "TomTom ttMult",
+    "note": "ttMean=1.065, range=[1.00,1.50], corr(ttMult,sC)=0.03"
+  },
+  "v8_source": {
+    "source": "Google Routes API typical traffic",
+    "n": 306,
+    "fixed_timezone": "Europe/Minsk UTC+3"
+  },
+  "scenarioA_all": {
+    "v7": {
+      "label": "A.v7  TomTom (все точки)",
+      "n": 304,
+      "mae_surge": 0.619,
+      "mape": 32.4,
+      "within10pct": 94,
+      "within20pct": 164,
+      "within30pct": 205,
+      "pct10": 30.9,
+      "pct20": 53.9,
+      "pct30": 67.4
+    },
+    "v8a": {
+      "label": "A.v8a Google gMult (все точки, fallback на TomTom)",
+      "n": 305,
+      "mae_surge": 0.626,
+      "mape": 34.9,
+      "within10pct": 89,
+      "within20pct": 149,
+      "within30pct": 201,
+      "pct10": 29.2,
+      "pct20": 48.9,
+      "pct30": 65.9
+    },
+    "v8b": {
+      "label": "A.v8b Google gMult+freeMin (все точки)",
+      "n": 305,
+      "mae_surge": 0.591,
+      "mape": 34.5,
+      "within10pct": 90,
+      "within20pct": 146,
+      "within30pct": 196,
+      "pct10": 29.5,
+      "pct20": 47.9,
+      "pct30": 64.3
+    }
+  },
+  "scenarioB_subset_predicted_with_full_peers": {
+    "v7": {
+      "label": "B.v7  TomTom (только with-google)",
+      "n": 304,
+      "mae_surge": 0.619,
+      "mape": 32.4,
+      "within10pct": 94,
+      "within20pct": 164,
+      "within30pct": 205,
+      "pct10": 30.9,
+      "pct20": 53.9,
+      "pct30": 67.4
+    },
+    "v8a": {
+      "label": "B.v8a Google gMult",
+      "n": 305,
+      "mae_surge": 0.626,
+      "mape": 34.9,
+      "within10pct": 89,
+      "within20pct": 149,
+      "within30pct": 201,
+      "pct10": 29.2,
+      "pct20": 48.9,
+      "pct30": 65.9
+    },
+    "v8b": {
+      "label": "B.v8b Google gMult+freeMin",
+      "n": 305,
+      "mae_surge": 0.591,
+      "mape": 34.5,
+      "within10pct": 90,
+      "within20pct": 146,
+      "within30pct": 196,
+      "pct10": 29.5,
+      "pct20": 47.9,
+      "pct30": 64.3
+    }
+  },
+  "scenarioC_pure_google": {
+    "v7": {
+      "label": "C.v7  TomTom-only (на google-subset)",
+      "n": 304,
+      "mae_surge": 0.619,
+      "mape": 32.4,
+      "within10pct": 94,
+      "within20pct": 164,
+      "within30pct": 205,
+      "pct10": 30.9,
+      "pct20": 53.9,
+      "pct30": 67.4
+    },
+    "v8a": {
+      "label": "C.v8a Google gMult",
+      "n": 305,
+      "mae_surge": 0.626,
+      "mape": 34.9,
+      "within10pct": 89,
+      "within20pct": 149,
+      "within30pct": 201,
+      "pct10": 29.2,
+      "pct20": 48.9,
+      "pct30": 65.9
+    },
+    "v8b": {
+      "label": "C.v8b Google gMult+freeMin",
+      "n": 305,
+      "mae_surge": 0.591,
+      "mape": 34.5,
+      "within10pct": 90,
+      "within20pct": 146,
+      "within30pct": 196,
+      "pct10": 29.5,
+      "pct20": 47.9,
+      "pct30": 64.3
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "<1 км",
+      "n": 0,
+      "note": "недостаточно"
+    },
+    {
+      "bucket": "1-2 км",
+      "n": 14,
+      "v7_mae": 0.365,
+      "v7_mape": 31.8,
+      "v7_pct20": 28.6,
+      "v8_mae": 0.562,
+      "v8_mape": 50.7,
+      "v8_pct20": 14.3,
+      "Δmape_pp": 18.9
+    },
+    {
+      "bucket": "2-3 км",
+      "n": 25,
+      "v7_mae": 0.376,
+      "v7_mape": 28.8,
+      "v7_pct20": 48,
+      "v8_mae": 0.402,
+      "v8_mape": 30.4,
+      "v8_pct20": 36,
+      "Δmape_pp": 1.6
+    },
+    {
+      "bucket": "3-5 км",
+      "n": 52,
+      "v7_mae": 0.365,
+      "v7_mape": 32,
+      "v7_pct20": 57.7,
+      "v8_mae": 0.38,
+      "v8_mape": 34.8,
+      "v8_pct20": 40.4,
+      "Δmape_pp": 2.8
+    },
+    {
+      "bucket": "≥5 км",
+      "n": 214,
+      "v7_mae": 0.726,
+      "v7_mape": 32.9,
+      "v7_pct20": 55.4,
+      "v8_mae": 0.716,
+      "v8_mape": 34.5,
+      "v8_pct20": 54.7,
+      "Δmape_pp": 1.6
+    }
+  ],
+  "slots": [
+    {
+      "slot": "sunday-evening",
+      "n": 72,
+      "v7_mape": 22.7,
+      "v7_pct20": 56.9,
+      "v8_mape": 23.3,
+      "v8_pct20": 56.9,
+      "Δmape_pp": 0.6
+    },
+    {
+      "slot": "sunday-late",
+      "n": 53,
+      "v7_mape": 41.2,
+      "v7_pct20": 35.8,
+      "v8_mape": 41.2,
+      "v8_pct20": 28.3,
+      "Δmape_pp": 0
+    },
+    {
+      "slot": "sunday-midday",
+      "n": 47,
+      "v7_mape": 65.3,
+      "v7_pct20": 31.9,
+      "v8_mape": 70.1,
+      "v8_pct20": 31.9,
+      "Δmape_pp": 4.8
+    },
+    {
+      "slot": "sunday-morning",
+      "n": 18,
+      "v7_mape": 45.1,
+      "v7_pct20": 47.1,
+      "v8_mape": 54.2,
+      "v8_pct20": 27.8,
+      "Δmape_pp": 9.1
+    },
+    {
+      "slot": "weekday-midday",
+      "n": 11,
+      "v7_mape": 9.1,
+      "v7_pct20": 90.9,
+      "v8_mape": 11.3,
+      "v8_pct20": 81.8,
+      "Δmape_pp": 2.2
+    },
+    {
+      "slot": "weekday-morning",
+      "n": 104,
+      "v7_mape": 20,
+      "v7_pct20": 68.3,
+      "v8_mape": 23.1,
+      "v8_pct20": 61.5,
+      "Δmape_pp": 3.1
+    }
+  ],
+  "correlation": {
+    "ttMult_sC": 0.03,
+    "gMult_sC": 0.073,
+    "n": 305
+  }
+}

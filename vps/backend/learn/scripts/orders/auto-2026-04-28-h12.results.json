@@ -1,0 +1,70 @@
+{
+  "date": "2026-04-28",
+  "day": "tuesday",
+  "calibrationVersion": 3,
+  "results": [
+    {
+      "id": "calib-2026-04-28-h12-9a5f52",
+      "from": "Автовокзал Восточный",
+      "to": "микрорайон Серебрянка",
+      "hour": 12,
+      "factE": 8.4,
+      "factC": 9.6,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_1873.png моделью gemini-2.5-flash-lite. App=Yandex Go. Time=12:00.",
+      "fromPt": [
+        53.8773184,
+        27.5992545
+      ],
+      "toPt": [
+        53.86268949999999,
+        27.6015979
+      ],
+      "km": 2.7831,
+      "freeMin": 4.955,
+      "ttMult": 1.0263157894736843,
+      "ttN": 6,
+      "ttTotal": 6,
+      "ttRatios": [
+        1,
+        1,
+        1,
+        1,
+        0.85,
+        1
+      ],
+      "ttMeanRatio": 0.9743589743589743,
+      "min": 5.0853947368421055,
+      "minSource": "tomtom",
+      "rC": 10,
+      "rE": 9,
+      "sC": 0.96,
+      "sE": 0.9333333333333333,
+      "hb": 0.9722222222222223,
+      "spdOSRM": 33.70050454086781,
+      "spdTT": 32.83638903981992,
+      "spdYa": null,
+      "dSpdPct": null,
+      "spdG": 27.035643564356434,
+      "dSpdGPct": null,
+      "yaSurgeC": null,
+      "bazaYC": null,
+      "bazaRatio": null,
+      "googleKm": 3.034,
+      "googleFreeMin": 7.033333333333333,
+      "googleTrafficMin": 6.733333333333333,
+      "gMult": 0.957345971563981,
+      "weather": {
+        "condition": "Cloudy",
+        "conditionType": "CLOUDY",
+        "tempC": 6,
+        "precipMmH": 0.03,
+        "precipProb": 20,
+        "precipType": "RAIN",
+        "windKmh": 19,
+        "visibilityKm": 16,
+        "cloudPct": 98,
+        "isDay": true
+      }
+    }
+  ]
+}

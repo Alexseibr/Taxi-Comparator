@@ -1,0 +1,150 @@
+{
+  "date": "2026-04-27",
+  "day": "monday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 20:00. Накоплено: 11 заказов.",
+  "coords": {
+    "проспект независимости 16": [
+      53.898280899999996,
+      27.555000699999997
+    ],
+    "некрасова 1": [
+      53.9300722,
+      27.5971533
+    ],
+    "пр. Независимости 22": [
+      53.90086770000001,
+      27.5603839
+    ],
+    "Янки Купалы 23": [
+      53.9056897,
+      27.5637776
+    ],
+    "Энгельса 6": [
+      53.90211919999999,
+      27.5597365
+    ],
+    "Герцена 12": [
+      53.9058047,
+      27.5583635
+    ],
+    "Интернациональная 27": [
+      53.9040678,
+      27.5592079
+    ],
+    "Карла Маркса 21": [
+      53.897173,
+      27.5555726
+    ],
+    "пл. Свободы 2А": [
+      53.9035944,
+      27.5560981
+    ],
+    "Карла Маркса 45": [
+      53.9030002,
+      27.5676333
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-27-h20-4bb9ed",
+      "from": "проспект независимости 16",
+      "to": "некрасова 1",
+      "hour": 20,
+      "factE": 13.7,
+      "factC": 15.4,
+      "yaMin": 13,
+      "yaKm": 4.7408,
+      "notes": "[auto] yellow rwb-form проспект независимости 16 → некрасова 1 · 4.7 км / 13 мин · Эконом 13.70 ⇒ ×1.46 · Комфорт 15.40 ⇒ ×1.56 · подача 5 мин · спрос 🟡 повышенный"
+    },
+    {
+      "id": "calib-2026-04-27-h20-0e65f5",
+      "from": "пр. Независимости 22",
+      "to": "Янки Купалы 23",
+      "hour": 20,
+      "factE": 4.7,
+      "factC": 5.5,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0297.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:04."
+    },
+    {
+      "id": "calib-2026-04-27-h20-18baf5",
+      "from": "пр. Независимости 22",
+      "to": "Энгельса 6",
+      "hour": 20,
+      "factE": 5,
+      "factC": 5.8,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0294.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:03."
+    },
+    {
+      "id": "calib-2026-04-27-h20-45c4be",
+      "from": "пр. Независимости 22",
+      "to": "Герцена 12",
+      "hour": 20,
+      "factE": 5.7,
+      "factC": 6.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0296.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:04."
+    },
+    {
+      "id": "calib-2026-04-27-h20-52618c",
+      "from": "пр. Независимости 22",
+      "to": "Герцена 12",
+      "hour": 20,
+      "factE": 5.7,
+      "factC": 6.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0296.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:04."
+    },
+    {
+      "id": "calib-2026-04-27-h20-52ea09",
+      "from": "пр. Независимости 22",
+      "to": "Интернациональная 27",
+      "hour": 20,
+      "factE": 5.2,
+      "factC": 6.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0293.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:03."
+    },
+    {
+      "id": "calib-2026-04-27-h20-6daf1a",
+      "from": "Карла Маркса 21",
+      "to": "пл. Свободы 2А",
+      "hour": 20,
+      "factE": 5.8,
+      "factC": 6.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0300.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:04."
+    },
+    {
+      "id": "calib-2026-04-27-h20-77bc99",
+      "from": "пр. Независимости 22",
+      "to": "Янки Купалы 23",
+      "hour": 20,
+      "factE": 4.7,
+      "factC": 5.5,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0297.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:04."
+    },
+    {
+      "id": "calib-2026-04-27-h20-e3a28d",
+      "from": "Карла Маркса 21",
+      "to": "пл. Свободы 2А",
+      "hour": 20,
+      "factE": 5.8,
+      "factC": 6.7,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0300.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:04."
+    },
+    {
+      "id": "calib-2026-04-27-h20-f8db4b",
+      "from": "пр. Независимости 22",
+      "to": "Карла Маркса 45",
+      "hour": 20,
+      "factE": 3.5,
+      "factC": 4.2,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0290.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:02."
+    },
+    {
+      "id": "calib-2026-04-27-h20-fa0bd8",
+      "from": "пр. Независимости 22",
+      "to": "Интернациональная 27",
+      "hour": 20,
+      "factE": 5.2,
+      "factC": 6.1,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_0293.jpeg моделью gemini-2.5-flash. App=Yandex Go. Time=15:03."
+    }
+  ]
+}

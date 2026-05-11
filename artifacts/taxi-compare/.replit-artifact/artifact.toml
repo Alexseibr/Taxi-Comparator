@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Taxi Compare"
+version = "1.0.0"
+id = "artifacts/taxi-compare"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22258
+
+[services.development]
+run = "pnpm --filter @workspace/taxi-compare run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/taxi-compare", "run", "build" ]
+publicDir = "artifacts/taxi-compare/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22258"
+BASE_PATH = "/"

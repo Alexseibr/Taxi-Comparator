@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "city": "Минск",
+  "comment": "Якорные точки (станции метро, ТЦ, вокзалы, районы). Сервер сам собирает из них пары А→Б — короткие (≤3 км), средние (3–10 км), длинные (>10 км), исключая уже отработанные за последние 24 ч. Файл можно править — receiver hot-reload-ит раз в минуту.",
+  "anchors": [
+    { "id": "ploshchad-pobedy",    "name": "Площадь Победы",         "lat": 53.9079, "lng": 27.5722, "type": "metro" },
+    { "id": "ploshchad-lenina",    "name": "Площадь Ленина",         "lat": 53.8917, "lng": 27.5489, "type": "metro" },
+    { "id": "yakuba-kolasa",       "name": "Площадь Якуба Коласа",   "lat": 53.9176, "lng": 27.5896, "type": "metro" },
+    { "id": "park-cheluskincev",   "name": "Парк Челюскинцев",       "lat": 53.9242, "lng": 27.6017, "type": "metro" },
+    { "id": "akademiya-nauk",      "name": "Академия Наук",          "lat": 53.9285, "lng": 27.5984, "type": "metro" },
+    { "id": "moskovskaya",         "name": "Московская",             "lat": 53.9343, "lng": 27.6193, "type": "metro" },
+    { "id": "vostok",              "name": "Восток",                 "lat": 53.9418, "lng": 27.6411, "type": "metro" },
+    { "id": "uruchye",             "name": "Уручье",                 "lat": 53.9509, "lng": 27.6810, "type": "metro" },
+    { "id": "institut-kultury",    "name": "Институт Культуры",      "lat": 53.8825, "lng": 27.5360, "type": "metro" },
+    { "id": "malinovka",           "name": "Малиновка",              "lat": 53.8500, "lng": 27.4675, "type": "metro" },
+    { "id": "kamennaya-gorka",     "name": "Каменная Горка",         "lat": 53.9221, "lng": 27.4561, "type": "metro" },
+    { "id": "kuncevshchina",       "name": "Кунцевщина",             "lat": 53.9165, "lng": 27.4687, "type": "metro" },
+    { "id": "frunzenskaya",        "name": "Фрунзенская",            "lat": 53.8989, "lng": 27.5234, "type": "metro" },
+    { "id": "nemiga",              "name": "Немига",                 "lat": 53.9028, "lng": 27.5485, "type": "metro" },
+    { "id": "pervomayskaya",       "name": "Первомайская",           "lat": 53.9019, "lng": 27.5780, "type": "metro" },
+    { "id": "partizanskaya",       "name": "Партизанская",           "lat": 53.8975, "lng": 27.6273, "type": "metro" },
+    { "id": "avtozavodskaya",      "name": "Автозаводская",          "lat": 53.8772, "lng": 27.6366, "type": "metro" },
+    { "id": "mogilevskaya",        "name": "Могилёвская",            "lat": 53.8484, "lng": 27.6478, "type": "metro" },
+
+    { "id": "tc-galileo",          "name": "ТЦ Galileo (вокзал)",    "lat": 53.8902, "lng": 27.5495, "type": "tc" },
+    { "id": "cum",                 "name": "ЦУМ Минск",              "lat": 53.9145, "lng": 27.5876, "type": "tc" },
+    { "id": "korona-kg",           "name": "Корона Каменная Горка",  "lat": 53.9244, "lng": 27.4451, "type": "tc" },
+    { "id": "dana-mall",           "name": "Дана Молл",              "lat": 53.8852, "lng": 27.6383, "type": "tc" },
+    { "id": "palazzo",             "name": "ТЦ Палаццо",             "lat": 53.9097, "lng": 27.5749, "type": "tc" },
+
+    { "id": "minsk-arena",         "name": "Минск-Арена",            "lat": 53.9347, "lng": 27.4825, "type": "sport" },
+    { "id": "dvorets-sporta",      "name": "Дворец спорта",          "lat": 53.9099, "lng": 27.5372, "type": "sport" },
+
+    { "id": "vokzal",              "name": "Главный ж/д вокзал",     "lat": 53.8910, "lng": 27.5497, "type": "transport" },
+    { "id": "avtovokzal-vostochny","name": "Автовокзал Восточный",   "lat": 53.8862, "lng": 27.6361, "type": "transport" },
+    { "id": "airport-minsk2",      "name": "Аэропорт Минск-2",       "lat": 53.8825, "lng": 28.0307, "type": "airport" },
+
+    { "id": "drozdy",              "name": "Дрозды",                 "lat": 53.9367, "lng": 27.5097, "type": "district" },
+    { "id": "loshica",             "name": "Лошица (Маяковского)",   "lat": 53.8553, "lng": 27.5760, "type": "district" },
+    { "id": "chizhovka",           "name": "Чижовка",                "lat": 53.8642, "lng": 27.6017, "type": "district" },
+    { "id": "serebryanka",         "name": "Серебрянка",             "lat": 53.8754, "lng": 27.5950, "type": "district" },
+    { "id": "kurasovshchina",      "name": "Курасовщина",            "lat": 53.8658, "lng": 27.5350, "type": "district" },
+    { "id": "suharevo",            "name": "Сухарево",               "lat": 53.8773, "lng": 27.4500, "type": "district" },
+    { "id": "zelyony-lug",         "name": "Зелёный Луг",            "lat": 53.9486, "lng": 27.5917, "type": "district" },
+    { "id": "mihalovo",            "name": "Михалово",               "lat": 53.8581, "lng": 27.4988, "type": "district" },
+    { "id": "rynok-zhdanovich",    "name": "Рынок Жданович",         "lat": 53.9433, "lng": 27.4544, "type": "district" }
+  ]
+}

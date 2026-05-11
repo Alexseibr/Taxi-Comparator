@@ -1,0 +1,18 @@
+[Unit]
+Description=RWB Taxi: re-queue vision_403 failed screens (Gemini transient denial)
+After=rwbtaxi-screens.service
+Requires=rwbtaxi-screens.service
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+ExecStart=/opt/rwbtaxi-screens/auto-retry-vision-403.sh
+StandardOutput=journal
+StandardError=journal
+# Песочница (как у основного сервиса, но проще — нужен только доступ к скринам)
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/rwbtaxi/data/screens
+PrivateTmp=true

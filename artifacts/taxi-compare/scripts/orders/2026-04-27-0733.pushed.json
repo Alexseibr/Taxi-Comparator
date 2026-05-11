@@ -1,0 +1,23 @@
+{
+  "sourceFile": "2026-04-27-0733.json",
+  "updatedAt": "2026-04-27T13:22:04.287Z",
+  "endpoint": "https://rwbtaxi.by/api/calib/submit",
+  "pushed": [
+    "m01",
+    "m02",
+    "m03",
+    "m04",
+    "m05",
+    "m06",
+    "m07",
+    "m08",
+    "m09",
+    "m10"
+  ],
+  "skipped": [
+    {
+      "id": "m02",
+      "reason": "out-of-bounds: dest Борисов [54.22832, 28.49452] вне Минска (сервер требует toLat 53.7-54.1, toLng 27.3-27.8). Outlier сохранён в orders.json для документации, не попадает в калибровочный пул surge."
+    }
+  ]
+}

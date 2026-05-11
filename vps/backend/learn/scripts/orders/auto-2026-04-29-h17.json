@@ -1,0 +1,112 @@
+{
+  "date": "2026-04-29",
+  "day": "wednesday",
+  "comment": "Автогенерация из замеров фронта (calib-receiver), час 17:00. Накоплено: 6 заказов.",
+  "coords": {
+    "Курасовщина": [
+      53.8442549,
+      27.5066892
+    ],
+    "Минск-Пасс": [
+      53.8908324,
+      27.5507367
+    ],
+    "Академия наук": [
+      53.921685,
+      27.59905
+    ],
+    "Выход № 1 на ул. Орловскую": [
+      53.9312312,
+      27.5418352
+    ],
+    "Машиностроителей 13к4": [
+      53.8500914,
+      27.6495344
+    ],
+    "Макаёнка 12Г": [
+      53.9245528,
+      27.6250578
+    ],
+    "Площадь Победы": [
+      53.9085303,
+      27.5748428
+    ],
+    "Площадь Якуба Коласа": [
+      53.9145879,
+      27.5804725
+    ],
+    "Дворец спорта": [
+      53.91062849999999,
+      27.5495588
+    ],
+    "Galileo": [
+      53.890522,
+      27.5537548
+    ],
+    "Dana Mall": [
+      53.9337974,
+      27.6522057
+    ]
+  },
+  "orders": [
+    {
+      "id": "calib-2026-04-29-h17-1545cc",
+      "from": "Курасовщина",
+      "to": "Минск-Пасс",
+      "hour": 17,
+      "factE": 18.3,
+      "factC": 20,
+      "yaMin": 20,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_1975.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 17:01)."
+    },
+    {
+      "id": "calib-2026-04-29-h17-ad1257",
+      "from": "Академия наук",
+      "to": "Выход № 1 на ул. Орловскую",
+      "hour": 17,
+      "factE": 21.3,
+      "factC": 23.6,
+      "yaMin": 18,
+      "notes": "[auto] red screenshot-auto Распознано из IMG_1974.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 17:01)."
+    },
+    {
+      "id": "calib-2026-04-29-h17-c719bd",
+      "from": "Машиностроителей 13к4",
+      "to": "Макаёнка 12Г",
+      "hour": 17,
+      "factE": 23.4,
+      "yaMin": 24,
+      "notes": "[auto] red screenshot-auto Распознано из 1000089081.jpg моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 17:23)."
+    },
+    {
+      "id": "calib-2026-04-29-h17-ce4df4",
+      "from": "Площадь Победы",
+      "to": "Площадь Якуба Коласа",
+      "hour": 17,
+      "factE": 13,
+      "factC": 13.9,
+      "yaMin": 5,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_1976.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 17:02)."
+    },
+    {
+      "id": "calib-2026-04-29-h17-e9c7d1",
+      "from": "Дворец спорта",
+      "to": "Galileo",
+      "hour": 17,
+      "factE": 12.4,
+      "factC": 13.9,
+      "yaMin": 11,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_1973.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 17:00)."
+    },
+    {
+      "id": "calib-2026-04-29-h17-edfee6",
+      "from": "Dana Mall",
+      "to": "Академия наук",
+      "hour": 17,
+      "factE": 13.8,
+      "factC": 17.6,
+      "yaMin": 16,
+      "notes": "[auto] yellow screenshot-auto Распознано из IMG_1972.png моделью gemini-2.5-flash. App=Yandex Go. orderAt=screen (статусбар 17:00)."
+    }
+  ]
+}

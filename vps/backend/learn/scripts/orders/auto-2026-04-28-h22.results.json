@@ -1,0 +1,132 @@
+{
+  "date": "2026-04-28",
+  "day": "tuesday",
+  "calibrationVersion": 3,
+  "results": [
+    {
+      "id": "calib-2026-04-28-h22-3cb00c",
+      "from": "Кривичская 54",
+      "to": "Купаловская",
+      "hour": 22,
+      "factE": 17.1,
+      "factC": 17.5,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000088900.jpg моделью gemini-2.5-flash. App=Yandex Go. Time=19:52.",
+      "fromPt": [
+        53.9645179,
+        27.5899622
+      ],
+      "toPt": [
+        53.9137871,
+        27.7481653
+      ],
+      "km": 16.2023,
+      "freeMin": 18.758333333333333,
+      "ttMult": 1,
+      "ttN": 6,
+      "ttTotal": 6,
+      "ttRatios": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ttMeanRatio": 1,
+      "min": 18.758333333333333,
+      "minSource": "tomtom",
+      "rC": 10,
+      "rE": 9,
+      "sC": 1.75,
+      "sE": 1.9000000000000001,
+      "hb": 1.0857142857142859,
+      "spdOSRM": 51.82432696579299,
+      "spdTT": 51.82432696579299,
+      "spdYa": null,
+      "dSpdPct": null,
+      "spdG": 48.899781818181815,
+      "dSpdGPct": null,
+      "yaSurgeC": null,
+      "bazaYC": null,
+      "bazaRatio": null,
+      "googleKm": 18.677,
+      "googleFreeMin": 24.316666666666666,
+      "googleTrafficMin": 22.916666666666668,
+      "gMult": 0.9424263193968472,
+      "weather": {
+        "condition": "Partly cloudy",
+        "conditionType": "PARTLY_CLOUDY",
+        "tempC": 1.5,
+        "precipMmH": 0,
+        "precipProb": 5,
+        "precipType": "SNOW",
+        "windKmh": 10,
+        "visibilityKm": 16,
+        "cloudPct": 56,
+        "isDay": false
+      }
+    },
+    {
+      "id": "calib-2026-04-28-h22-e63261",
+      "from": "Усадебная 17",
+      "to": "Купаловская",
+      "hour": 22,
+      "factC": 13.6,
+      "notes": "[auto] yellow screenshot-auto Распознано из 1000088898.jpg моделью gemini-2.5-flash-lite. App=Yandex Go. Time=19:52.",
+      "fromPt": [
+        53.9561981,
+        27.5899191
+      ],
+      "toPt": [
+        53.9137871,
+        27.7481653
+      ],
+      "km": 16.4064,
+      "freeMin": 19.815,
+      "ttMult": 1,
+      "ttN": 6,
+      "ttTotal": 6,
+      "ttRatios": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ttMeanRatio": 1,
+      "min": 19.815,
+      "minSource": "tomtom",
+      "rC": 10,
+      "rE": 9,
+      "sC": 1.3599999999999999,
+      "sE": null,
+      "hb": null,
+      "spdOSRM": 49.67872823618471,
+      "spdTT": 49.67872823618471,
+      "spdYa": null,
+      "dSpdPct": null,
+      "spdG": 43.71948752528659,
+      "dSpdGPct": null,
+      "yaSurgeC": null,
+      "bazaYC": null,
+      "bazaRatio": null,
+      "googleKm": 18.01,
+      "googleFreeMin": 26.95,
+      "googleTrafficMin": 24.716666666666665,
+      "gMult": 0.91713048855906,
+      "weather": {
+        "condition": "Partly cloudy",
+        "conditionType": "PARTLY_CLOUDY",
+        "tempC": 1.5,
+        "precipMmH": 0,
+        "precipProb": 5,
+        "precipType": "SNOW",
+        "windKmh": 10,
+        "visibilityKm": 16,
+        "cloudPct": 56,
+        "isDay": false
+      }
+    }
+  ]
+}

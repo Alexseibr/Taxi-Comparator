@@ -1,0 +1,1283 @@
+{
+  "$comment": "Анализ тарифа Yandex Go в Минске. v4: OLS по 7640 live-снапшотам (20 маршрутов). Econom R²=1.0 (детерминированная). Comfort: minimum=9.10 для <10.4км, формула для длинных маршрутов.",
+  "version": 4,
+  "generatedAt": "2026-05-10T00:00:00.000Z",
+  "basedOn": {
+    "totalSnapshots": 7640,
+    "routes": 20,
+    "totalCalibs": 356,
+    "usable": 325,
+    "yellow": 282,
+    "red": 38,
+    "green": 5
+  },
+  "config": {
+    "dogleg": 1.4,
+    "avgSpeedKmh": 18,
+    "shrinkK": 5,
+    "hexGridDeg": 0.01
+  },
+  "baseline": {
+    "econom": {
+      "base": 5.567,
+      "perKm": 0.503,
+      "perMin": 0.209,
+      "minimum": 6.40,
+      "r2": 1.0,
+      "mape": 0.002,
+      "n": 3820,
+      "note": "Детерминированная формула: baza = 5.567 + 0.503·km + 0.209·min. price = max(6.40, baza) × surge."
+    },
+    "comfort": {
+      "base": 1.959,
+      "perKm": 0.688,
+      "perMin": 0,
+      "minimum": 9.10,
+      "r2": 0.792,
+      "mape": 0.12,
+      "n": 3820,
+      "note": "Minimum 9.10 BYN доминирует для маршрутов <10.4 км. Для длинных: baza = 1.959 + 0.688·km."
+    }
+  },
+  "perKmFallback": {
+    "econom": {
+      "base": 5.567,
+      "perKm": 0.503,
+      "r2": 1.0,
+      "mape": 0.002
+    },
+    "comfort": {
+      "base": 1.959,
+      "perKm": 0.688,
+      "r2": 0.792,
+      "mape": 0.12
+    }
+  },
+  "averageRates": {
+    "yellow": {
+      "econom": {
+        "perMin": 0.74,
+        "perKm": 2.46,
+        "n": 281
+      },
+      "comfort": {
+        "perMin": 0.85,
+        "perKm": 2.84,
+        "n": 282
+      },
+      "speedKmh": 18
+    },
+    "red": {
+      "econom": {
+        "perMin": 0.7,
+        "perKm": 2.34,
+        "n": 37
+      },
+      "comfort": {
+        "perMin": 0.81,
+        "perKm": 2.69,
+        "n": 37
+      },
+      "speedKmh": 18
+    }
+  },
+  "byHour": [
+    {
+      "hour": 0,
+      "n": 0,
+      "nE": 0,
+      "nC": 0,
+      "median": 0,
+      "shrunken": 1,
+      "surgeE": 1,
+      "surgeC": 1
+    },
+    {
+      "hour": 1,
+      "n": 0,
+      "nE": 0,
+      "nC": 0,
+      "median": 0,
+      "shrunken": 1,
+      "surgeE": 1,
+      "surgeC": 1
+    },
+    {
+      "hour": 2,
+      "n": 0,
+      "nE": 0,
+      "nC": 0,
+      "median": 0,
+      "shrunken": 1,
+      "surgeE": 1,
+      "surgeC": 1
+    },
+    {
+      "hour": 3,
+      "n": 0,
+      "nE": 0,
+      "nC": 0,
+      "median": 0,
+      "shrunken": 1,
+      "surgeE": 1,
+      "surgeC": 1
+    },
+    {
+      "hour": 4,
+      "n": 0,
+      "nE": 0,
+      "nC": 0,
+      "median": 0,
+      "shrunken": 1,
+      "surgeE": 1,
+      "surgeC": 1
+    },
+    {
+      "hour": 5,
+      "n": 0,
+      "nE": 0,
+      "nC": 0,
+      "median": 0,
+      "shrunken": 1,
+      "surgeE": 1,
+      "surgeC": 1
+    },
+    {
+      "hour": 6,
+      "n": 0,
+      "nE": 0,
+      "nC": 0,
+      "median": 0,
+      "shrunken": 1,
+      "surgeE": 1,
+      "surgeC": 1
+    },
+    {
+      "hour": 7,
+      "n": 12,
+      "nE": 12,
+      "nC": 12,
+      "median": 1.168,
+      "shrunken": 1.119,
+      "surgeE": 1.116,
+      "surgeC": 1.129
+    },
+    {
+      "hour": 8,
+      "n": 34,
+      "nE": 34,
+      "nC": 34,
+      "median": 0.857,
+      "shrunken": 0.875,
+      "surgeE": 0.889,
+      "surgeC": 0.862
+    },
+    {
+      "hour": 9,
+      "n": 39,
+      "nE": 39,
+      "nC": 39,
+      "median": 0.85,
+      "shrunken": 0.867,
+      "surgeE": 0.888,
+      "surgeC": 0.849
+    },
+    {
+      "hour": 10,
+      "n": 0,
+      "nE": 0,
+      "nC": 0,
+      "median": 0,
+      "shrunken": 1,
+      "surgeE": 1,
+      "surgeC": 1
+    },
+    {
+      "hour": 11,
+      "n": 10,
+      "nE": 10,
+      "nC": 10,
+      "median": 0.738,
+      "shrunken": 0.825,
+      "surgeE": 0.827,
+      "surgeC": 0.79
+    },
+    {
+      "hour": 12,
+      "n": 1,
+      "nE": 1,
+      "nC": 1,
+      "median": 0.92,
+      "shrunken": 0.987,
+      "surgeE": 0.987,
+      "surgeC": 0.986
+    },
+    {
+      "hour": 13,
+      "n": 5,
+      "nE": 5,
+      "nC": 5,
+      "median": 0.689,
+      "shrunken": 0.844,
+      "surgeE": 0.788,
+      "surgeC": 0.901
+    },
+    {
+      "hour": 14,
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 0.913,
+      "shrunken": 0.975,
+      "surgeE": 0.975,
+      "surgeC": 0.975
+    },
+    {
+      "hour": 15,
+      "n": 29,
+      "nE": 29,
+      "nC": 29,
+      "median": 0.724,
+      "shrunken": 0.765,
+      "surgeE": 0.763,
+      "surgeC": 0.767
+    },
+    {
+      "hour": 16,
+      "n": 54,
+      "nE": 54,
+      "nC": 54,
+      "median": 1.078,
+      "shrunken": 1.072,
+      "surgeE": 1.074,
+      "surgeC": 1.091
+    },
+    {
+      "hour": 17,
+      "n": 4,
+      "nE": 4,
+      "nC": 4,
+      "median": 1.25,
+      "shrunken": 1.111,
+      "surgeE": 1.12,
+      "surgeC": 1.121
+    },
+    {
+      "hour": 18,
+      "n": 6,
+      "nE": 6,
+      "nC": 6,
+      "median": 0.729,
+      "shrunken": 0.852,
+      "surgeE": 0.84,
+      "surgeC": 0.863
+    },
+    {
+      "hour": 19,
+      "n": 18,
+      "nE": 18,
+      "nC": 18,
+      "median": 0.944,
+      "shrunken": 0.956,
+      "surgeE": 0.96,
+      "surgeC": 0.961
+    },
+    {
+      "hour": 20,
+      "n": 10,
+      "nE": 10,
+      "nC": 10,
+      "median": 0.711,
+      "shrunken": 0.807,
+      "surgeE": 0.804,
+      "surgeC": 0.81
+    },
+    {
+      "hour": 21,
+      "n": 7,
+      "nE": 7,
+      "nC": 7,
+      "median": 1.366,
+      "shrunken": 1.214,
+      "surgeE": 1.208,
+      "surgeC": 1.219
+    },
+    {
+      "hour": 22,
+      "n": 34,
+      "nE": 33,
+      "nC": 34,
+      "median": 1.175,
+      "shrunken": 1.152,
+      "surgeE": 1.185,
+      "surgeC": 1.135
+    },
+    {
+      "hour": 23,
+      "n": 17,
+      "nE": 17,
+      "nC": 17,
+      "median": 1.187,
+      "shrunken": 1.145,
+      "surgeE": 1.155,
+      "surgeC": 1.134
+    }
+  ],
+  "byDistrict": [
+    {
+      "name": "пр. Независимости 22",
+      "street": "пр. Независимости 22",
+      "n": 28,
+      "nE": 28,
+      "nC": 28,
+      "median": 0.578,
+      "shrunken": 0.642,
+      "surgeE": 0.635,
+      "surgeC": 0.649,
+      "avgHour": 17
+    },
+    {
+      "name": "Сухая 25",
+      "street": "Сухая 25",
+      "n": 12,
+      "nE": 12,
+      "nC": 12,
+      "median": 1.317,
+      "shrunken": 1.224,
+      "surgeE": 1.233,
+      "surgeC": 1.215,
+      "avgHour": 12
+    },
+    {
+      "name": "Площадь Якуба Коласа",
+      "street": "Площадь Якуба Коласа",
+      "n": 5,
+      "nE": 5,
+      "nC": 5,
+      "median": 1.426,
+      "shrunken": 1.213,
+      "surgeE": 1.229,
+      "surgeC": 1.197,
+      "avgHour": 13
+    },
+    {
+      "name": "Иерусалимская 4",
+      "street": "Иерусалимская 4",
+      "n": 6,
+      "nE": 6,
+      "nC": 6,
+      "median": 1.356,
+      "shrunken": 1.194,
+      "surgeE": 1.177,
+      "surgeC": 1.211,
+      "avgHour": 22
+    },
+    {
+      "name": "Фрунзенская",
+      "street": "Фрунзенская",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 0.364,
+      "shrunken": 0.818,
+      "surgeE": 0.818,
+      "surgeC": 0.818,
+      "avgHour": 20
+    },
+    {
+      "name": "Корона",
+      "street": "Корона",
+      "n": 4,
+      "nE": 4,
+      "nC": 4,
+      "median": 0.621,
+      "shrunken": 0.832,
+      "surgeE": 0.829,
+      "surgeC": 0.835,
+      "avgHour": 10
+    },
+    {
+      "name": "пр. Независимости 31А",
+      "street": "пр. Независимости 31А",
+      "n": 5,
+      "nE": 5,
+      "nC": 5,
+      "median": 0.675,
+      "shrunken": 0.838,
+      "surgeE": 0.823,
+      "surgeC": 0.852,
+      "avgHour": 18
+    },
+    {
+      "name": "пр. Независимости 25",
+      "street": "пр. Независимости 25",
+      "n": 11,
+      "nE": 11,
+      "nC": 11,
+      "median": 0.766,
+      "shrunken": 0.839,
+      "surgeE": 0.829,
+      "surgeC": 0.848,
+      "avgHour": 11
+    },
+    {
+      "name": "Карла Маркса 42",
+      "street": "Карла Маркса 42",
+      "n": 5,
+      "nE": 5,
+      "nC": 5,
+      "median": 0.689,
+      "shrunken": 0.844,
+      "surgeE": 0.788,
+      "surgeC": 0.901,
+      "avgHour": 13
+    },
+    {
+      "name": "пр. Независимости 16",
+      "street": "пр. Независимости 16",
+      "n": 5,
+      "nE": 5,
+      "nC": 5,
+      "median": 0.694,
+      "shrunken": 0.847,
+      "surgeE": 0.849,
+      "surgeC": 0.845,
+      "avgHour": 11
+    },
+    {
+      "name": "Менделеева 4",
+      "street": "Менделеева 4",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.535,
+      "shrunken": 1.153,
+      "surgeE": 1.163,
+      "surgeC": 1.143,
+      "avgHour": 16
+    },
+    {
+      "name": "Немига",
+      "street": "Немига",
+      "n": 6,
+      "nE": 6,
+      "nC": 6,
+      "median": 0.739,
+      "shrunken": 0.857,
+      "surgeE": 0.842,
+      "surgeC": 0.874,
+      "avgHour": 11
+    },
+    {
+      "name": "Первомайская улица",
+      "street": "Первомайская улица",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.493,
+      "shrunken": 1.141,
+      "surgeE": 1.154,
+      "surgeC": 1.128,
+      "avgHour": 22
+    },
+    {
+      "name": "Осипенко 17к2",
+      "street": "Осипенко 17к2",
+      "n": 4,
+      "nE": 4,
+      "nC": 4,
+      "median": 1.315,
+      "shrunken": 1.14,
+      "surgeE": 1.149,
+      "surgeC": 1.131,
+      "avgHour": 15
+    },
+    {
+      "name": "Октябрьская 16к5",
+      "street": "Октябрьская 16к5",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.48,
+      "shrunken": 1.137,
+      "surgeE": 1.145,
+      "surgeC": 1.129,
+      "avgHour": 19
+    },
+    {
+      "name": "Институт культуры",
+      "street": "Институт культуры",
+      "n": 4,
+      "nE": 4,
+      "nC": 4,
+      "median": 0.694,
+      "shrunken": 0.864,
+      "surgeE": 0.866,
+      "surgeC": 0.862,
+      "avgHour": 12
+    },
+    {
+      "name": "Первомайская",
+      "street": "Первомайская",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 0.614,
+      "shrunken": 0.89,
+      "surgeE": 0.888,
+      "surgeC": 0.891,
+      "avgHour": 9
+    },
+    {
+      "name": "Первомайская 24к1",
+      "street": "Первомайская 24к1",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.37,
+      "shrunken": 1.106,
+      "surgeE": 1.114,
+      "surgeC": 1.097,
+      "avgHour": 23
+    },
+    {
+      "name": "улица Алеся Гаруна",
+      "street": "улица Алеся Гаруна",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.362,
+      "shrunken": 1.104,
+      "surgeE": 1.108,
+      "surgeC": 1.099,
+      "avgHour": 22
+    },
+    {
+      "name": "Привокзальная пл. 7",
+      "street": "Привокзальная пл. 7",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.355,
+      "shrunken": 1.102,
+      "surgeE": 1.101,
+      "surgeC": 1.102,
+      "avgHour": 23
+    },
+    {
+      "name": "Карла Маркса 21",
+      "street": "Карла Маркса 21",
+      "n": 3,
+      "nE": 3,
+      "nC": 3,
+      "median": 0.727,
+      "shrunken": 0.898,
+      "surgeE": 0.897,
+      "surgeC": 0.899,
+      "avgHour": 18
+    },
+    {
+      "name": "Площадь Ленина",
+      "street": "Площадь Ленина",
+      "n": 4,
+      "nE": 4,
+      "nC": 4,
+      "median": 0.782,
+      "shrunken": 0.903,
+      "surgeE": 0.87,
+      "surgeC": 0.904,
+      "avgHour": 13
+    },
+    {
+      "name": "Каменная Горка",
+      "street": "Каменная Горка",
+      "n": 3,
+      "nE": 3,
+      "nC": 3,
+      "median": 0.752,
+      "shrunken": 0.907,
+      "surgeE": 0.934,
+      "surgeC": 0.88,
+      "avgHour": 13
+    },
+    {
+      "name": "Привокзальная пл. 5",
+      "street": "Привокзальная пл. 5",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.308,
+      "shrunken": 1.088,
+      "surgeE": 1.087,
+      "surgeC": 1.089,
+      "avgHour": 23
+    },
+    {
+      "name": "квартал Северная Америка",
+      "street": "квартал Северная Америка",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 0.696,
+      "shrunken": 0.913,
+      "surgeE": 0.914,
+      "surgeC": 0.913,
+      "avgHour": 22
+    },
+    {
+      "name": "Партизанская",
+      "street": "Партизанская",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 0.7,
+      "shrunken": 0.914,
+      "surgeE": 0.919,
+      "surgeC": 0.909,
+      "avgHour": 12
+    },
+    {
+      "name": "Выход № 1 на ул. Орловскую",
+      "street": "Выход № 1 на ул. Орловскую",
+      "n": 5,
+      "nE": 5,
+      "nC": 5,
+      "median": 0.837,
+      "shrunken": 0.918,
+      "surgeE": 0.926,
+      "surgeC": 0.911,
+      "avgHour": 12
+    },
+    {
+      "name": "микрорайон Серебрянка",
+      "street": "микрорайон Серебрянка",
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 0.732,
+      "shrunken": 0.923,
+      "surgeE": 0.928,
+      "surgeC": 0.919,
+      "avgHour": 12
+    },
+    {
+      "name": "Минск-Пасс",
+      "street": "Минск-Пасс",
+      "n": 4,
+      "nE": 4,
+      "nC": 4,
+      "median": 0.831,
+      "shrunken": 0.925,
+      "surgeE": 0.911,
+      "surgeC": 0.96,
+      "avgHour": 14
+    },
+    {
+      "name": "Ленина 3",
+      "street": "Ленина 3",
+      "n": 3,
+      "nE": 3,
+      "nC": 3,
+      "median": 0.803,
+      "shrunken": 0.926,
+      "surgeE": 0.932,
+      "surgeC": 0.92,
+      "avgHour": 15
+    }
+  ],
+  "byHex": {
+    "5391:2752": {
+      "lat": 53.91,
+      "lon": 27.52,
+      "n": 8,
+      "median": 1.24,
+      "shrunken": 1.148,
+      "surgeE": 1.135,
+      "surgeC": 1.16,
+      "avgHour": 7
+    },
+    "5390:2756": {
+      "lat": 53.9,
+      "lon": 27.56,
+      "n": 53,
+      "median": 0.694,
+      "shrunken": 0.72,
+      "surgeE": 0.724,
+      "surgeC": 0.727,
+      "avgHour": 15
+    },
+    "5390:2755": {
+      "lat": 53.9,
+      "lon": 27.55,
+      "n": 11,
+      "median": 0.739,
+      "shrunken": 0.82,
+      "surgeE": 0.809,
+      "surgeC": 0.843,
+      "avgHour": 15
+    },
+    "5394:2764": {
+      "lat": 53.94,
+      "lon": 27.64,
+      "n": 3,
+      "median": 0.806,
+      "shrunken": 0.927,
+      "surgeE": 0.923,
+      "surgeC": 0.932,
+      "avgHour": 20
+    },
+    "5389:2758": {
+      "lat": 53.89,
+      "lon": 27.58,
+      "n": 2,
+      "median": 1.48,
+      "shrunken": 1.137,
+      "surgeE": 1.145,
+      "surgeC": 1.129,
+      "avgHour": 19
+    },
+    "5390:2754": {
+      "lat": 53.9,
+      "lon": 27.54,
+      "n": 10,
+      "median": 1.403,
+      "shrunken": 1.269,
+      "surgeE": 1.253,
+      "surgeC": 1.288,
+      "avgHour": 22
+    },
+    "5387:2757": {
+      "lat": 53.87,
+      "lon": 27.57,
+      "n": 4,
+      "median": 0.621,
+      "shrunken": 0.832,
+      "surgeE": 0.829,
+      "surgeC": 0.835,
+      "avgHour": 10
+    },
+    "5393:2751": {
+      "lat": 53.93,
+      "lon": 27.51,
+      "n": 3,
+      "median": 0.819,
+      "shrunken": 0.932,
+      "surgeE": 0.938,
+      "surgeC": 0.927,
+      "avgHour": 9
+    },
+    "5392:2743": {
+      "lat": 53.92,
+      "lon": 27.43,
+      "n": 3,
+      "median": 0.752,
+      "shrunken": 0.907,
+      "surgeE": 0.934,
+      "surgeC": 0.88,
+      "avgHour": 13
+    },
+    "5388:2760": {
+      "lat": 53.88,
+      "lon": 27.6,
+      "n": 3,
+      "median": 0.92,
+      "shrunken": 0.97,
+      "surgeE": 0.971,
+      "surgeC": 0.969,
+      "avgHour": 10
+    },
+    "5391:2760": {
+      "lat": 53.91,
+      "lon": 27.6,
+      "n": 2,
+      "median": 0.945,
+      "shrunken": 0.984,
+      "surgeE": 0.987,
+      "surgeC": 0.981,
+      "avgHour": 11
+    },
+    "5389:2753": {
+      "lat": 53.89,
+      "lon": 27.53,
+      "n": 3,
+      "median": 0.911,
+      "shrunken": 0.967,
+      "surgeE": 0.966,
+      "surgeC": 0.967,
+      "avgHour": 11
+    },
+    "5396:2759": {
+      "lat": 53.96,
+      "lon": 27.59,
+      "n": 2,
+      "median": 0.662,
+      "shrunken": 0.903,
+      "surgeE": 0.967,
+      "surgeC": 0.897,
+      "avgHour": 22
+    },
+    "5392:2760": {
+      "lat": 53.92,
+      "lon": 27.6,
+      "n": 3,
+      "median": 0.909,
+      "shrunken": 0.966,
+      "surgeE": 0.967,
+      "surgeC": 0.967,
+      "avgHour": 20
+    },
+    "5391:2755": {
+      "lat": 53.91,
+      "lon": 27.55,
+      "n": 11,
+      "median": 1.062,
+      "shrunken": 1.043,
+      "surgeE": 1.05,
+      "surgeC": 1.035,
+      "avgHour": 13
+    },
+    "5400:2768": {
+      "lat": 54,
+      "lon": 27.68,
+      "n": 2,
+      "median": 0.364,
+      "shrunken": 0.818,
+      "surgeE": 0.818,
+      "surgeC": 0.818,
+      "avgHour": 20
+    },
+    "5386:2756": {
+      "lat": 53.86,
+      "lon": 27.56,
+      "n": 2,
+      "median": 0.7,
+      "shrunken": 0.914,
+      "surgeE": 0.919,
+      "surgeC": 0.909,
+      "avgHour": 12
+    },
+    "5389:2755": {
+      "lat": 53.89,
+      "lon": 27.55,
+      "n": 31,
+      "median": 1.018,
+      "shrunken": 1.016,
+      "surgeE": 1.025,
+      "surgeC": 1.016,
+      "avgHour": 14
+    },
+    "5391:2757": {
+      "lat": 53.91,
+      "lon": 27.57,
+      "n": 13,
+      "median": 0.782,
+      "shrunken": 0.843,
+      "surgeE": 0.835,
+      "surgeC": 0.851,
+      "avgHour": 16
+    },
+    "5384:2751": {
+      "lat": 53.84,
+      "lon": 27.51,
+      "n": 4,
+      "median": 1.064,
+      "shrunken": 1.029,
+      "surgeE": 1.026,
+      "surgeC": 1.031,
+      "avgHour": 13
+    },
+    "5386:2760": {
+      "lat": 53.86,
+      "lon": 27.6,
+      "n": 3,
+      "median": 0.753,
+      "shrunken": 0.907,
+      "surgeE": 0.913,
+      "surgeC": 0.901,
+      "avgHour": 16
+    },
+    "5393:2754": {
+      "lat": 53.93,
+      "lon": 27.54,
+      "n": 5,
+      "median": 0.837,
+      "shrunken": 0.918,
+      "surgeE": 0.926,
+      "surgeC": 0.911,
+      "avgHour": 12
+    },
+    "5389:2754": {
+      "lat": 53.89,
+      "lon": 27.54,
+      "n": 5,
+      "median": 0.76,
+      "shrunken": 0.88,
+      "surgeE": 0.876,
+      "surgeC": 0.884,
+      "avgHour": 13
+    },
+    "5392:2759": {
+      "lat": 53.92,
+      "lon": 27.59,
+      "n": 2,
+      "median": 0.973,
+      "shrunken": 0.992,
+      "surgeE": 0.996,
+      "surgeC": 0.989,
+      "avgHour": 12
+    },
+    "5390:2758": {
+      "lat": 53.9,
+      "lon": 27.58,
+      "n": 6,
+      "median": 1.1,
+      "shrunken": 1.055,
+      "surgeE": 1.068,
+      "surgeC": 1.041,
+      "avgHour": 18
+    },
+    "5391:2758": {
+      "lat": 53.91,
+      "lon": 27.58,
+      "n": 5,
+      "median": 1.426,
+      "shrunken": 1.213,
+      "surgeE": 1.229,
+      "surgeC": 1.197,
+      "avgHour": 13
+    },
+    "5397:2753": {
+      "lat": 53.97,
+      "lon": 27.53,
+      "n": 2,
+      "median": 1.02,
+      "shrunken": 1.006,
+      "surgeE": 1.016,
+      "surgeC": 0.995,
+      "avgHour": 14
+    },
+    "5390:2757": {
+      "lat": 53.9,
+      "lon": 27.57,
+      "n": 6,
+      "median": 0.745,
+      "shrunken": 0.861,
+      "surgeE": 0.804,
+      "surgeC": 0.913,
+      "avgHour": 14
+    },
+    "5393:2755": {
+      "lat": 53.93,
+      "lon": 27.55,
+      "n": 4,
+      "median": 1.315,
+      "shrunken": 1.14,
+      "surgeE": 1.149,
+      "surgeC": 1.131,
+      "avgHour": 15
+    },
+    "5389:2742": {
+      "lat": 53.89,
+      "lon": 27.42,
+      "n": 3,
+      "median": 0.879,
+      "shrunken": 0.955,
+      "surgeE": 0.959,
+      "surgeC": 0.951,
+      "avgHour": 15
+    },
+    "5393:2765": {
+      "lat": 53.93,
+      "lon": 27.65,
+      "n": 2,
+      "median": 1.214,
+      "shrunken": 1.061,
+      "surgeE": 1.051,
+      "surgeC": 1.072,
+      "avgHour": 17
+    },
+    "5389:2756": {
+      "lat": 53.89,
+      "lon": 27.56,
+      "n": 2,
+      "median": 0.836,
+      "shrunken": 0.953,
+      "surgeE": 0.955,
+      "surgeC": 0.952,
+      "avgHour": 16
+    },
+    "5393:2744": {
+      "lat": 53.93,
+      "lon": 27.44,
+      "n": 2,
+      "median": 0.928,
+      "shrunken": 0.979,
+      "surgeE": 0.985,
+      "surgeC": 0.974,
+      "avgHour": 18
+    },
+    "5390:2762": {
+      "lat": 53.9,
+      "lon": 27.62,
+      "n": 2,
+      "median": 1.535,
+      "shrunken": 1.153,
+      "surgeE": 1.163,
+      "surgeC": 1.143,
+      "avgHour": 16
+    },
+    "5393:2767": {
+      "lat": 53.93,
+      "lon": 27.67,
+      "n": 2,
+      "median": 1.248,
+      "shrunken": 1.071,
+      "surgeE": 1.076,
+      "surgeC": 1.065,
+      "avgHour": 16
+    },
+    "5395:2733": {
+      "lat": 53.95,
+      "lon": 27.33,
+      "n": 2,
+      "median": 0.94,
+      "shrunken": 0.983,
+      "surgeE": 1.003,
+      "surgeC": 0.963,
+      "avgHour": 16
+    },
+    "5391:2759": {
+      "lat": 53.91,
+      "lon": 27.59,
+      "n": 3,
+      "median": 1.262,
+      "shrunken": 1.098,
+      "surgeE": 1.109,
+      "surgeC": 1.087,
+      "avgHour": 20
+    },
+    "5385:2744": {
+      "lat": 53.85,
+      "lon": 27.44,
+      "n": 2,
+      "median": 0.916,
+      "shrunken": 0.976,
+      "surgeE": 0.976,
+      "surgeC": 0.976,
+      "avgHour": 18
+    },
+    "5388:2744": {
+      "lat": 53.88,
+      "lon": 27.44,
+      "n": 2,
+      "median": 0.883,
+      "shrunken": 0.967,
+      "surgeE": 0.963,
+      "surgeC": 0.97,
+      "avgHour": 19
+    },
+    "5386:2763": {
+      "lat": 53.86,
+      "lon": 27.63,
+      "n": 2,
+      "median": 0.756,
+      "shrunken": 0.93,
+      "surgeE": 0.905,
+      "surgeC": 0.956,
+      "avgHour": 19
+    },
+    "5391:2756": {
+      "lat": 53.91,
+      "lon": 27.56,
+      "n": 2,
+      "median": 1.158,
+      "shrunken": 1.045,
+      "surgeE": 1.051,
+      "surgeC": 1.039,
+      "avgHour": 22
+    },
+    "5392:2745": {
+      "lat": 53.92,
+      "lon": 27.45,
+      "n": 2,
+      "median": 1.362,
+      "shrunken": 1.104,
+      "surgeE": 1.108,
+      "surgeC": 1.099,
+      "avgHour": 22
+    }
+  },
+  "yandexTrend24h": {
+    "windowHours": 24,
+    "nE": 219,
+    "nC": 224,
+    "shiftE": -0.046,
+    "shiftC": -0.046,
+    "multiplierE": 0.954,
+    "multiplierC": 0.954,
+    "multiplier": 0.954
+  },
+  "liveHex": {
+    "5388:2744": {
+      "lat": 53.88,
+      "lon": 27.44,
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 0.883,
+      "shrunken": 0.953,
+      "surgeE": 0.948,
+      "surgeC": 0.958,
+      "ageMinM": 309,
+      "ageMaxM": 309
+    },
+    "5386:2763": {
+      "lat": 53.86,
+      "lon": 27.63,
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 0.756,
+      "shrunken": 0.903,
+      "surgeE": 0.866,
+      "surgeC": 0.939,
+      "ageMinM": 309,
+      "ageMaxM": 309
+    },
+    "5394:2764": {
+      "lat": 53.94,
+      "lon": 27.64,
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 0.918,
+      "shrunken": 0.967,
+      "surgeE": 0.962,
+      "surgeC": 0.973,
+      "ageMinM": 74,
+      "ageMaxM": 134
+    },
+    "5391:2756": {
+      "lat": 53.91,
+      "lon": 27.56,
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.158,
+      "shrunken": 1.063,
+      "surgeE": 1.072,
+      "surgeC": 1.054,
+      "ageMinM": 138,
+      "ageMaxM": 149
+    },
+    "5389:2755": {
+      "lat": 53.89,
+      "lon": 27.55,
+      "n": 10,
+      "nE": 10,
+      "nC": 10,
+      "median": 1.235,
+      "shrunken": 1.181,
+      "surgeE": 1.184,
+      "surgeC": 1.178,
+      "ageMinM": 118,
+      "ageMaxM": 159
+    },
+    "5392:2745": {
+      "lat": 53.92,
+      "lon": 27.45,
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.362,
+      "shrunken": 1.145,
+      "surgeE": 1.151,
+      "surgeC": 1.139,
+      "ageMinM": 144,
+      "ageMaxM": 148
+    },
+    "5390:2755": {
+      "lat": 53.9,
+      "lon": 27.55,
+      "n": 4,
+      "nE": 4,
+      "nC": 4,
+      "median": 1.067,
+      "shrunken": 1.039,
+      "surgeE": 1.048,
+      "surgeC": 1.029,
+      "ageMinM": 119,
+      "ageMaxM": 149
+    },
+    "5391:2759": {
+      "lat": 53.91,
+      "lon": 27.59,
+      "n": 2,
+      "nE": 2,
+      "nC": 2,
+      "median": 1.063,
+      "shrunken": 1.025,
+      "surgeE": 1.032,
+      "surgeC": 1.018,
+      "ageMinM": 138,
+      "ageMaxM": 139
+    },
+    "5390:2758": {
+      "lat": 53.9,
+      "lon": 27.58,
+      "n": 4,
+      "nE": 4,
+      "nC": 4,
+      "median": 1.454,
+      "shrunken": 1.259,
+      "surgeE": 1.279,
+      "surgeC": 1.239,
+      "ageMinM": 74,
+      "ageMaxM": 149
+    },
+    "5391:2757": {
+      "lat": 53.91,
+      "lon": 27.57,
+      "n": 5,
+      "nE": 5,
+      "nC": 5,
+      "median": 1.577,
+      "shrunken": 1.361,
+      "surgeE": 1.395,
+      "surgeC": 1.327,
+      "ageMinM": 79,
+      "ageMaxM": 154
+    }
+  },
+  "liveWindowHours": 6,
+  "demandColor": {
+    "yellow": {
+      "n": 282,
+      "multiplier": 0.908,
+      "econom": 0.913,
+      "comfort": 0.901
+    },
+    "red": {
+      "n": 38,
+      "multiplier": 1.099,
+      "econom": 1.047,
+      "comfort": 1.024
+    },
+    "green": {
+      "n": 5,
+      "multiplier": 0.575,
+      "econom": 0.788,
+      "comfort": 0.804
+    }
+  },
+  "demandMultiplier": {
+    "yellow": {
+      "econom": 0.913,
+      "comfort": 0.901
+    },
+    "red": {
+      "econom": 1.047,
+      "comfort": 1.024
+    }
+  }
+}
