@@ -2,8 +2,8 @@ import type { ReactNode } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useWbCurrentUser } from "@/lib/wb-auth";
-import { getWbToken } from "@/lib/wb-api";
-import type { WbRole } from "@/lib/wb-api";
+import { getWbToken, type WbRole } from "@/lib/wb-api";
+import { roleLabel } from "@/lib/module-access";
 
 type Props = {
   roles: WbRole[];
@@ -60,7 +60,3 @@ export function RouteGuard({ roles, children }: Props) {
   return <>{children}</>;
 }
 
-function roleLabel(r: WbRole): string {
-  if (r === "admin") return "админ";
-  return "просмотр карты";
-}

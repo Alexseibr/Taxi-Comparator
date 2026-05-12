@@ -3,52 +3,18 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import {
-  Camera,
-  Car,
-  LogOut,
-  Map as MapIcon,
-} from "lucide-react";
+import { Car, LogOut } from "lucide-react";
 import {
   fetchWbMe,
   getWbToken,
   onWbAuthChanged,
   wbLogin,
   wbLogout,
-  type WbRole,
   type WbUser,
 } from "@/lib/wb-api";
 import { setStoredWbUser, useWbCurrentUser } from "@/lib/wb-auth";
 
-const BASE = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
-
-type Module = {
-  key: string;
-  title: string;
-  desc: string;
-  href: string;
-  icon: React.ComponentType<{ className?: string }>;
-  roles: WbRole[];
-};
-
-const MODULES: Module[] = [
-  {
-    key: "pryan",
-    title: "Прогноз тарифов",
-    desc: "Тепловая карта surge по Минску, расчёт стоимости и сверка с Я.Такси.",
-    href: `${BASE}/pryan`,
-    icon: MapIcon,
-    roles: ["admin", "viewer"],
-  },
-  {
-    key: "uploader-stats",
-    title: "Моя статистика",
-    desc: "Сколько скринов вы загрузили за сегодня/неделю/месяц, ваше место в рейтинге, кнопка быстрой загрузки.",
-    href: `${BASE}/uploader`,
-    icon: Camera,
-    roles: ["uploader", "admin"],
-  },
-];
+import { APP_MODULES, roleLabel } from "@/lib/module-access";
 
 // Безопасная версия параметра ?next=... — принимаем только относительные пути,
 // чтобы нельзя было увести юзера на чужой домен через open redirect.
@@ -126,7 +92,7 @@ function onAfterLogin(u: WbUser) {
   }
   // Иначе: если у пользователя только один доступный модуль —
   // сразу проваливаем в него.
-  const allowed = MODULES.filter((m) => m.roles.includes(u.role));
+  const allowed = APP_MODULES.filter((m) => m.roles.includes(u.role));
   if (allowed.length === 1) {
     window.location.assign(allowed[0].href);
   }
@@ -244,7 +210,14 @@ function LoginScreen({ onLoggedIn }: { onLoggedIn: (u: WbUser) => void }) {
 }
 
 function Menu({ user }: { user: WbUser }) {
-  const allowed = MODULES.filter((m) => m.roles.includes(user.role));
+  const allowed = APP_MODULES.filter((m) => m.roles.includes(user.role));
+  const [moduleQuery, setModuleQuery] = useState("");
+  const q = moduleQuery.trim().toLowerCase();
+  const visible = !q
+    ? allowed
+    : allowed.filter((m) =>
+        `${m.title} ${m.desc}`.toLowerCase().includes(q),
+      );
 
   async function handleLogout() {
     await wbLogout();
@@ -262,7 +235,7 @@ function Menu({ user }: { user: WbUser }) {
           <span className="text-xs text-muted-foreground">· Минск</span>
           <div className="ml-auto flex items-center gap-3">
             <span className="text-sm text-muted-foreground hidden sm:inline">
-              {user.displayName} · {roleHuman(user.role)}
+              {user.displayName} · {roleLabel(user.role)}
             </span>
             <Button
               variant="outline"
@@ -284,8 +257,18 @@ function Menu({ user }: { user: WbUser }) {
           Выберите модуль. Переключиться можно в любой момент через шапку модуля.
         </p>
 
+        <div className="mb-4">
+          <Input
+            value={moduleQuery}
+            onChange={(e) => setModuleQuery(e.target.value)}
+            placeholder="Поиск по модулям"
+            data-testid="input-module-search"
+            className="max-w-md"
+          />
+        </div>
+
         <div className="grid sm:grid-cols-2 gap-4">
-          {allowed.map((m) => {
+          {visible.map((m) => {
             const Icon = m.icon;
             return (
               <a
@@ -322,12 +305,17 @@ function Menu({ user }: { user: WbUser }) {
             </p>
           </Card>
         )}
+
+        {allowed.length > 0 && visible.length === 0 && (
+          <Card className="p-6 mt-2" data-testid="empty-module-search">
+            <h2 className="font-semibold mb-1">Ничего не найдено</h2>
+            <p className="text-sm text-muted-foreground">
+              Измените поисковый запрос, чтобы увидеть доступные модули.
+            </p>
+          </Card>
+        )}
       </main>
     </div>
   );
 }
 
-function roleHuman(r: WbRole): string {
-  if (r === "admin") return "админ";
-  return "просмотр карты";
-}
