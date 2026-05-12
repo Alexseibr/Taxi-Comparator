@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
+import { readFileSync } from "fs";
+import { execSync } from "child_process";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 const rawPort = process.env.PORT;
@@ -32,10 +34,26 @@ if (!basePath) {
 // по HTTP-referrer (rwbtaxi.by, *.replit.dev).
 const googleMapsKey = process.env.GOOGLE_MAPS_KEY ?? "";
 
+// Версия приложения: берём из package.json + короткий git-SHA.
+// Результат вшивается в бандл как VITE_APP_VERSION (напр. "1.0.0+3feec9c").
+const pkg = JSON.parse(
+  readFileSync(new URL("./package.json", import.meta.url), "utf-8"),
+) as { version: string };
+let gitSha = "dev";
+try {
+  gitSha = execSync("git rev-parse --short HEAD", { stdio: ["pipe", "pipe", "ignore"] })
+    .toString()
+    .trim();
+} catch {
+  /* вне git-репо — используем "dev" */
+}
+const appVersion = `${pkg.version}+${gitSha}`;
+
 export default defineConfig({
   base: basePath,
   define: {
     "import.meta.env.VITE_GOOGLE_MAPS_KEY": JSON.stringify(googleMapsKey),
+    "import.meta.env.VITE_APP_VERSION": JSON.stringify(appVersion),
   },
   plugins: [
     react(),

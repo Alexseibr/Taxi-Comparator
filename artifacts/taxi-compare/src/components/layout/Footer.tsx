@@ -1,5 +1,7 @@
 import React from "react";
 
+const APP_VERSION = import.meta.env.VITE_APP_VERSION as string | undefined;
+
 export default function Footer() {
   return (
     <footer className="hidden md:block border-t bg-muted/20 mt-auto">
@@ -8,9 +10,12 @@ export default function Footer() {
           Минск, RWB Taxi. Базовый тариф — формула, сёрджи — наблюдения / прогнозы.
           Реальные цены могут отличаться из-за пробок и местного спроса.
         </p>
-        <p className="text-xs text-muted-foreground">
-          Map © OpenStreetMap contributors
-        </p>
+        <div className="flex items-center gap-3 text-xs text-muted-foreground">
+          {APP_VERSION && (
+            <span className="font-mono opacity-60">v{APP_VERSION}</span>
+          )}
+          <span>Map © OpenStreetMap contributors</span>
+        </div>
       </div>
     </footer>
   );
