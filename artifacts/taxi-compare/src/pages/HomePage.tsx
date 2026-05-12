@@ -3,52 +3,20 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import {
-  Camera,
-  Car,
-  LogOut,
-  Map as MapIcon,
-} from "lucide-react";
+import { Car, LogOut } from "lucide-react";
 import {
   fetchWbMe,
   getWbToken,
   onWbAuthChanged,
   wbLogin,
   wbLogout,
-  type WbRole,
   type WbUser,
 } from "@/lib/wb-api";
 import { setStoredWbUser, useWbCurrentUser } from "@/lib/wb-auth";
 
-const BASE = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+import { APP_MODULES, filterModules, roleLabel } from "@/lib/module-access";
 
-type Module = {
-  key: string;
-  title: string;
-  desc: string;
-  href: string;
-  icon: React.ComponentType<{ className?: string }>;
-  roles: WbRole[];
-};
-
-const MODULES: Module[] = [
-  {
-    key: "pryan",
-    title: "Прогноз тарифов",
-    desc: "Тепловая карта surge по Минску, расчёт стоимости и сверка с Я.Такси.",
-    href: `${BASE}/pryan`,
-    icon: MapIcon,
-    roles: ["admin", "viewer"],
-  },
-  {
-    key: "uploader-stats",
-    title: "Моя статистика",
-    desc: "Сколько скринов вы загрузили за сегодня/неделю/месяц, ваше место в рейтинге, кнопка быстрой загрузки.",
-    href: `${BASE}/uploader`,
-    icon: Camera,
-    roles: ["uploader", "admin"],
-  },
-];
+const LAST_MODULE_KEY = "wb_last_module_v1";
 
 // Безопасная версия параметра ?next=... — принимаем только относительные пути,
 // чтобы нельзя было увести юзера на чужой домен через open redirect.
@@ -126,7 +94,7 @@ function onAfterLogin(u: WbUser) {
   }
   // Иначе: если у пользователя только один доступный модуль —
   // сразу проваливаем в него.
-  const allowed = MODULES.filter((m) => m.roles.includes(u.role));
+  const allowed = APP_MODULES.filter((m) => m.roles.includes(u.role));
   if (allowed.length === 1) {
     window.location.assign(allowed[0].href);
   }
@@ -244,7 +212,12 @@ function LoginScreen({ onLoggedIn }: { onLoggedIn: (u: WbUser) => void }) {
 }
 
 function Menu({ user }: { user: WbUser }) {
-  const allowed = MODULES.filter((m) => m.roles.includes(user.role));
+  const allowed = APP_MODULES.filter((m) => m.roles.includes(user.role));
+  const [moduleQuery, setModuleQuery] = useState("");
+  const visible = filterModules(allowed, moduleQuery);
+  const lastModuleKey =
+    typeof window !== "undefined" ? window.localStorage.getItem(LAST_MODULE_KEY) : null;
+  const lastModule = allowed.find((m) => m.key === lastModuleKey) ?? null;
 
   async function handleLogout() {
     await wbLogout();
@@ -262,7 +235,7 @@ function Menu({ user }: { user: WbUser }) {
           <span className="text-xs text-muted-foreground">· Минск</span>
           <div className="ml-auto flex items-center gap-3">
             <span className="text-sm text-muted-foreground hidden sm:inline">
-              {user.displayName} · {roleHuman(user.role)}
+              {user.displayName} · {roleLabel(user.role)}
             </span>
             <Button
               variant="outline"
@@ -284,8 +257,38 @@ function Menu({ user }: { user: WbUser }) {
           Выберите модуль. Переключиться можно в любой момент через шапку модуля.
         </p>
 
+        {lastModule && (
+          <Card className="mb-4 p-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 border-violet-200">
+            <div className="text-sm text-muted-foreground">Последний открытый модуль:</div>
+            <a
+              href={lastModule.href}
+              onClick={() => {
+                try {
+                  window.localStorage.setItem(LAST_MODULE_KEY, lastModule.key);
+                } catch {
+                  /* noop */
+                }
+              }}
+              className="text-sm font-medium text-violet-700 hover:underline"
+              data-testid="link-last-module"
+            >
+              {lastModule.title}
+            </a>
+          </Card>
+        )}
+
+        <div className="mb-4">
+          <Input
+            value={moduleQuery}
+            onChange={(e) => setModuleQuery(e.target.value)}
+            placeholder="Поиск по модулям"
+            data-testid="input-module-search"
+            className="max-w-md"
+          />
+        </div>
+
         <div className="grid sm:grid-cols-2 gap-4">
-          {allowed.map((m) => {
+          {visible.map((m) => {
             const Icon = m.icon;
             return (
               <a
@@ -293,6 +296,13 @@ function Menu({ user }: { user: WbUser }) {
                 href={m.href}
                 className="block group"
                 data-testid={`tile-${m.key}`}
+                onClick={() => {
+                  try {
+                    window.localStorage.setItem(LAST_MODULE_KEY, m.key);
+                  } catch {
+                    /* noop */
+                  }
+                }}
               >
                 <Card className="p-5 h-full transition-all border-violet-200 hover:border-violet-500 hover:shadow-lg hover:-translate-y-0.5">
                   <div className="flex items-start gap-4">
@@ -322,12 +332,17 @@ function Menu({ user }: { user: WbUser }) {
             </p>
           </Card>
         )}
+
+        {allowed.length > 0 && visible.length === 0 && (
+          <Card className="p-6 mt-2" data-testid="empty-module-search">
+            <h2 className="font-semibold mb-1">Ничего не найдено</h2>
+            <p className="text-sm text-muted-foreground">
+              Измените поисковый запрос, чтобы увидеть доступные модули.
+            </p>
+          </Card>
+        )}
       </main>
     </div>
   );
 }
 
-function roleHuman(r: WbRole): string {
-  if (r === "admin") return "админ";
-  return "просмотр карты";
-}

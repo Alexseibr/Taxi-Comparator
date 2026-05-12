@@ -18,6 +18,7 @@ import {
   type WbRole, type WbUser,
 } from "@/lib/wb-api";
 import { useWbCurrentUser } from "@/lib/wb-auth";
+import { roleLabel } from "@/lib/module-access";
 
 function fmtDt(ms?: number): string {
   if (!ms) return "—";
@@ -36,7 +37,7 @@ export default function WbAdminUsersPage() {
   const [showCreate, setShowCreate] = useState(false);
   const [createLogin, setCreateLogin] = useState("");
   const [createName, setCreateName] = useState("");
-  const [createRole, setCreateRole] = useState<WbRole>("antifraud");
+  const [createRole, setCreateRole] = useState<WbRole>("viewer");
 
   const [shownPassword, setShownPassword] = useState<{ login: string; password: string } | null>(null);
 
@@ -54,7 +55,7 @@ export default function WbAdminUsersPage() {
     onSuccess: ({ user, password }) => {
       qc.invalidateQueries({ queryKey: ["wb", "users"] });
       setShowCreate(false);
-      setCreateLogin(""); setCreateName(""); setCreateRole("antifraud");
+      setCreateLogin(""); setCreateName(""); setCreateRole("viewer");
       setShownPassword({ login: user.login, password });
     },
     onError: (e: Error) => toast({ title: "Не создано", description: e.message, variant: "destructive" }),
@@ -142,7 +143,7 @@ export default function WbAdminUsersPage() {
                     <td className="px-3 py-2">{u.displayName}</td>
                     <td className="px-3 py-2">
                       <Badge variant={u.role === "admin" ? "default" : "outline"}>
-                        {u.role === "admin" ? "админ" : "антифрод"}
+                        {roleLabel(u.role)}
                       </Badge>
                     </td>
                     <td className="px-3 py-2">
@@ -220,7 +221,8 @@ export default function WbAdminUsersPage() {
               <Select value={createRole} onValueChange={(v) => setCreateRole(v as WbRole)}>
                 <SelectTrigger data-testid="select-create-role"><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="antifraud">Антифрод</SelectItem>
+                  <SelectItem value="viewer">Просмотр</SelectItem>
+                  <SelectItem value="uploader">Загрузчик</SelectItem>
                   <SelectItem value="admin">Админ</SelectItem>
                 </SelectContent>
               </Select>
