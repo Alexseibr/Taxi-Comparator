@@ -59,4 +59,3 @@ export function RouteGuard({ roles, children }: Props) {
 
   return <>{children}</>;
 }
-
