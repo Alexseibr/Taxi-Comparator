@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Home, LogOut } from "lucide-react";
 import { clearWbToken } from "@/lib/wb-api";
 import { setStoredWbUser, useWbCurrentUser } from "@/lib/wb-auth";
+import { roleLabel } from "@/lib/module-access";
 
 type Props = {
   title: string;
@@ -55,10 +56,4 @@ export function ModuleHeader({ title }: Props) {
       </div>
     </div>
   );
-}
-
-function roleLabel(r: "admin" | "antifraud" | "viewer"): string {
-  if (r === "admin") return "админ";
-  if (r === "antifraud") return "антифрод";
-  return "просмотр";
 }

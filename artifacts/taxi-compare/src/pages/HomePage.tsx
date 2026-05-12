@@ -13,6 +13,7 @@ import {
   type WbUser,
 } from "@/lib/wb-api";
 import { setStoredWbUser, useWbCurrentUser } from "@/lib/wb-auth";
+
 import { APP_MODULES, roleLabel } from "@/lib/module-access";
 
 // Безопасная версия параметра ?next=... — принимаем только относительные пути,
@@ -317,3 +318,4 @@ function Menu({ user }: { user: WbUser }) {
     </div>
   );
 }
+
