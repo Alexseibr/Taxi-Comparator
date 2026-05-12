@@ -1,22 +1,18 @@
-import { type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { ModuleHeader } from "@/components/ModuleHeader";
-import { WbNav } from "@/components/wb/WbNav";
 
-// Обёртка для всех /wb-страниц. Общая авторизация теперь живёт на главной
-// странице (HomePage), сюда приходит только уже залогиненный пользователь
-// (RouteGuard в App.tsx гарантирует это).
-export function WbShell({
-  children,
-  title = "ВБ Такси",
-}: {
+type Props = {
   children: ReactNode;
   title?: string;
-}) {
+};
+
+export function WbShell({ children, title = "Управление" }: Props) {
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <ModuleHeader title={title} />
-      <WbNav />
-      {children}
-    </>
+      <div className="container mx-auto max-w-[1100px] px-4 py-4">
+        {children}
+      </div>
+    </div>
   );
 }

@@ -81,12 +81,10 @@ export default function WbAdminUsersPage() {
     onError: (e: Error) => toast({ title: "Ошибка", description: e.message, variant: "destructive" }),
   });
 
-  // Deny-by-default: пока me не загружен — не показываем admin UI и не даём
-  // запускать мутации. Если по факту окажется не admin — отрисуем forbidden.
   if (!me) {
     return (
-      <WbShell>
-        <div className="container mx-auto p-6 text-sm text-muted-foreground">
+      <WbShell title="Сотрудники">
+        <div className="text-sm text-muted-foreground p-6">
           Загрузка профиля…
         </div>
       </WbShell>
@@ -94,22 +92,20 @@ export default function WbAdminUsersPage() {
   }
   if (!isAdmin) {
     return (
-      <WbShell>
-        <div className="container mx-auto p-6">
-          <Card className="p-6">
-            <h2 className="text-lg font-semibold mb-2">Доступ запрещён</h2>
-            <p className="text-sm text-muted-foreground">
-              Раздел сотрудников доступен только администраторам.
-            </p>
-          </Card>
-        </div>
+      <WbShell title="Сотрудники">
+        <Card className="p-6">
+          <h2 className="text-lg font-semibold mb-2">Доступ запрещён</h2>
+          <p className="text-sm text-muted-foreground">
+            Раздел сотрудников доступен только администраторам.
+          </p>
+        </Card>
       </WbShell>
     );
   }
 
   return (
-    <WbShell>
-      <div className="container mx-auto px-4 max-w-[1100px] py-4 space-y-4">
+    <WbShell title="Сотрудники">
+      <div className="space-y-4">
         <div className="flex items-center justify-between flex-wrap gap-2">
           <h1 className="text-2xl font-semibold">Сотрудники</h1>
           <Button onClick={() => setShowCreate(true)} data-testid="btn-create-user">
