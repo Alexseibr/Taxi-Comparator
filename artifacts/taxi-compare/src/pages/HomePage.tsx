@@ -13,7 +13,10 @@ import {
   type WbUser,
 } from "@/lib/wb-api";
 import { setStoredWbUser, useWbCurrentUser } from "@/lib/wb-auth";
-import { APP_MODULES, roleLabel } from "@/lib/module-access";
+
+import { APP_MODULES, filterModules, roleLabel } from "@/lib/module-access";
+
+const LAST_MODULE_KEY = "wb_last_module_v1";
 
 // Безопасная версия параметра ?next=... — принимаем только относительные пути,
 // чтобы нельзя было увести юзера на чужой домен через open redirect.
@@ -211,12 +214,10 @@ function LoginScreen({ onLoggedIn }: { onLoggedIn: (u: WbUser) => void }) {
 function Menu({ user }: { user: WbUser }) {
   const allowed = APP_MODULES.filter((m) => m.roles.includes(user.role));
   const [moduleQuery, setModuleQuery] = useState("");
-  const q = moduleQuery.trim().toLowerCase();
-  const visible = !q
-    ? allowed
-    : allowed.filter((m) =>
-        `${m.title} ${m.desc}`.toLowerCase().includes(q),
-      );
+  const visible = filterModules(allowed, moduleQuery);
+  const lastModuleKey =
+    typeof window !== "undefined" ? window.localStorage.getItem(LAST_MODULE_KEY) : null;
+  const lastModule = allowed.find((m) => m.key === lastModuleKey) ?? null;
 
   async function handleLogout() {
     await wbLogout();
@@ -256,6 +257,26 @@ function Menu({ user }: { user: WbUser }) {
           Выберите модуль. Переключиться можно в любой момент через шапку модуля.
         </p>
 
+        {lastModule && (
+          <Card className="mb-4 p-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 border-violet-200">
+            <div className="text-sm text-muted-foreground">Последний открытый модуль:</div>
+            <a
+              href={lastModule.href}
+              onClick={() => {
+                try {
+                  window.localStorage.setItem(LAST_MODULE_KEY, lastModule.key);
+                } catch {
+                  /* noop */
+                }
+              }}
+              className="text-sm font-medium text-violet-700 hover:underline"
+              data-testid="link-last-module"
+            >
+              {lastModule.title}
+            </a>
+          </Card>
+        )}
+
         <div className="mb-4">
           <Input
             value={moduleQuery}
@@ -275,6 +296,13 @@ function Menu({ user }: { user: WbUser }) {
                 href={m.href}
                 className="block group"
                 data-testid={`tile-${m.key}`}
+                onClick={() => {
+                  try {
+                    window.localStorage.setItem(LAST_MODULE_KEY, m.key);
+                  } catch {
+                    /* noop */
+                  }
+                }}
               >
                 <Card className="p-5 h-full transition-all border-violet-200 hover:border-violet-500 hover:shadow-lg hover:-translate-y-0.5">
                   <div className="flex items-start gap-4">
@@ -317,3 +345,4 @@ function Menu({ user }: { user: WbUser }) {
     </div>
   );
 }
+

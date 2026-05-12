@@ -37,3 +37,10 @@ export function roleLabel(role: WbRole): string {
   if (role === "uploader") return "загрузчик";
   return "просмотр карты";
 }
+
+
+export function filterModules(modules: AppModule[], query: string): AppModule[] {
+  const q = query.trim().toLowerCase();
+  if (!q) return modules;
+  return modules.filter((m) => `${m.title} ${m.desc}`.toLowerCase().includes(q));
+}

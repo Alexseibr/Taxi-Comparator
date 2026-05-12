@@ -865,6 +865,7 @@ function MapDashboardImpl() {
   const [mlOverviewOpen, setMlOverviewOpen] = useState(false);
   const [operatorStatsOpen, setOperatorStatsOpen] = useState(false);
   const [holesInfoOpen, setHolesInfoOpen] = useState(false);
+  const [desktopToolsOpen, setDesktopToolsOpen] = useState(false);
   // Слой «Дыры» включён по умолчанию: на странице анализа сразу видно
   // откуда поступали заказы (точки А) и где «дыры» — пустые соты, где
   // данных мало или нет. Раньше требовалось ручное включение через
@@ -1177,19 +1178,24 @@ function MapDashboardImpl() {
     <div className="flex flex-col h-[100dvh] md:h-[calc(100dvh-4rem-3rem)]">
       {/* Top bar — десктоп */}
       <div className="hidden md:block border-b bg-card">
-        <div className="container mx-auto px-4 py-3 flex flex-wrap items-center gap-3">
-          <div className="flex-1 min-w-[200px]">
+        <div className="container mx-auto px-4 py-3 space-y-3">
+          <div className="flex items-center gap-3">
+            <div className="flex-1 min-w-[200px]">
             <h1 className="text-base font-bold tracking-tight">
               Прогноз для анализа RWB Taxi
             </h1>
             <p className="text-xs text-muted-foreground">
               Тепловая карта сёрджа по Минску — гексагональная сетка, интерполяция IDW, обрезка по МКАД
             </p>
+            </div>
+            <Badge variant="outline" className="text-xs">Минск · Desktop</Badge>
+            {/* Кнопка «i» — пошаговая инструкция (десктоп). При новой версии
+                на ней пульсирует красный «!» */}
+            <HelpButton variant="icon" />
           </div>
 
-          {/* Кнопка «i» — пошаговая инструкция (десктоп). При новой версии
-              на ней пульсирует красный «!» */}
-          <HelpButton variant="icon" />
+          <div className="rounded-xl border bg-background/80 p-2.5 flex flex-wrap items-center gap-2">
+            <div className="text-[11px] uppercase tracking-wide text-muted-foreground px-1">Основные настройки</div>
 
           <div className="flex border rounded-md overflow-hidden text-xs">
             {(["econom", "comfort"] as TaxiClass[]).map((c) => (
@@ -1265,6 +1271,10 @@ function MapDashboardImpl() {
 
           {/* Переключатель подложки карты — десктопная шапка */}
           <BasemapPicker variant="row" />
+          </div>
+
+          <div className="rounded-xl border bg-background/80 p-2.5 flex flex-wrap items-center gap-2">
+            <div className="text-[11px] uppercase tracking-wide text-muted-foreground px-1">Аналитика и данные</div>
 
           <div className="flex border rounded-md overflow-hidden text-xs">
             {SCHEDULE_DAYS.map((d) => (
@@ -1326,9 +1336,20 @@ function MapDashboardImpl() {
           {/* Книжка с рекомендованными адресами А→Б (нажать → Yandex Go) */}
           <RecommendedRoutesIconButton />
 
-          {/* Methodology / Сверка с Я. / Экспорт — только администратору */}
-          {isAdmin && (
-            <>
+          <Button
+            size="sm"
+            variant={desktopToolsOpen ? "default" : "outline"}
+            className="text-xs h-8"
+            onClick={() => setDesktopToolsOpen((v) => !v)}
+            data-testid="btn-desktop-tools-toggle"
+          >
+            {desktopToolsOpen ? "Скрыть инструменты" : "Показать инструменты"}
+          </Button>
+          {desktopToolsOpen && (
+            <div className="w-full rounded-xl border bg-background/80 p-3 mt-1 flex flex-wrap items-center gap-2">
+              {/* Methodology / Сверка с Я. / Экспорт — только администратору */}
+              {isAdmin && (
+                <>
               <Button
                 size="sm"
                 variant="outline"
@@ -1408,96 +1429,99 @@ function MapDashboardImpl() {
               >
                 👥 Операторы
               </Button>
-              <AdminPriceMonitorButton variant="toolbar" />
-            </>
-          )}
-          <TariffBreakdownDialog />
-          <Button
-            size="sm"
-            variant="outline"
-            className="gap-2 text-xs h-8"
-            onClick={() => setPriceSimOpen(true)}
-            data-testid="btn-price-simulator"
-          >
-            <Calculator className="w-3.5 h-3.5" />
-            Калькулятор
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            className="text-xs gap-1 h-8"
-            onClick={() => setTripsOpen(true)}
-            data-testid="btn-user-trips"
-          >
-            📷 Мои поездки
-            {userTrips.length > 0 && (
-              <span className="ml-0.5 inline-flex items-center justify-center text-[10px] bg-emerald-100 text-emerald-700 rounded-full px-1.5 min-w-[18px]">
-                {userTrips.length}
-              </span>
+                <AdminPriceMonitorButton variant="toolbar" />
+              </>
             )}
-          </Button>
-          <Button
-            variant={routeOpen ? "default" : "outline"}
-            size="sm"
-            className="gap-2 text-xs h-8"
-            onClick={() => setRouteOpen((o) => !o)}
-            data-testid="button-open-route"
-          >
-            <Navigation className="w-3.5 h-3.5" />
-            Маршрут А→Б
-            {pickMode && (
-              <span className="text-[10px] bg-amber-500 text-black px-1 rounded">
-                ставим {pickMode === "from" ? "А" : "Б"}
-              </span>
+            <TariffBreakdownDialog />
+            <Button
+              size="sm"
+              variant="outline"
+              className="gap-2 text-xs h-8"
+              onClick={() => setPriceSimOpen(true)}
+              data-testid="btn-price-simulator"
+            >
+              <Calculator className="w-3.5 h-3.5" />
+              Калькулятор
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="text-xs gap-1 h-8"
+              onClick={() => setTripsOpen(true)}
+              data-testid="btn-user-trips"
+            >
+              📷 Мои поездки
+              {userTrips.length > 0 && (
+                <span className="ml-0.5 inline-flex items-center justify-center text-[10px] bg-emerald-100 text-emerald-700 rounded-full px-1.5 min-w-[18px]">
+                  {userTrips.length}
+                </span>
+              )}
+            </Button>
+            <Button
+              variant={routeOpen ? "default" : "outline"}
+              size="sm"
+              className="gap-2 text-xs h-8"
+              onClick={() => setRouteOpen((o) => !o)}
+              data-testid="button-open-route"
+            >
+              <Navigation className="w-3.5 h-3.5" />
+              Маршрут А→Б
+              {pickMode && (
+                <span className="text-[10px] bg-amber-500 text-black px-1 rounded">
+                  ставим {pickMode === "from" ? "А" : "Б"}
+                </span>
+              )}
+            </Button>
+
+            {isAdmin && (
+              <div className="flex gap-1">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={handleExportJson}
+                  data-testid="btn-export-json"
+                  className="text-xs h-8"
+                >
+                  <FileJson className="w-3.5 h-3.5 mr-1" />
+                  JSON
+                </Button>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={handleExportCsv}
+                  data-testid="btn-export-csv"
+                  className="text-xs h-8"
+                >
+                  <FileSpreadsheet className="w-3.5 h-3.5 mr-1" />
+                  CSV
+                </Button>
+              </div>
             )}
-          </Button>
 
-          {isAdmin && (
-            <div className="flex gap-1">
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={handleExportJson}
-                data-testid="btn-export-json"
-                className="text-xs h-8"
-              >
-                <FileJson className="w-3.5 h-3.5 mr-1" />
-                JSON
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={handleExportCsv}
-                data-testid="btn-export-csv"
-                className="text-xs h-8"
-              >
-                <FileSpreadsheet className="w-3.5 h-3.5 mr-1" />
-                CSV
-              </Button>
-            </div>
+            <Button
+              size="sm"
+              variant={holesLayerOn ? "default" : "outline"}
+              className="gap-1.5 text-xs h-8"
+              onClick={toggleHolesLayer}
+              data-testid="btn-toggle-holes-layer"
+              title="Показать/скрыть карту дыр на карте"
+            >
+              🎯 Дыры {holesLayerOn ? "вкл" : ""}
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="gap-1 text-xs h-8 px-2"
+              onClick={() => setHolesInfoOpen(true)}
+              data-testid="btn-holes-info-open"
+              title="Что такое «дыры» — короткая инструкция"
+            >
+              ?
+            </Button>
+          </div>
           )}
-
-          <Button
-            size="sm"
-            variant={holesLayerOn ? "default" : "outline"}
-            className="gap-1.5 text-xs h-8"
-            onClick={toggleHolesLayer}
-            data-testid="btn-toggle-holes-layer"
-            title="Показать/скрыть карту дыр на карте"
-          >
-            🎯 Дыры {holesLayerOn ? "вкл" : ""}
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            className="gap-1 text-xs h-8 px-2"
-            onClick={() => setHolesInfoOpen(true)}
-            data-testid="btn-holes-info-open"
-            title="Что такое «дыры» — короткая инструкция"
-          >
-            ?
-          </Button>
           <AdminLoginPopover />
+          </div>
         </div>
       </div>
 
