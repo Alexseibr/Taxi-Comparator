@@ -62,6 +62,5 @@ export function RouteGuard({ roles, children }: Props) {
 
 function roleLabel(r: WbRole): string {
   if (r === "admin") return "админ";
-  if (r === "antifraud") return "антифрод";
   return "просмотр карты";
 }

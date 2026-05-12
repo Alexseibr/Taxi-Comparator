@@ -62,11 +62,9 @@ export default function ViewerMapDashboard() {
   const roleLabel =
     wbUser?.role === "admin"
       ? "Админ"
-      : wbUser?.role === "antifraud"
-        ? "Антифрод"
-        : wbUser?.role === "uploader"
-          ? "Загрузчик"
-          : "Водитель";
+      : wbUser?.role === "uploader"
+        ? "Загрузчик"
+        : "Водитель";
   // День и час — «сейчас», как у viewer нет таймлайна. Опрос раз в минуту,
   // чтобы при долгом сидении подсветка дыр догоняла реальный час.
   const [day, setDay] = useState<DayType>(() =>

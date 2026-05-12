@@ -1133,7 +1133,7 @@ export async function uploadWbCsv(csvText: string): Promise<WbUploadResult> {
 
 // ─────────────── RBAC + Cases ───────────────────────────────────────────────
 
-export type WbRole = "admin" | "antifraud" | "viewer";
+export type WbRole = "admin" | "viewer" | "uploader";
 
 export type WbUser = {
   id: string;

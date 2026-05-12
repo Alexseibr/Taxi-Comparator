@@ -32,7 +32,6 @@ import { useIsAdmin, tryAdminLogin, logoutAdmin } from "@/lib/admin-auth";
 import { useWbCurrentUser } from "@/lib/wb-auth";
 import { SCHEDULE_DAYS, type ScheduleDay } from "@/lib/zones";
 import { BasemapPicker } from "@/components/BasemapPicker";
-import { AdminWbLaunchButton } from "@/components/AdminWbLaunchButton";
 
 interface Props {
   scheduleDay: ScheduleDay;
@@ -336,10 +335,6 @@ export function MobileMenuSheet(p: Props) {
                   <AlertTriangle className="h-4 w-4 text-rose-600" />
                   AI-куратор и аномалии
                 </Button>
-                <AdminWbLaunchButton
-                  variant="mobile"
-                  onBeforeNavigate={() => setOpen(false)}
-                />
                 <AdminPriceMonitorButton
                   variant="full"
                   onBeforeOpen={() => setOpen(false)}

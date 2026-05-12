@@ -4,16 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import {
-  AlertTriangle,
-  BarChart3,
   Camera,
   Car,
-  FileBarChart2,
-  LineChart,
   LogOut,
   Map as MapIcon,
-  ShieldAlert,
-  Users,
 } from "lucide-react";
 import {
   fetchWbMe,
@@ -41,50 +35,10 @@ const MODULES: Module[] = [
   {
     key: "pryan",
     title: "Прогноз тарифов",
-    desc: "Тепловая карта sürge по Минску, расчёт стоимости и сверка с Я.Такси.",
+    desc: "Тепловая карта surge по Минску, расчёт стоимости и сверка с Я.Такси.",
     href: `${BASE}/pryan`,
     icon: MapIcon,
     roles: ["admin", "viewer"],
-  },
-  {
-    key: "wb-stats",
-    title: "Статистика ВБ",
-    desc: "Заказы, клиенты, водители, пары, тепловые карты ВБ-Такси.",
-    href: `${BASE}/wb`,
-    icon: BarChart3,
-    roles: ["admin"],
-  },
-  {
-    key: "wb-fraud-suspects",
-    title: "Фрод",
-    desc: "Подозрения на фрод: авто-сводка по клиентам, водителям, связкам и заказам с порогами p95/p99.",
-    href: `${BASE}/wb/fraud`,
-    icon: AlertTriangle,
-    roles: ["admin", "antifraud"],
-  },
-  {
-    key: "wb-fraud",
-    title: "Антифрод",
-    desc: "Разбор подозрительных клиентов и водителей, кейсы и комментарии.",
-    href: `${BASE}/wb/cases`,
-    icon: ShieldAlert,
-    roles: ["admin", "antifraud"],
-  },
-  {
-    key: "wb-fraud-report",
-    title: "Отчёт фрода",
-    desc: "Сводный отчёт по водителям за период: авто-сигналы и ручные пометки.",
-    href: `${BASE}/wb/driver-fraud-report`,
-    icon: FileBarChart2,
-    roles: ["admin", "antifraud"],
-  },
-  {
-    key: "newstat",
-    title: "Антифрод-аналитика",
-    desc: "Деньги под риском, рабочее место разбора кейсов, ML-модели, граф связей.",
-    href: `${BASE}/newstat/workbench`,
-    icon: LineChart,
-    roles: ["admin", "antifraud"],
   },
   {
     key: "uploader-stats",
@@ -92,15 +46,7 @@ const MODULES: Module[] = [
     desc: "Сколько скринов вы загрузили за сегодня/неделю/месяц, ваше место в рейтинге, кнопка быстрой загрузки.",
     href: `${BASE}/uploader`,
     icon: Camera,
-    roles: ["uploader", "admin", "antifraud"],
-  },
-  {
-    key: "wb-users",
-    title: "Сотрудники",
-    desc: "Управление учётными записями антифродеров: создание, выключение, сброс пароля.",
-    href: `${BASE}/wb/admin/users`,
-    icon: Users,
-    roles: ["admin"],
+    roles: ["uploader", "admin"],
   },
 ];
 
@@ -383,6 +329,5 @@ function Menu({ user }: { user: WbUser }) {
 
 function roleHuman(r: WbRole): string {
   if (r === "admin") return "админ";
-  if (r === "antifraud") return "антифрод";
   return "просмотр карты";
 }

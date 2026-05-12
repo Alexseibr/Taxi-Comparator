@@ -76,10 +76,6 @@ import {
   BarChart3,
 } from "lucide-react";
 import UserTripsDialog from "@/components/UserTripsDialog";
-import ParsingExportDialog from "@/components/ParsingExportDialog";
-import UploadsExportDialog from "@/components/UploadsExportDialog";
-import TariffComparisonDialog from "@/components/TariffComparisonDialog";
-import ScreenshotsStatsDialog from "@/components/ScreenshotsStatsDialog";
 import { CalibrationAccuracy } from "@/components/CalibrationAccuracy";
 import LeaveOneOutDialog from "@/components/LeaveOneOutDialog";
 import { AdminCalibComparison } from "@/components/AdminCalibComparison";
@@ -88,9 +84,7 @@ import { AdminAnomalyReport } from "@/components/AdminAnomalyReport";
 import { AdminScreensMap } from "@/components/AdminScreensMap";
 import { AdminMlOverview } from "@/components/AdminMlOverview";
 import { AdminOperatorStats } from "@/components/AdminOperatorStats";
-import { AdminModelABCompare } from "@/components/AdminModelABCompare";
 import { AdminLoginPopover } from "@/components/AdminLoginPopover";
-import { AdminWbLaunchButton } from "@/components/AdminWbLaunchButton";
 import { AdminPriceMonitorButton } from "@/components/AdminPriceMonitor";
 import { HolesInfoDialog } from "@/components/HolesInfoDialog";
 import { TariffBreakdownDialog } from "@/components/TariffBreakdownDialog";
@@ -870,12 +864,7 @@ function MapDashboardImpl() {
   const [screensMapOpen, setScreensMapOpen] = useState(false);
   const [mlOverviewOpen, setMlOverviewOpen] = useState(false);
   const [operatorStatsOpen, setOperatorStatsOpen] = useState(false);
-  const [modelABOpen, setModelABOpen] = useState(false);
   const [holesInfoOpen, setHolesInfoOpen] = useState(false);
-  const [parsingExportOpen, setParsingExportOpen] = useState(false);
-  const [uploadsExportOpen, setUploadsExportOpen] = useState(false);
-  const [tariffComparisonOpen, setTariffComparisonOpen] = useState(false);
-  const [screenshotsStatsOpen, setScreenshotsStatsOpen] = useState(false);
   // Слой «Дыры» включён по умолчанию: на странице анализа сразу видно
   // откуда поступали заказы (точки А) и где «дыры» — пустые соты, где
   // данных мало или нет. Раньше требовалось ручное включение через
@@ -1419,61 +1408,6 @@ function MapDashboardImpl() {
               >
                 👥 Операторы
               </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1 border-violet-300 text-violet-700 hover:bg-violet-50"
-                onClick={() => setModelABOpen(true)}
-                data-testid="btn-model-ab"
-                title="A/B сравнение моделей: активная vs baseline (price), текущий fraud-run vs предыдущий. Видно — стало лучше или хуже после переобучения."
-              >
-                ⚖️ A/B модели
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1 border-emerald-300 text-emerald-700 hover:bg-emerald-50"
-                onClick={() => setParsingExportOpen(true)}
-                data-testid="btn-parsing-export"
-                title="Excel-выгрузка распарсенных скриншотов Yandex Go за период (адрес, цена, ETA, время в пути, км)"
-              >
-                <FileSpreadsheet className="w-3.5 h-3.5" />
-                Парсинг → Excel
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1 border-indigo-300 text-indigo-700 hover:bg-indigo-50"
-                onClick={() => setTariffComparisonOpen(true)}
-                data-testid="btn-tariff-comparison"
-                title="Сравнительный анализ тарифов: Yandex (скрины) vs WB (orders) — Эконом и Комфорт, BYN/км и BYN/мин с разбивкой по часу × дистанции"
-              >
-                <BarChart3 className="w-3.5 h-3.5" />
-                Тарифы Я vs WB
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1 border-sky-300 text-sky-700 hover:bg-sky-50"
-                onClick={() => setUploadsExportOpen(true)}
-                data-testid="btn-uploads-export"
-                title="Кто и когда присылал скриншоты: разбивка по IP, дням, каналам поступления и дубликаты"
-              >
-                <FileSpreadsheet className="w-3.5 h-3.5" />
-                Импорт → Excel
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1 border-emerald-300 text-emerald-700 hover:bg-emerald-50"
-                onClick={() => setScreenshotsStatsOpen(true)}
-                data-testid="btn-screenshots-stats"
-                title="Браузерный отчёт по скринам: устройства (склейка по серийным номерам iPhone), IP, дни, превью самих скринов"
-              >
-                <Camera className="w-3.5 h-3.5" />
-                Скрины: статистика
-              </Button>
-              <AdminWbLaunchButton />
               <AdminPriceMonitorButton variant="toolbar" />
             </>
           )}
@@ -2341,10 +2275,6 @@ function MapDashboardImpl() {
         open={operatorStatsOpen}
         onClose={() => setOperatorStatsOpen(false)}
       />
-      <AdminModelABCompare
-        open={modelABOpen}
-        onClose={() => setModelABOpen(false)}
-      />
       <HolesInfoDialog
         controlledOpen={holesInfoOpen}
         onControlledOpenChange={handleHolesIntroChange}
@@ -2358,22 +2288,6 @@ function MapDashboardImpl() {
         controlledOpen={tripsOpen}
         onControlledOpenChange={setTripsOpen}
         hideTrigger
-      />
-      <ParsingExportDialog
-        open={parsingExportOpen}
-        onOpenChange={setParsingExportOpen}
-      />
-      <UploadsExportDialog
-        open={uploadsExportOpen}
-        onOpenChange={setUploadsExportOpen}
-      />
-      <TariffComparisonDialog
-        open={tariffComparisonOpen}
-        onOpenChange={setTariffComparisonOpen}
-      />
-      <ScreenshotsStatsDialog
-        open={screenshotsStatsOpen}
-        onOpenChange={setScreenshotsStatsOpen}
       />
       <LiveHexCellDialog
         hex={selectedLiveHex}
