@@ -1,9 +1,8 @@
 import { useEffect, useState, type FormEvent } from "react";
-import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Car, LogOut } from "lucide-react";
+import { Car, LogOut, ArrowRight } from "lucide-react";
 import {
   fetchWbMe,
   getWbToken,
@@ -13,13 +12,10 @@ import {
   type WbUser,
 } from "@/lib/wb-api";
 import { setStoredWbUser, useWbCurrentUser } from "@/lib/wb-auth";
-
 import { APP_MODULES, filterModules, roleLabel } from "@/lib/module-access";
 
 const LAST_MODULE_KEY = "wb_last_module_v1";
 
-// Безопасная версия параметра ?next=... — принимаем только относительные пути,
-// чтобы нельзя было увести юзера на чужой домен через open redirect.
 function readSafeNext(): string | null {
   if (typeof window === "undefined") return null;
   try {
@@ -36,9 +32,6 @@ function readSafeNext(): string | null {
 
 export default function HomePage() {
   const me = useWbCurrentUser();
-  // Один источник истины — наличие действительного токена. Подписываемся
-  // на wb-auth-changed (логин, logout, 401-сброс) и storage-event (другая
-  // вкладка), чтобы UI всегда отражал реальное состояние.
   const [hasToken, setHasToken] = useState<boolean>(() => getWbToken() !== null);
 
   useEffect(() => {
@@ -57,16 +50,15 @@ export default function HomePage() {
     return <LoginScreen onLoggedIn={onAfterLogin} />;
   }
 
-  // Есть токен, но профиль ещё не подгружен — показываем загрузчик
-  // с аварийной кнопкой выхода (на случай битой сессии).
   if (!me) {
     return (
       <FullScreen>
-        <Card className="w-full max-w-sm p-6 space-y-3 text-center">
-          <div className="text-sm text-muted-foreground">Загрузка профиля…</div>
+        <div className="w-full max-w-sm rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-6 space-y-3 text-center text-white">
+          <div className="text-sm text-white/60">Загрузка профиля…</div>
           <Button
             variant="outline"
             size="sm"
+            className="border-white/30 text-white/80 hover:bg-white/10 bg-transparent"
             onClick={async () => {
               await wbLogout();
               setStoredWbUser(null);
@@ -75,7 +67,7 @@ export default function HomePage() {
           >
             Выйти и войти заново
           </Button>
-        </Card>
+        </div>
       </FullScreen>
     );
   }
@@ -85,15 +77,11 @@ export default function HomePage() {
 
 function onAfterLogin(u: WbUser) {
   setStoredWbUser(u);
-  // Если юзер пришёл по защищённой ссылке — возвращаем его туда
-  // (но только при наличии прав; иначе RouteGuard покажет «доступ запрещён»).
   const next = readSafeNext();
   if (next) {
     window.location.assign(next);
     return;
   }
-  // Иначе: если у пользователя только один доступный модуль —
-  // сразу проваливаем в него.
   const allowed = APP_MODULES.filter((m) => m.roles.includes(u.role));
   if (allowed.length === 1) {
     window.location.assign(allowed[0].href);
@@ -106,7 +94,7 @@ function FullScreen({ children }: { children: React.ReactNode }) {
       className="min-h-[100dvh] flex items-center justify-center px-4"
       style={{
         background:
-          "linear-gradient(135deg, #5b21b6 0%, #7c3aed 60%, #a855f7 100%)",
+          "linear-gradient(135deg, #3b0764 0%, #5b21b6 50%, #7c3aed 100%)",
       }}
     >
       {children}
@@ -150,24 +138,24 @@ function LoginScreen({ onLoggedIn }: { onLoggedIn: (u: WbUser) => void }) {
 
   return (
     <FullScreen>
-      <Card className="w-full max-w-sm p-6 sm:p-8 shadow-2xl">
-        <div className="mb-5 flex items-center gap-3">
+      <div className="w-full max-w-sm rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-6 sm:p-8 shadow-2xl">
+        <div className="mb-6 flex items-center gap-3">
           <div
-            className="flex h-10 w-10 items-center justify-center rounded-lg"
-            style={{ backgroundColor: "#5b21b6", color: "#facc15" }}
+            className="flex h-11 w-11 items-center justify-center rounded-xl shadow-lg"
+            style={{ background: "linear-gradient(135deg, #7c3aed, #5b21b6)" }}
             aria-hidden
           >
-            <Car className="h-5 w-5" />
+            <Car className="h-5 w-5 text-white" />
           </div>
           <div>
-            <h1 className="text-lg font-bold">RWB Taxi</h1>
-            <p className="text-xs text-muted-foreground">Вход в систему</p>
+            <h1 className="text-lg font-bold text-white">RWB Taxi</h1>
+            <p className="text-xs text-white/50">Аналитическая платформа</p>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} autoComplete="on" className="space-y-3">
+        <form onSubmit={handleSubmit} autoComplete="on" className="space-y-4">
           <div className="space-y-1.5">
-            <Label htmlFor="home-login">Логин</Label>
+            <Label htmlFor="home-login" className="text-white/70 text-xs">Логин</Label>
             <Input
               id="home-login"
               name="username"
@@ -178,10 +166,11 @@ function LoginScreen({ onLoggedIn }: { onLoggedIn: (u: WbUser) => void }) {
               spellCheck={false}
               autoFocus
               data-testid="input-home-login"
+              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus-visible:ring-violet-400"
             />
           </div>
           <div className="space-y-1.5">
-            <Label htmlFor="home-password">Пароль</Label>
+            <Label htmlFor="home-password" className="text-white/70 text-xs">Пароль</Label>
             <Input
               id="home-password"
               name="password"
@@ -190,23 +179,24 @@ function LoginScreen({ onLoggedIn }: { onLoggedIn: (u: WbUser) => void }) {
               onChange={(e) => setPassword(e.target.value)}
               autoComplete="current-password"
               data-testid="input-home-password"
+              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus-visible:ring-violet-400"
             />
           </div>
           {err && (
-            <div className="text-sm text-rose-600" role="alert" data-testid="text-home-error">
+            <div className="text-sm text-rose-300 bg-rose-500/20 rounded-lg px-3 py-2" role="alert" data-testid="text-home-error">
               {err}
             </div>
           )}
           <Button
             type="submit"
-            className="w-full"
+            className="w-full bg-violet-600 hover:bg-violet-500 text-white border-0"
             disabled={busy || !login.trim() || !password}
             data-testid="btn-home-login"
           >
             {busy ? "Проверяю…" : "Войти"}
           </Button>
         </form>
-      </Card>
+      </div>
     </FullScreen>
   );
 }
@@ -222,71 +212,90 @@ function Menu({ user }: { user: WbUser }) {
   async function handleLogout() {
     await wbLogout();
     setStoredWbUser(null);
-    // wbLogout эмитит wb-auth-changed → подписка в HomePage сама
-    // переключит экран на LoginScreen без явного setHasToken.
   }
 
   return (
-    <div className="min-h-[100dvh] bg-gradient-to-br from-violet-50 via-white to-violet-100">
-      <header className="border-b bg-white/80 backdrop-blur">
+    <div
+      className="min-h-[100dvh] flex flex-col"
+      style={{ background: "linear-gradient(160deg, #0f0520 0%, #150a2e 40%, #1a0f3a 100%)" }}
+    >
+      {/* Header */}
+      <header className="border-b border-white/8 bg-black/20 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto max-w-[1100px] px-4 h-14 flex items-center gap-3">
-          <Car className="h-5 w-5 text-violet-700" />
-          <span className="font-bold tracking-tight">RWB Taxi</span>
-          <span className="text-xs text-muted-foreground">· Минск</span>
+          <div className="flex items-center gap-2.5">
+            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-700 flex items-center justify-center shadow-md shadow-violet-900/50">
+              <Car className="h-4 w-4 text-white" />
+            </div>
+            <span className="font-bold tracking-tight text-white">RWB Taxi</span>
+            <span className="text-xs text-white/30 hidden sm:inline">· Минск</span>
+          </div>
           <div className="ml-auto flex items-center gap-3">
-            <span className="text-sm text-muted-foreground hidden sm:inline">
+            <span className="text-sm text-white/40 hidden sm:inline">
               {user.displayName} · {roleLabel(user.role)}
             </span>
             <Button
-              variant="outline"
+              variant="ghost"
               size="sm"
-              className="gap-2"
+              className="gap-2 text-white/60 hover:text-white hover:bg-white/10"
               onClick={handleLogout}
               data-testid="btn-home-logout"
             >
               <LogOut className="h-4 w-4" />
-              <span>Выйти</span>
+              <span className="hidden sm:inline">Выйти</span>
             </Button>
           </div>
         </div>
       </header>
 
-      <main className="container mx-auto max-w-[1100px] px-4 py-8 sm:py-12">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-1">Куда заходим?</h1>
-        <p className="text-sm text-muted-foreground mb-6">
-          Выберите модуль. Переключиться можно в любой момент через шапку модуля.
-        </p>
+      {/* Hero */}
+      <div className="border-b border-white/8">
+        <div className="container mx-auto max-w-[1100px] px-4 py-10 sm:py-14">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2">
+            Куда заходим?
+          </h1>
+          <p className="text-white/40 text-sm sm:text-base">
+            Выберите модуль. Переключиться можно в любой момент через шапку модуля.
+          </p>
+        </div>
+      </div>
 
-        {lastModule && (
-          <Card className="mb-4 p-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 border-violet-200">
-            <div className="text-sm text-muted-foreground">Последний открытый модуль:</div>
+      <main className="container mx-auto max-w-[1100px] px-4 py-8 flex-1">
+        {/* Last module */}
+        {lastModule && (() => {
+          const LastIcon = lastModule.icon;
+          return (
             <a
               href={lastModule.href}
-              onClick={() => {
-                try {
-                  window.localStorage.setItem(LAST_MODULE_KEY, lastModule.key);
-                } catch {
-                  /* noop */
-                }
-              }}
-              className="text-sm font-medium text-violet-700 hover:underline"
+              onClick={() => { try { window.localStorage.setItem(LAST_MODULE_KEY, lastModule.key); } catch { /* noop */ } }}
+              className="group mb-6 flex items-center gap-4 rounded-xl border border-violet-500/25 bg-violet-500/8 hover:border-violet-400/50 hover:bg-violet-500/15 transition-all p-4"
               data-testid="link-last-module"
             >
-              {lastModule.title}
+              <div className="h-10 w-10 rounded-xl bg-violet-600/30 border border-violet-500/30 flex items-center justify-center shrink-0 group-hover:bg-violet-600/50 transition-colors">
+                <LastIcon className="h-5 w-5 text-violet-300" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="text-[11px] text-white/35 uppercase tracking-wider mb-0.5">Продолжить</div>
+                <div className="text-sm font-semibold text-violet-200 group-hover:text-violet-100 transition-colors">
+                  {lastModule.title}
+                </div>
+              </div>
+              <ArrowRight className="h-4 w-4 text-violet-400/60 group-hover:text-violet-300 group-hover:translate-x-0.5 transition-all shrink-0" />
             </a>
-          </Card>
-        )}
+          );
+        })()}
 
-        <div className="mb-4">
+        {/* Search */}
+        <div className="mb-5">
           <Input
             value={moduleQuery}
             onChange={(e) => setModuleQuery(e.target.value)}
-            placeholder="Поиск по модулям"
+            placeholder="Поиск по модулям…"
             data-testid="input-module-search"
-            className="max-w-md"
+            className="max-w-sm bg-white/5 border-white/12 text-white placeholder:text-white/25 focus-visible:ring-violet-500 focus-visible:border-violet-500/50"
           />
         </div>
 
+        {/* Module grid */}
         <div className="grid sm:grid-cols-2 gap-4">
           {visible.map((m) => {
             const Icon = m.icon;
@@ -296,53 +305,46 @@ function Menu({ user }: { user: WbUser }) {
                 href={m.href}
                 className="block group"
                 data-testid={`tile-${m.key}`}
-                onClick={() => {
-                  try {
-                    window.localStorage.setItem(LAST_MODULE_KEY, m.key);
-                  } catch {
-                    /* noop */
-                  }
-                }}
+                onClick={() => { try { window.localStorage.setItem(LAST_MODULE_KEY, m.key); } catch { /* noop */ } }}
               >
-                <Card className="p-5 h-full transition-all border-violet-200 hover:border-violet-500 hover:shadow-lg hover:-translate-y-0.5">
+                <div className="rounded-xl border border-white/10 bg-white/4 p-6 h-full transition-all duration-200 group-hover:border-violet-500/40 group-hover:bg-violet-950/40 group-hover:-translate-y-0.5 group-hover:shadow-xl group-hover:shadow-violet-950/60">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-violet-600 text-white">
+                    <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-purple-700 text-white shadow-lg shadow-violet-900/40 group-hover:shadow-violet-800/60 transition-shadow" style={{ height: "52px", width: "52px" }}>
                       <Icon className="h-6 w-6" />
                     </div>
-                    <div className="min-w-0">
-                      <div className="font-semibold text-base group-hover:text-violet-700">
+                    <div className="min-w-0 pt-0.5">
+                      <div className="font-semibold text-base text-white group-hover:text-violet-200 transition-colors leading-tight">
                         {m.title}
                       </div>
-                      <div className="text-sm text-muted-foreground mt-1">
+                      <div className="text-sm text-white/45 mt-1.5 leading-relaxed">
                         {m.desc}
                       </div>
                     </div>
                   </div>
-                </Card>
+                </div>
               </a>
             );
           })}
         </div>
 
         {allowed.length === 0 && (
-          <Card className="p-6 mt-2">
-            <h2 className="font-semibold mb-1">Нет доступных модулей</h2>
-            <p className="text-sm text-muted-foreground">
+          <div className="rounded-xl border border-white/10 bg-white/4 p-6 mt-2">
+            <h2 className="font-semibold mb-1 text-white">Нет доступных модулей</h2>
+            <p className="text-sm text-white/45">
               Обратитесь к администратору — для вашей роли пока не настроены модули.
             </p>
-          </Card>
+          </div>
         )}
 
         {allowed.length > 0 && visible.length === 0 && (
-          <Card className="p-6 mt-2" data-testid="empty-module-search">
-            <h2 className="font-semibold mb-1">Ничего не найдено</h2>
-            <p className="text-sm text-muted-foreground">
+          <div className="rounded-xl border border-white/10 bg-white/4 p-6 mt-2" data-testid="empty-module-search">
+            <h2 className="font-semibold mb-1 text-white">Ничего не найдено</h2>
+            <p className="text-sm text-white/45">
               Измените поисковый запрос, чтобы увидеть доступные модули.
             </p>
-          </Card>
+          </div>
         )}
       </main>
     </div>
   );
 }
-

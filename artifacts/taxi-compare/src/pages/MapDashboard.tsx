@@ -74,6 +74,7 @@ import {
   Flame,
   Camera,
   BarChart3,
+  Settings2,
 } from "lucide-react";
 import UserTripsDialog from "@/components/UserTripsDialog";
 import { CalibrationAccuracy } from "@/components/CalibrationAccuracy";
@@ -1176,37 +1177,18 @@ function MapDashboardImpl() {
 
   return (
     <div className="flex flex-col h-[100dvh] md:h-[calc(100dvh-4rem-3rem)]">
-      {/* Top bar — десктоп */}
-      <div className="hidden md:block border-b bg-card">
-        <div className="container mx-auto px-4 py-3 space-y-3">
-          <div className="flex items-center gap-3">
-            <div className="flex-1 min-w-[200px]">
-            <h1 className="text-base font-bold tracking-tight">
-              Прогноз для анализа RWB Taxi
-            </h1>
-            <p className="text-xs text-muted-foreground">
-              Тепловая карта сёрджа по Минску — гексагональная сетка, интерполяция IDW, обрезка по МКАД
-            </p>
-            </div>
-            <Badge variant="outline" className="text-xs">Минск · Desktop</Badge>
-            {/* Кнопка «i» — пошаговая инструкция (десктоп). При новой версии
-                на ней пульсирует красный «!» */}
-            <HelpButton variant="icon" />
-          </div>
-
-          <div className="rounded-xl border bg-background/80 p-2.5 flex flex-wrap items-center gap-2">
-            <div className="text-[11px] uppercase tracking-wide text-muted-foreground px-1">Основные настройки</div>
-
-          <div className="flex border rounded-md overflow-hidden text-xs">
+      {/* Top bar — десктоп: компактная однострочная панель */}
+      <div className="hidden md:block border-b bg-card/95 backdrop-blur-sm">
+        <div className="container mx-auto px-3 h-12 flex items-center gap-2">
+          {/* Класс тарифа */}
+          <div className="flex rounded-lg overflow-hidden text-xs border shrink-0">
             {(["econom", "comfort"] as TaxiClass[]).map((c) => (
               <button
                 key={c}
                 onClick={() => setCls(c)}
                 data-testid={`btn-class-${c}`}
                 className={`px-3 py-1.5 font-medium transition-colors ${
-                  cls === c
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-background hover:bg-muted"
+                  cls === c ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted"
                 }`}
               >
                 {c === "econom" ? "Эконом" : "Комфорт"}
@@ -1214,52 +1196,32 @@ function MapDashboardImpl() {
             ))}
           </div>
 
-          <div
-            className="flex border rounded-md overflow-hidden text-xs"
-            title="Слой карты: цены или скорости движения"
-          >
-            <button
-              onClick={() => setViewMode("surge")}
-              data-testid="btn-view-surge"
-              className={`px-3 py-1.5 font-medium transition-colors ${
-                viewMode === "surge"
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-background hover:bg-muted"
-              }`}
-            >
+          {/* Слой карты */}
+          <div className="flex rounded-lg overflow-hidden text-xs border shrink-0" title="Слой карты: сёрджи / скорости / парк">
+            <button onClick={() => setViewMode("surge")} data-testid="btn-view-surge"
+              className={`px-2.5 py-1.5 font-medium transition-colors ${viewMode === "surge" ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted"}`}>
               Сёрджи
             </button>
-            <button
-              onClick={() => setViewMode("speed")}
-              data-testid="btn-view-speed"
-              className={`px-3 py-1.5 font-medium transition-colors ${
-                viewMode === "speed"
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-background hover:bg-muted"
-              }`}
-            >
+            <button onClick={() => setViewMode("speed")} data-testid="btn-view-speed"
+              className={`px-2.5 py-1.5 font-medium transition-colors ${viewMode === "speed" ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted"}`}>
               Скорости
             </button>
-            <button
-              onClick={() => setViewMode("fleet")}
-              data-testid="btn-view-fleet"
+            <button onClick={() => setViewMode("fleet")} data-testid="btn-view-fleet"
               title="Распределение собственного парка по районам"
-              className={`px-3 py-1.5 font-medium transition-colors ${
-                viewMode === "fleet"
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-background hover:bg-muted"
-              }`}
-            >
+              className={`px-2.5 py-1.5 font-medium transition-colors ${viewMode === "fleet" ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted"}`}>
               Парк
             </button>
           </div>
 
-          {/* Кнопка прогноза спроса — доступна в любом режиме */}
+          {/* Подложка карты */}
+          <BasemapPicker variant="row" />
+
+          {/* Прогноз спроса 24ч */}
           <button
             onClick={() => setDemandForecastOpen((p) => !p)}
             data-testid="btn-demand-forecast-toggle"
             title="24-часовой прогноз спроса: surge по часам с учётом погоды и событий"
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border text-xs font-medium transition-colors ${
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-medium transition-colors shrink-0 ${
               demandForecastOpen
                 ? "bg-primary text-primary-foreground border-primary"
                 : "bg-background hover:bg-muted border-input"
@@ -1269,35 +1231,13 @@ function MapDashboardImpl() {
             Прогноз
           </button>
 
-          {/* Переключатель подложки карты — десктопная шапка */}
-          <BasemapPicker variant="row" />
-          </div>
+          {/* Рекомендованные маршруты */}
+          <RecommendedRoutesIconButton />
 
-          <div className="rounded-xl border bg-background/80 p-2.5 flex flex-wrap items-center gap-2">
-            <div className="text-[11px] uppercase tracking-wide text-muted-foreground px-1">Аналитика и данные</div>
+          <div className="flex-1" />
 
-          <div className="flex border rounded-md overflow-hidden text-xs">
-            {SCHEDULE_DAYS.map((d) => (
-              <button
-                key={d.id}
-                onClick={() => {
-                  setScheduleDay(d.id);
-                  setAutoFollow(false);
-                }}
-                data-testid={`btn-day-${d.id}`}
-                title={d.label}
-                className={`px-2.5 py-1.5 font-medium transition-colors ${
-                  scheduleDay === d.id
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-background hover:bg-muted"
-                }`}
-              >
-                {d.short}
-              </button>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-1.5 text-xs">
+          {/* Бейджи данных */}
+          <div className="flex items-center gap-1 shrink-0">
             <Badge variant="outline" className="gap-1 text-xs" title="Зон с измеренным сёрджем">
               <CheckCircle2 className="w-3 h-3 text-emerald-600" />
               {stats.measured}
@@ -1321,7 +1261,7 @@ function MapDashboardImpl() {
             {hasTrafficProvider() && (
               <Badge
                 className="gap-1 text-xs bg-emerald-600 hover:bg-emerald-600"
-                title={`Real-time пробки: ${trafficProviderName()} активен. Используется в маршруте А→Б.`}
+                title={`Real-time пробки: ${trafficProviderName()} активен`}
                 data-testid="badge-traffic-provider"
               >
                 <span className="relative flex h-2 w-2">
@@ -1333,123 +1273,61 @@ function MapDashboardImpl() {
             )}
           </div>
 
-          {/* Книжка с рекомендованными адресами А→Б (нажать → Yandex Go) */}
-          <RecommendedRoutesIconButton />
+          <div className="h-5 w-px bg-border shrink-0" />
 
+          {/* Инструменты */}
           <Button
             size="sm"
-            variant={desktopToolsOpen ? "default" : "outline"}
-            className="text-xs h-8"
+            variant={desktopToolsOpen ? "default" : "ghost"}
+            className="text-xs h-8 gap-1.5 shrink-0"
             onClick={() => setDesktopToolsOpen((v) => !v)}
             data-testid="btn-desktop-tools-toggle"
           >
-            {desktopToolsOpen ? "Скрыть инструменты" : "Показать инструменты"}
+            <Settings2 className="w-3.5 h-3.5" />
+            {desktopToolsOpen ? "Закрыть" : "Инструменты"}
           </Button>
-          {desktopToolsOpen && (
-            <div className="w-full rounded-xl border bg-background/80 p-3 mt-1 flex flex-wrap items-center gap-2">
-              {/* Methodology / Сверка с Я. / Экспорт — только администратору */}
-              {isAdmin && (
-                <>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8"
-                onClick={() => setMethodologyOpen(true)}
-                data-testid="btn-methodology"
-              >
-                <HelpCircle className="w-3.5 h-3.5 mr-1" />
-                Methodology
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1"
-                onClick={() => setLooOpen(true)}
-                data-testid="btn-loo"
-              >
-                Сверка с Я.
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1"
-                onClick={() => setCalibCompareOpen(true)}
-                data-testid="btn-calib-compare"
-                title="Таблица «план vs факт» по последним распознанным скринам Yandex"
-              >
-                Скрины: план/факт
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1 border-sky-300 text-sky-700 hover:bg-sky-50"
-                onClick={() => setScreensMapOpen(true)}
-                data-testid="btn-screens-map"
-                title="Карта стартовых точек скриншотов Yandex Go за 7 дней с фильтром по времени"
-              >
-                📍 Карта скринов
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1"
-                onClick={() => setCoverageMapOpen(true)}
-                data-testid="btn-coverage-map"
-                title="Карта дыр: где у модели мало данных и нужны новые скрины"
-              >
-                🎯 Карта дыр
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1 border-violet-300 text-violet-700 hover:bg-violet-50"
-                onClick={() => setAnomalyReportOpen(true)}
-                data-testid="btn-anomaly-report"
-                title="AI-куратор: краткий отчёт + список заказов с подозрением на ошибку распознавания/выброс"
-              >
-                🤖 Аномалии
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1 border-rose-300 text-rose-700 hover:bg-rose-50"
-                onClick={() => setMlOverviewOpen(true)}
-                data-testid="btn-ml-overview"
-                title="Top-5 пар с худшей точностью модели + heatmap покрытия 24×7 (час × день недели). Куда отправить калибровщика и какие смены догрузить."
-              >
-                📊 ML обзор
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-xs h-8 gap-1 border-indigo-300 text-indigo-700 hover:bg-indigo-50"
-                onClick={() => setOperatorStatsOpen(true)}
-                data-testid="btn-operator-stats"
-                title="Сколько скринов каждый оператор загрузил за сегодня / неделю / месяц. Видно перекосы по нагрузке и кому платить премию за объём."
-              >
-                👥 Операторы
-              </Button>
+
+          <AdminLoginPopover />
+          <HelpButton variant="icon" />
+        </div>
+
+        {/* Раскрывающаяся панель инструментов */}
+        {desktopToolsOpen && (
+          <div className="container mx-auto px-3 pb-2 border-t pt-2 flex flex-wrap items-center gap-1.5">
+            {isAdmin && (
+              <>
+                <Button size="sm" variant="outline" className="text-xs h-7" onClick={() => setMethodologyOpen(true)} data-testid="btn-methodology">
+                  <HelpCircle className="w-3 h-3 mr-1" />Methodology
+                </Button>
+                <Button size="sm" variant="outline" className="text-xs h-7 gap-1" onClick={() => setLooOpen(true)} data-testid="btn-loo">
+                  Сверка с Я.
+                </Button>
+                <Button size="sm" variant="outline" className="text-xs h-7 gap-1" onClick={() => setCalibCompareOpen(true)} data-testid="btn-calib-compare">
+                  Скрины: план/факт
+                </Button>
+                <Button size="sm" variant="outline" className="text-xs h-7 gap-1 border-sky-300 text-sky-700 hover:bg-sky-50" onClick={() => setScreensMapOpen(true)} data-testid="btn-screens-map">
+                  📍 Карта скринов
+                </Button>
+                <Button size="sm" variant="outline" className="text-xs h-7 gap-1" onClick={() => setCoverageMapOpen(true)} data-testid="btn-coverage-map">
+                  🎯 Карта дыр
+                </Button>
+                <Button size="sm" variant="outline" className="text-xs h-7 gap-1 border-violet-300 text-violet-700 hover:bg-violet-50" onClick={() => setAnomalyReportOpen(true)} data-testid="btn-anomaly-report">
+                  🤖 Аномалии
+                </Button>
+                <Button size="sm" variant="outline" className="text-xs h-7 gap-1 border-rose-300 text-rose-700 hover:bg-rose-50" onClick={() => setMlOverviewOpen(true)} data-testid="btn-ml-overview">
+                  📊 ML обзор
+                </Button>
+                <Button size="sm" variant="outline" className="text-xs h-7 gap-1 border-indigo-300 text-indigo-700 hover:bg-indigo-50" onClick={() => setOperatorStatsOpen(true)} data-testid="btn-operator-stats">
+                  👥 Операторы
+                </Button>
                 <AdminPriceMonitorButton variant="toolbar" />
               </>
             )}
             <TariffBreakdownDialog />
-            <Button
-              size="sm"
-              variant="outline"
-              className="gap-2 text-xs h-8"
-              onClick={() => setPriceSimOpen(true)}
-              data-testid="btn-price-simulator"
-            >
-              <Calculator className="w-3.5 h-3.5" />
-              Калькулятор
+            <Button size="sm" variant="outline" className="gap-1 text-xs h-7" onClick={() => setPriceSimOpen(true)} data-testid="btn-price-simulator">
+              <Calculator className="w-3 h-3" />Калькулятор
             </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="text-xs gap-1 h-8"
-              onClick={() => setTripsOpen(true)}
-              data-testid="btn-user-trips"
-            >
+            <Button size="sm" variant="outline" className="text-xs gap-1 h-7" onClick={() => setTripsOpen(true)} data-testid="btn-user-trips">
               📷 Мои поездки
               {userTrips.length > 0 && (
                 <span className="ml-0.5 inline-flex items-center justify-center text-[10px] bg-emerald-100 text-emerald-700 rounded-full px-1.5 min-w-[18px]">
@@ -1457,72 +1335,30 @@ function MapDashboardImpl() {
                 </span>
               )}
             </Button>
-            <Button
-              variant={routeOpen ? "default" : "outline"}
-              size="sm"
-              className="gap-2 text-xs h-8"
-              onClick={() => setRouteOpen((o) => !o)}
-              data-testid="button-open-route"
-            >
-              <Navigation className="w-3.5 h-3.5" />
-              Маршрут А→Б
+            <Button variant={routeOpen ? "default" : "outline"} size="sm" className="gap-1 text-xs h-7" onClick={() => setRouteOpen((o) => !o)} data-testid="button-open-route">
+              <Navigation className="w-3 h-3" />Маршрут А→Б
               {pickMode && (
                 <span className="text-[10px] bg-amber-500 text-black px-1 rounded">
                   ставим {pickMode === "from" ? "А" : "Б"}
                 </span>
               )}
             </Button>
-
             {isAdmin && (
               <div className="flex gap-1">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={handleExportJson}
-                  data-testid="btn-export-json"
-                  className="text-xs h-8"
-                >
-                  <FileJson className="w-3.5 h-3.5 mr-1" />
-                  JSON
+                <Button size="sm" variant="outline" onClick={handleExportJson} data-testid="btn-export-json" className="text-xs h-7">
+                  <FileJson className="w-3 h-3 mr-1" />JSON
                 </Button>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={handleExportCsv}
-                  data-testid="btn-export-csv"
-                  className="text-xs h-8"
-                >
-                  <FileSpreadsheet className="w-3.5 h-3.5 mr-1" />
-                  CSV
+                <Button size="sm" variant="outline" onClick={handleExportCsv} data-testid="btn-export-csv" className="text-xs h-7">
+                  <FileSpreadsheet className="w-3 h-3 mr-1" />CSV
                 </Button>
               </div>
             )}
-
-            <Button
-              size="sm"
-              variant={holesLayerOn ? "default" : "outline"}
-              className="gap-1.5 text-xs h-8"
-              onClick={toggleHolesLayer}
-              data-testid="btn-toggle-holes-layer"
-              title="Показать/скрыть карту дыр на карте"
-            >
+            <Button size="sm" variant={holesLayerOn ? "default" : "outline"} className="gap-1.5 text-xs h-7" onClick={toggleHolesLayer} data-testid="btn-toggle-holes-layer">
               🎯 Дыры {holesLayerOn ? "вкл" : ""}
             </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="gap-1 text-xs h-8 px-2"
-              onClick={() => setHolesInfoOpen(true)}
-              data-testid="btn-holes-info-open"
-              title="Что такое «дыры» — короткая инструкция"
-            >
-              ?
-            </Button>
+            <Button size="sm" variant="outline" className="gap-1 text-xs h-7 px-2" onClick={() => setHolesInfoOpen(true)} data-testid="btn-holes-info-open">?</Button>
           </div>
-          )}
-          <AdminLoginPopover />
-          </div>
-        </div>
+        )}
       </div>
 
       {/* Map + Route panel side-by-side */}
@@ -1702,6 +1538,134 @@ function MapDashboardImpl() {
         {/* Плашка активных городских событий — праздники, матчи, концерты.
             Отображается только когда есть активное событие. */}
         <EventsBadge />
+
+        {/* Десктоп: выбор дня недели — плавающий оверлей вверху карты (по центру) */}
+        <div className="hidden md:block absolute top-2 left-1/2 -translate-x-1/2 z-[500]">
+          <div className="flex rounded-xl overflow-hidden text-xs shadow-lg bg-background/95 backdrop-blur-sm border">
+            {SCHEDULE_DAYS.map((d) => (
+              <button
+                key={d.id}
+                onClick={() => { setScheduleDay(d.id); setAutoFollow(false); }}
+                data-testid={`btn-day-${d.id}`}
+                title={d.label}
+                className={`px-3 py-1.5 font-medium transition-colors ${
+                  scheduleDay === d.id
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-background hover:bg-muted"
+                }`}
+              >
+                {d.short}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Десктоп: слайдер времени — плавающая панель поверх карты (снизу) */}
+        <div className="hidden md:block absolute bottom-0 left-0 right-0 z-[500] bg-background/92 backdrop-blur-md border-t px-4 pt-2 pb-2.5">
+          <div className="flex items-center gap-3 mb-1.5">
+            <span className="text-xl leading-none select-none">{timeSlot.emoji}</span>
+            <div className="min-w-0">
+              <div className="text-sm font-semibold leading-tight">{timeSlot.label} · {timeLabel}</div>
+              <div className="text-xs text-muted-foreground leading-tight">
+                Слот: {timeSlot.hours} · Zoom {zoom} · Hex res {zoomToH3Res(zoom)} · {hexes.length} ячеек
+              </div>
+            </div>
+            <div className="flex-1" />
+            <button
+              type="button"
+              onClick={handleNowClick}
+              data-testid="button-time-now"
+              title={autoFollow ? "Синхронизировано с реальным временем. Перетащите для прогноза." : "Вернуться к реальному времени"}
+              className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-colors shrink-0 ${
+                autoFollow
+                  ? "bg-emerald-500 text-white border-emerald-500 hover:bg-emerald-600"
+                  : "hover:bg-accent border-input"
+              }`}
+            >
+              {autoFollow ? "● Реальное время" : "Сейчас"}
+            </button>
+            {!autoFollow && (
+              <span className="text-xs text-muted-foreground hidden lg:inline">
+                Перетащите или нажмите «Сейчас»
+              </span>
+            )}
+          </div>
+          <Slider
+            value={[minute]}
+            min={0}
+            max={1430}
+            step={10}
+            onValueChange={(v) => { setMinute(v[0]); setAutoFollow(false); }}
+            data-testid="slider-time"
+          />
+          <div className="flex justify-between text-[10px] text-muted-foreground mt-1">
+            {[0, 4, 8, 12, 16, 20, 23].map((h) => (
+              <span key={h}>{String(h).padStart(2, "0")}:00</span>
+            ))}
+          </div>
+        </div>
+
+        {/* Десктоп: настройки парка — плавающий оверлей справа (только в режиме «Парк») */}
+        {viewMode === "fleet" && (
+          <div className="hidden md:flex absolute top-10 right-2 z-[600] w-68 flex-col gap-2.5 bg-background/95 backdrop-blur-sm rounded-xl border shadow-xl p-3" style={{ width: "272px" }}>
+            <div className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wide">Настройки парка</div>
+            <div className="flex items-center gap-2 text-xs flex-wrap">
+              <span className="text-muted-foreground shrink-0">Резерв:</span>
+              <div className="flex border rounded-md overflow-hidden">
+                {[10, 15, 20, 25, 30].map((p) => (
+                  <button key={p} type="button" onClick={() => setReservePct(p)} data-testid={`btn-reserve-${p}`}
+                    className={`px-2 py-1 text-xs ${reservePct === p ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted"}`}>
+                    {p}%
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="flex items-center gap-2 text-xs flex-wrap">
+              <span className="text-muted-foreground shrink-0">Спрос:</span>
+              <div className="flex border rounded-md overflow-hidden">
+                {[
+                  { v: 0.5, label: "тихо" },
+                  { v: 1.0, label: "норм" },
+                  { v: 1.5, label: "пик" },
+                  { v: 2.0, label: "буря" },
+                ].map((opt) => (
+                  <button key={opt.v} type="button" onClick={() => setDemandScale(opt.v)} data-testid={`btn-demand-${opt.v}`}
+                    className={`px-2 py-1 text-xs ${demandScale === opt.v ? "bg-primary text-primary-foreground" : "bg-background hover:bg-muted"}`}>
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span className="text-muted-foreground">Кол-во авто</span>
+                <span className="font-semibold tabular-nums">{totalCars}</span>
+              </div>
+              <Slider value={[totalCars]} min={50} max={2000} step={10}
+                onValueChange={(v) => setTotalCars(v[0])} data-testid="slider-fleet-size" />
+              <div className="flex justify-between text-[10px] text-muted-foreground">
+                {[100, 500, 1000, 1500, 2000].map((n) => <span key={n}>{n}</span>)}
+              </div>
+            </div>
+            <div className="text-xs text-muted-foreground pt-1.5 border-t space-y-0.5">
+              <div>
+                На линии: <b className="text-foreground">{fleetSummary.onShift}</b>
+                {fleetSummary.offShift > 0 && <span> · резерв: {fleetSummary.offShift}</span>}
+              </div>
+              <div>
+                Спрос: {fleetSummary.totalDemand.toFixed(0)} · Баланс:{" "}
+                <b style={{ color: fleetColor(fleetSummary.globalRatio) }}>
+                  {fleetLabel(fleetSummary.globalRatio)} ({(fleetSummary.globalRatio * 100).toFixed(0)}%)
+                </b>
+              </div>
+              {useHexFleet && fleetHexSummary && (
+                <div className="text-[10px]">
+                  {fleetHexSummary.habitableCount} жилых сот · среднее {fleetHexSummary.meanCarsPerHabitable.toFixed(1)} авто/соту
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Прогноз спроса 24ч — абсолютный попап над картой слева снизу.
             Открывается кнопкой «Прогноз» в шапке. Закрывается повторным кликом. */}
@@ -2049,202 +2013,6 @@ function MapDashboardImpl() {
           />
         </div>
       )}
-      </div>
-
-      {/* Bottom slider — десктоп (на мобильном слайдер живёт в MobileBottomBar) */}
-      <div className="hidden md:block border-t bg-card">
-        {viewMode === "fleet" && (
-          <div className="container mx-auto px-6 pt-3 pb-1 border-b">
-            <div className="flex items-center justify-between gap-4 mb-2 flex-wrap">
-              <div className="flex items-center gap-3 text-sm">
-                <span className="text-xl">🚖</span>
-                <div>
-                  <div className="font-semibold">
-                    Парк: <span className="text-primary">{fleetSummary.totalCars}</span> авто
-                    · на линии {fleetSummary.onShift}
-                    {fleetSummary.offShift > 0 && (
-                      <span className="text-muted-foreground"> · в смене {fleetSummary.offShift}</span>
-                    )}
-                  </div>
-                  <div className="text-xs text-muted-foreground">
-                    Прогноз спроса: {fleetSummary.totalDemand.toFixed(0)} одноврем. ·{" "}
-                    общий баланс:{" "}
-                    <span
-                      className="font-semibold"
-                      style={{ color: fleetColor(fleetSummary.globalRatio) }}
-                    >
-                      {fleetLabel(fleetSummary.globalRatio)} ({(fleetSummary.globalRatio * 100).toFixed(0)}%)
-                    </span>
-                  </div>
-                  {useHexFleet && fleetHexSummary && (
-                    <div className="text-[11px] text-muted-foreground mt-0.5">
-                      Сетка сот · {fleetHexSummary.habitableCount} жилых ячеек ·{" "}
-                      <span className="text-amber-600">
-                        отброшено {fleetHexSummary.excludedCount}
-                      </span>{" "}
-                      (лес/вода/аэропорт) · среднее {fleetHexSummary.meanCarsPerHabitable.toFixed(1)} авто/соту
-                    </div>
-                  )}
-                </div>
-              </div>
-              <div className="flex items-center gap-2 text-xs flex-wrap">
-                <div className="flex items-center gap-1.5" title="Машины не на линии: пересменка, обед, ремонт, нет водителя. Эти авто не принимают заказы.">
-                  <span className="text-muted-foreground">
-                    Не на линии (резерв):
-                  </span>
-                  <div className="flex border rounded-md overflow-hidden">
-                    {[10, 15, 20, 25, 30].map((p) => (
-                      <button
-                        key={p}
-                        type="button"
-                        onClick={() => setReservePct(p)}
-                        data-testid={`btn-reserve-${p}`}
-                        className={`px-2 py-1 ${
-                          reservePct === p
-                            ? "bg-primary text-primary-foreground"
-                            : "bg-background hover:bg-muted"
-                        }`}
-                      >
-                        {p}%
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                <div
-                  className="flex items-center gap-1.5"
-                  title="Сколько одновременно пассажиров заказывает такси по городу. Тихо = ночь/выходные, обычно = будни, час пик = утро/вечер, непогода = дождь/снег и праздники."
-                >
-                  <span className="text-muted-foreground">
-                    Интенсивность спроса:
-                  </span>
-                  <div className="flex border rounded-md overflow-hidden">
-                    {[
-                      { v: 0.5, label: "тихо" },
-                      { v: 1.0, label: "обычно" },
-                      { v: 1.5, label: "пик" },
-                      { v: 2.0, label: "непогода" },
-                    ].map((opt) => (
-                      <button
-                        key={opt.v}
-                        type="button"
-                        onClick={() => setDemandScale(opt.v)}
-                        data-testid={`btn-demand-${opt.v}`}
-                        className={`px-2 py-1 ${
-                          demandScale === opt.v
-                            ? "bg-primary text-primary-foreground"
-                            : "bg-background hover:bg-muted"
-                        }`}
-                      >
-                        {opt.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="text-[11px] text-muted-foreground -mt-1 mb-1 leading-tight">
-              <span className="font-medium text-foreground">Как читать:</span>{" "}
-              <b>На линии</b> — авто, которые сейчас могут брать заказы.{" "}
-              <b>В смене (резерв)</b> — стоят на пересменке/отдыхе/ремонте.{" "}
-              <b>Прогноз спроса</b> — расчёт сколько одновременно пассажиров заказывают такси
-              в выбранный день и час; зависит от площади районов, типа (центр/спальник/вокзал) и сёрджей,
-              а множитель «интенсивность» подстраивает его под обычный/час пик/непогоду.
-              Почасовой прогноз с погодой и событиями — кнопка <b>«Прогноз»</b> в шапке.
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-xs text-muted-foreground whitespace-nowrap w-24">
-                Кол-во авто:
-              </span>
-              <Slider
-                value={[totalCars]}
-                min={50}
-                max={2000}
-                step={10}
-                onValueChange={(v) => setTotalCars(v[0])}
-                data-testid="slider-fleet-size"
-                className="flex-1"
-              />
-              <input
-                type="number"
-                value={totalCars}
-                min={50}
-                max={2000}
-                step={10}
-                onChange={(e) => {
-                  const n = Number(e.target.value);
-                  if (Number.isFinite(n)) setTotalCars(Math.max(50, Math.min(2000, n)));
-                }}
-                data-testid="input-fleet-size"
-                className="w-20 px-2 py-1 text-xs border rounded text-right tabular-nums"
-              />
-            </div>
-            <div className="flex justify-between text-[10px] text-muted-foreground mt-1 px-1">
-              {[100, 250, 500, 750, 1000, 1500, 2000].map((n) => (
-                <span key={n}>{n}</span>
-              ))}
-            </div>
-          </div>
-        )}
-        <div className="container mx-auto px-6 py-3">
-          <div className="flex items-center justify-between mb-2">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">{timeSlot.emoji}</span>
-              <div>
-                <div className="text-sm font-semibold">
-                  {timeSlot.label} · {timeLabel}
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  Слот: {timeSlot.hours} · Шаг 10 мин · Zoom {zoom} · Hex res{" "}
-                  {zoomToH3Res(zoom)} · {hexes.length} ячеек
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  setMinute(getCurrentMinuteOfDay());
-                  setScheduleDay(getCurrentScheduleDay());
-                  setAutoFollow(true);
-                }}
-                className={`text-xs px-2 py-1 rounded border transition-colors ${
-                  autoFollow
-                    ? "bg-emerald-500 text-white border-emerald-500 hover:bg-emerald-600"
-                    : "hover:bg-accent"
-                }`}
-                data-testid="button-time-now"
-                title={
-                  autoFollow
-                    ? "Слайдер синхронизирован с реальным временем (двигается каждые 30 сек). Нажмите чтобы вручную выбрать день/время."
-                    : "Вернуться к реальному времени"
-                }
-              >
-                {autoFollow ? "● Реальное время" : "Сейчас"}
-              </button>
-              <span className="text-xs text-muted-foreground">
-                {autoFollow
-                  ? "Слайдер двигается сам — перетащите для прогноза на другое время"
-                  : "Перетащите слайдер или нажмите «Сейчас» для возврата к реальному времени"}
-              </span>
-            </div>
-          </div>
-          <Slider
-            value={[minute]}
-            min={0}
-            max={1430}
-            step={10}
-            onValueChange={(v) => {
-              setMinute(v[0]);
-              setAutoFollow(false);
-            }}
-            data-testid="slider-time"
-          />
-          <div className="flex justify-between text-[10px] text-muted-foreground mt-1 px-1">
-            {[0, 4, 8, 12, 16, 20, 23].map((h) => (
-              <span key={h}>{String(h).padStart(2, "0")}:00</span>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Controlled-инстансы диалогов: открываются программно (из desktop
